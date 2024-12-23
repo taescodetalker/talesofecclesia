@@ -1,0 +1,23 @@
+[
+null,
+{"id":1,"list":[{"code":322,"indent":0,"parameters":[1,"Orio",0,"SF_Actor2",6,"orio"]},{"code":320,"indent":0,"parameters":[1,"Albaz"]},{"code":322,"indent":0,"parameters":[3,"Aluber",0,"kittface",7,"aluberrr"]},{"code":320,"indent":0,"parameters":[3,"Aluber"]},{"code":0,"indent":0,"parameters":[]}],"name":"Revert","switchId":1,"trigger":0},
+{"id":2,"list":[{"code":0,"indent":0,"parameters":[]}],"name":"","switchId":1,"trigger":0},
+{"id":3,"list":[{"code":0,"indent":0,"parameters":[]}],"name":"","switchId":1,"trigger":0},
+{"id":4,"list":[{"code":0,"indent":0,"parameters":[]}],"name":"","switchId":1,"trigger":0},
+{"id":5,"list":[{"code":0,"indent":0,"parameters":[]}],"name":"","switchId":1,"trigger":0},
+{"id":6,"list":[{"code":0,"indent":0,"parameters":[]}],"name":"","switchId":1,"trigger":0},
+{"id":7,"list":[{"code":0,"indent":0,"parameters":[]}],"name":"","switchId":1,"trigger":0},
+{"id":8,"list":[{"code":0,"indent":0,"parameters":[]}],"name":"","switchId":1,"trigger":0},
+{"id":9,"list":[{"code":0,"indent":0,"parameters":[]}],"name":"","switchId":1,"trigger":0},
+{"id":10,"list":[{"code":0,"indent":0,"parameters":[]}],"name":"","switchId":1,"trigger":0},
+{"id":11,"list":[{"code":0,"indent":0,"parameters":[]}],"name":"","switchId":1,"trigger":0},
+{"id":12,"list":[{"code":0,"indent":0,"parameters":[]}],"name":"","switchId":1,"trigger":0},
+{"id":13,"list":[{"code":0,"indent":0,"parameters":[]}],"name":"","switchId":1,"trigger":0},
+{"id":14,"list":[{"code":0,"indent":0,"parameters":[]}],"name":"","switchId":1,"trigger":0},
+{"id":15,"list":[{"code":0,"indent":0,"parameters":[]}],"name":"","switchId":1,"trigger":0},
+{"id":16,"list":[{"code":320,"indent":0,"parameters":[3,"Masquerade the Blazing Dragon"]},{"code":313,"indent":0,"parameters":[0,1,0,36]},{"code":322,"indent":0,"parameters":[3,"dragons222",4,"orio",1,"RTP Dragon SV Battler"]},{"code":0,"indent":0,"parameters":[]}],"name":"Masquerade the Blazing Dragon","switchId":1,"trigger":0},
+{"id":17,"list":[{"code":0,"indent":0,"parameters":[]}],"name":"Mirrorjade","switchId":1,"trigger":0},
+{"id":18,"list":[{"code":0,"indent":0,"parameters":[]}],"name":"Albion/Sanctifire","switchId":1,"trigger":0},
+{"id":19,"list":[{"code":0,"indent":0,"parameters":[]}],"name":"Albion/Shrouded","switchId":1,"trigger":0},
+{"id":20,"list":[{"code":320,"indent":0,"parameters":[1,"Albion"]},{"code":313,"indent":0,"parameters":[0,1,0,34]},{"code":322,"indent":0,"parameters":[1,"Orio",0,"SF_Actor2",1,"RTP Dragon SV Battler"]},{"code":0,"indent":0,"parameters":[]}],"name":"Albion/Branded","switchId":1,"trigger":0}
+]
