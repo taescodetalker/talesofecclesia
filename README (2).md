@@ -1,4 +1,0 @@
-"# talesofecclesia" 
-"# talesofecclesia" 
-"# talesofecclesia" 
-"# talesofecclesia" 
