@@ -98,9 +98,14 @@
 
 	function createTextPictureBitmap(text) {
 		const tempWindow = new Window_Base(new Rectangle());
-		const size = tempWindow.textSizeEx(text);
+		const textSize = tempWindow.textSizeEx(text);
+
+		// Adjust dimensions to include padding
+		const width = textSize.width + padding * 2;
+		const height = textSize.height + padding * 2;
+
 		tempWindow.padding = 0;
-		tempWindow.move(0, 0, size.width + padding * 2, size.height + padding * 2);
+		tempWindow.move(0, 0, width, height + padding * 2);
 		tempWindow.createContents();
 
 		const bitmap = tempWindow.contents;
@@ -112,13 +117,13 @@
 		bitmap.paintOpacity = backgroundOpacity;
 
 		// Draw rounded background
-		drawRoundedBackground(bitmap, 0, 0, size.width, size.height, cornerRadius, backgroundColor);
+		drawRoundedBackground(bitmap, 0, 0, width, height, cornerRadius, backgroundColor);
 
 		// Restore original paint opacity
 		bitmap.paintOpacity = originalOpacity;
 
-		// Draw the text
-		tempWindow.drawTextEx(text, padding, padding, 0);
+		// Draw the text with padding offset
+		tempWindow.drawTextEx(text, padding, padding, width - padding * 2);
 
 		tempWindow.contents = null;
 		tempWindow.destroy();
