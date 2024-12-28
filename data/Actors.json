@@ -522,7 +522,7 @@
 			{ "code": 62, "dataId": 3, "value": 1 },
 			{ "code": 41, "dataId": 1, "value": 1 }
 		],
-		"initialLevel": 8,
+		"initialLevel": 20,
 		"maxLevel": 99,
 		"name": "Nobleman of Crossout",
 		"nickname": "Crossout Designator",
