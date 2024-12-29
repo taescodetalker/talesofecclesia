@@ -2183,7 +2183,7 @@
 						{ "code": 505, "indent": 0, "parameters": [{ "code": 15, "parameters": [3] }] },
 						{ "code": 505, "indent": 0, "parameters": [{ "code": 18 }] },
 						{ "code": 505, "indent": 0, "parameters": [{ "code": 15, "parameters": [3] }] },
-						{ "code": 250, "indent": 0, "parameters": [{ "name": "Chime2 (2)", "volume": 90, "pitch": 100, "pan": 0 }] },
+						{ "code": 250, "indent": 0, "parameters": [{ "name": "Chime2", "volume": 90, "pitch": 100, "pan": 0 }] },
 						{ "code": 123, "indent": 0, "parameters": ["A", 0] },
 						{ "code": 126, "indent": 0, "parameters": [7, 0, 0, 1] },
 						{ "code": 101, "indent": 0, "parameters": ["", 0, 0, 2] },

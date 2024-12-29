@@ -4,7 +4,7 @@
 	"battleback1Name": "GrassMaze",
 	"battleback2Name": "Forest",
 	"bgm": { "name": "", "pan": 0, "pitch": 100, "volume": 90 },
-	"bgs": { "name": "Wind1", "pan": 0, "pitch": 100, "volume": 95 },
+	"bgs": { "name": "", "pan": 0, "pitch": 100, "volume": 95 },
 	"disableDashing": false,
 	"displayName": "Harpie's Hunting Ground",
 	"encounterList": [],
