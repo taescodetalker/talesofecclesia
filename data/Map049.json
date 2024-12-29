@@ -3,7 +3,7 @@
 	"autoplayBgs": false,
 	"battleback1Name": "Wood1",
 	"battleback2Name": "Room2",
-	"bgm": { "name": "", "pan": 0, "pitch": 100, "volume": 65 },
+	"bgm": { "name": "Bond-Of-Friendship-By-Yu-Gi-Oh", "pan": 0, "pitch": 100, "volume": 90 },
 	"bgs": { "name": "", "pan": 0, "pitch": 100, "volume": 90 },
 	"disableDashing": false,
 	"displayName": "",
