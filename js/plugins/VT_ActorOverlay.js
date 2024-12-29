@@ -14,7 +14,7 @@
  */
 
 (() => {
-	"use strict";
+	("use strict");
 	var PLUGIN_NAME = "VT_ActorOverlay";
 	var pluginParams = PluginManager.parameters(PLUGIN_NAME);
 
@@ -260,6 +260,18 @@
 		updateLvlText() {
 			this.lvlText.text = "Lvl: " + this.actor.level;
 		}
+
+		refresh() {
+			// Ensure to remove previous drawing elements
+			this.removeChild(this.hpBar); // Remove old HP/MP bars
+			this.removeChild(this.mpBar);
+			this.removeChild(this.pictureContainer); // Remove old actor picture, if needed
+
+			// Redraw or reinitialize the actor data and overlays
+			this.createHpBar(); // Redraw HP bars
+			this.createMpBar();
+			this.createActorPicture(); // Redraw actor picture, etc.
+		}
 	}
 
 	const _Scene_Map_createSpriteset = Scene_Map.prototype.createSpriteset;
@@ -282,5 +294,24 @@
 			this.addChild(overlay);
 			this.partyOverlays.push(overlay);
 		});
+	};
+
+	// Override the addActor method to detect when an actor is added
+	const _Game_Party_addActor = Game_Party.prototype.addActor;
+	Game_Party.prototype.addActor = function (actorId) {
+		_Game_Party_addActor.call(this, actorId);
+		this.onActorChanged(); // Trigger refresh when an actor is added
+	};
+
+	// Override the removeActor method to detect when an actor is removed
+	const _Game_Party_removeActor = Game_Party.prototype.removeActor;
+	Game_Party.prototype.removeActor = function (actorId) {
+		_Game_Party_removeActor.call(this, actorId);
+		this.onActorChanged(); // Trigger refresh when an actor is removed
+	};
+
+	// New method to handle actor change (called after addActor or removeActor)
+	Game_Party.prototype.onActorChanged = function () {
+		SceneManager._scene.createPartyOverlays();
 	};
 })();
