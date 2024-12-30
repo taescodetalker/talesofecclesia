@@ -10,7 +10,7 @@
  *
  * Terms of Use: Commercial.
  *
- * Version: 1.0.0
+ * Version: 1.0.1
  */
 
 (() => {
@@ -100,8 +100,8 @@
 			this.hpBar.y = y;
 			this.addChild(this.hpBar);
 
-			// Create and position the "HP" label text using PIXI.Text
-			this.hpText = new PIXI.Text("HP", {
+			// Create and position the "LP" label text using PIXI.Text
+			this.hpText = new PIXI.Text("LP", {
 				fontFamily: fontface,
 				fontSize: 24,
 				fill: "#FFFF00", // Yellow text
@@ -274,44 +274,56 @@
 		}
 	}
 
-	const _Scene_Map_createSpriteset = Scene_Map.prototype.createSpriteset;
-	Scene_Map.prototype.createSpriteset = function () {
-		_Scene_Map_createSpriteset.call(this);
-		this.createPartyOverlays();
+	const _Scene_Map_update = Scene_Map.prototype.update;
+	Scene_Map.prototype.update = function () {
+		// Call the original update method
+		_Scene_Map_update.call(this);
+
+		// Check if the party composition has changed
+		if (this._partyCompositionChanged()) {
+			this._refreshPartySprites();
+		}
 	};
 
-	Scene_Map.prototype.createPartyOverlays = function () {
-		this.partyOverlays = [];
-		const members = $gameParty.members();
+	Scene_Map.prototype._partyCompositionChanged = function () {
+		// Example: Compare current party members to stored list
+		const currentPartyMembers = $gameParty.members();
+		if (!this._lastPartyMembers || this._lastPartyMembers.length !== currentPartyMembers.length) {
+			this._lastPartyMembers = [...currentPartyMembers];
+			return true;
+		}
+		for (let i = 0; i < currentPartyMembers.length; i++) {
+			if (this._lastPartyMembers[i] !== currentPartyMembers[i]) {
+				this._lastPartyMembers = [...currentPartyMembers];
+				return true;
+			}
+		}
+		return false;
+	};
+
+	Scene_Map.prototype._refreshPartySprites = function () {
+		// Clear existing sprites from the party layer
+		if (this._partySpritesLayer) {
+			this._partySpritesLayer.removeChildren();
+		} else {
+			// Create a dedicated container for party sprites
+			this._partySpritesLayer = new PIXI.Container();
+			this._spriteset._pictureContainer.addChildAt(this._partySpritesLayer, 0);
+		}
+
+		// Redraw sprites for current party members
+		const partyMembers = $gameParty.members();
+
 		const startX = 50; // Starting X position
 		const startY = 750; // Starting Y position
 		const spacingX = 300; // Vertical spacing between overlays
 
-		members.forEach((member, index) => {
+		for (let i = 0; i < partyMembers.length; i++) {
+			const member = partyMembers[i];
 			const overlay = new Sprite_ActorOverlay(member);
-			overlay.x = startX + index * spacingX;
+			overlay.x = startX + i * spacingX;
 			overlay.y = startY;
-			this.addChild(overlay);
-			this.partyOverlays.push(overlay);
-		});
-	};
-
-	// Override the addActor method to detect when an actor is added
-	const _Game_Party_addActor = Game_Party.prototype.addActor;
-	Game_Party.prototype.addActor = function (actorId) {
-		_Game_Party_addActor.call(this, actorId);
-		this.onActorChanged(); // Trigger refresh when an actor is added
-	};
-
-	// Override the removeActor method to detect when an actor is removed
-	const _Game_Party_removeActor = Game_Party.prototype.removeActor;
-	Game_Party.prototype.removeActor = function (actorId) {
-		_Game_Party_removeActor.call(this, actorId);
-		this.onActorChanged(); // Trigger refresh when an actor is removed
-	};
-
-	// New method to handle actor change (called after addActor or removeActor)
-	Game_Party.prototype.onActorChanged = function () {
-		SceneManager._scene.createPartyOverlays();
+			this._partySpritesLayer.addChild(overlay);
+		}
 	};
 })();
