@@ -279,6 +279,16 @@
 		// Call the original update method
 		_Scene_Map_update.call(this);
 
+		// Check for button press (e.g., TAB key)
+		if (Input.isTriggered("tab")) {
+			// Toggle sprite visibility
+			this._spritesVisible = !this._spritesVisible;
+			// Update the sprite visibility immediately
+			if (this._partySpritesLayer) {
+				this._partySpritesLayer.visible = this._spritesVisible;
+			}
+		}
+
 		// Check if the party composition has changed
 		if (this._partyCompositionChanged()) {
 			this._refreshPartySprites();
@@ -325,5 +335,18 @@
 			overlay.y = startY;
 			this._partySpritesLayer.addChild(overlay);
 		}
+
+		// Set visibility based on the current state
+		this._partySpritesLayer.visible = this._spritesVisible;
+	};
+
+	const _Scene_Map_createSpriteset = Scene_Map.prototype.createSpriteset;
+	Scene_Map.prototype.createSpriteset = function () {
+		// Call the original method to create the spriteset
+		_Scene_Map_createSpriteset.call(this);
+
+		// Initialize the party sprites array and layer later, once everything is ready
+		// this._partySprites = [];
+		this._spritesVisible = true; // Track if sprites are visible
 	};
 })();
