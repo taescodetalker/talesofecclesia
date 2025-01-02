@@ -349,4 +349,35 @@
 		// this._partySprites = [];
 		this._spritesVisible = true; // Track if sprites are visible
 	};
+
+	// Hook into Game_Actor's refresh method
+	/*This method is automatically called whenever an actor's HP, MP , or other parameters are updated. 
+	It now triggers a callback(onPartyMemberChanged) in Scene_Map */
+	const _Game_Actor_refresh = Game_Actor.prototype.refresh;
+	Game_Actor.prototype.refresh = function () {
+		_Game_Actor_refresh.call(this); // Call the original refresh method
+
+		// Notify Scene_Map of the change
+		if (SceneManager._scene instanceof Scene_Map) {
+			SceneManager._scene.onPartyMemberChanged();
+		}
+	};
+
+	// Add a handler in Scene_Map to refresh party sprites
+	Scene_Map.prototype.onPartyMemberChanged = function () {
+		if (this._partySpritesLayer) {
+			this._refreshPartySprites();
+		}
+	};
+
+	// Hook into the recoverAll method of Game_Battler
+	const _Game_Battler_recoverAll = Game_Battler.prototype.recoverAll;
+	Game_Battler.prototype.recoverAll = function () {
+		_Game_Battler_recoverAll.call(this); // Call the original recoverAll method
+
+		// Notify Scene_Map of the change
+		if (this instanceof Game_Actor && SceneManager._scene instanceof Scene_Map) {
+			SceneManager._scene.onPartyMemberChanged();
+		}
+	};
 })();
