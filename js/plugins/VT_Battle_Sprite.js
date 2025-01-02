@@ -3,13 +3,13 @@
  * @plugindesc Adjusts the side-view battle sprite positions for 1080p resolution.
  * @author Vincent Thieu
  *
- * @param SpriteXOffset
+ * @param OffsetX
  * @text X Offset
  * @desc Adjust the horizontal position of the sprites.
  * @type number
  * @default 1000
  *
- * @param SpriteYOffset
+ * @param OffsetY
  * @text Y Offset
  * @desc Adjust the vertical position of the sprites.
  * @type number
@@ -49,17 +49,18 @@
 
 (() => {
 	const parameters = PluginManager.parameters("VT_Battle_Sprite");
-	const xOffset = Number(parameters["SpriteXOffset"] || 1000);
-	const yOffset = Number(parameters["SpriteYOffset"] || 600);
 	const scaleX = Number(parameters["ScaleX"] || 1); // Adjust horizontal scale
 	const scaleY = Number(parameters["ScaleY"] || 1); // Adjust vertical scale
 	const spacingX = Number(parameters["SpacingX"] || 100); // Adjust horizontal spacing between actors
 	const spacingY = Number(parameters["SpacingY"] || 100); // Adjust vertical spacing between actors
+	const offsetX = Number(parameters["OffsetX"] || 1000);
+	const offsetY = Number(parameters["OffsetY"] || 600);
 
 	Sprite_Actor.prototype.setActorHome = function (index) {
 		// Calculate the position based on both horizontal and vertical spacing
-		this.setHome(xOffset + (index % 4) * spacingX, yOffset + Math.floor(index / 4) * spacingY); // Modifies both X and Y
+		this.setHome(offsetX + (index % 4) * spacingX, offsetY + Math.floor(index / 4) * spacingY); // Modifies both X and Y
 		this.scale.x = scaleX; // Apply horizontal scaling
 		this.scale.y = scaleY; // Apply vertical scaling
+		console.log("offsetX: " + offsetX + "| spacingX: " + spacingX);
 	};
 })();
