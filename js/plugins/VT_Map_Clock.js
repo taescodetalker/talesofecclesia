@@ -56,17 +56,58 @@
 	// Variables for tracking time
 	let clockUpdateCounter = 0;
 
+	// Map the "T" key (key code 84) to a custom input symbol, e.g. "toggleClock"
+	Input.keyMapper[84] = "toggleClock";
+	//$gameVariables.setValue(21, 1); // Clock starts "on"
+
 	// Scene_Map update method to handle the clock update
 	const _Scene_Map_update = Scene_Map.prototype.update;
 	Scene_Map.prototype.update = function () {
 		_Scene_Map_update.call(this);
 
+		// Check for button press (e.g., TAB key)
+		// if (Input.isTriggered("T")) {
+		// 	// Toggle sprite visibility
+		// 	if ($gameVariables.value(21) != 0) {
+		// 		$gameVariables.setValue(21, 0);
+		// 	} else {
+		// 		$gameVariables.setValue(21, 1);
+		// 	}
+		// 	console.log("T is pressed " + $gameVariables.value(21));
+		// 	if (this._clockSpritesLayer) {
+		// 		// Update the sprite visibility immediately
+		// 		this._clockSpritesLayer.visible = $gameVariables.value(21) != 0;
+		// 	}
+		// }
+
+		// Check if "T" was pressed
+		if (Input.isTriggered("toggleClock")) {
+			this.toggleClockVisibility();
+		}
+
 		// Update clock every defined interval
 		clockUpdateCounter++;
 		if (clockUpdateCounter >= updateInterval) {
 			clockUpdateCounter = 0;
-			console.log("updateClock");
+			// console.log("updateClock");
 			this.updateClock();
+		}
+	};
+
+	// Our toggle function
+	Scene_Map.prototype.toggleClockVisibility = function () {
+		// Read variable 21's current value (assume 0 or 1)
+		const currentValue = $gameVariables.value(21);
+
+		// Flip the value (if 0 -> 1, if 1 -> 0)
+		const newValue = currentValue === 0 ? 1 : 0;
+		$gameVariables.setValue(21, newValue);
+
+		// Now adjust the clock layer visibility
+		// We assume you created `this._clockSpritesLayer` in your drawClock function
+		// or have a reference to clock sprites. We'll show one approach below.
+		if (SceneManager._scene && SceneManager._scene._clockSpritesLayer) {
+			SceneManager._scene._clockSpritesLayer.visible = newValue === 1;
 		}
 	};
 
@@ -97,7 +138,7 @@
 			const clockText = `Day ${days} - ${hours}:${minutes}`;
 
 			// Draw the clock on screen
-			console.log("updateClock");
+			// console.log("updateClock");
 			this.drawClock(clockText);
 		} catch (error) {
 			console.error("Error updating time variables:", error);
@@ -156,5 +197,6 @@
 			// Update the existing text
 			this.clockTextObject.text = clockText;
 		}
+		this._clockSpritesLayer.visible = $gameVariables.value(21) === 0 ? 0 : 1;
 	};
 })();
