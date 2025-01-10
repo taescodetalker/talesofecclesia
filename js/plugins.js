@@ -15,5 +15,7 @@ var $plugins =
 {"name":"Mini-Map Plugin","status":false,"description":"Adds a mini-map system to your game.","parameters":{"MapWidth":"150","MapHeight":"150","BackgroundColor":"#333","PlayerColor":"#0f0","MarkerColor":"#f00","PositionTop":"20px","PositionRight":"20px"}},
 {"name":"VT_TextPicture","status":true,"description":"Displays text as a picture.","parameters":{}},
 {"name":"VT_Battle_Sprite","status":true,"description":"Adjusts the side-view battle sprite positions for 1080p resolution.","parameters":{"OffsetX":"1400","OffsetY":"600","ScaleX":"3","ScaleY":"3","SpacingX":"150","SpacingY":"100"}},
-{"name":"VT_Map_Clock","status":true,"description":"Custom clock plugin that displays hours and minutes on screen.","parameters":{"clockPositionX":"1600","clockPositionY":"10","fontSize":"24","fontColor":"#6fdf11","updateInterval":"60"}}
+{"name":"VT_Map_Clock","status":true,"description":"Custom clock plugin that displays hours and minutes on screen.","parameters":{"clockPositionX":"1600","clockPositionY":"10","fontSize":"24","fontColor":"#6fdf11","updateInterval":"60"}},
+{"name":"SRD_UltraBase","status":false,"description":"Contains code required for HUD Maker Ultra. Does not affect the RPG Maker codebase.","parameters":{}},
+{"name":"SRD_HUDMakerUltra","status":false,"description":"Allows you to create and use HUDs for the map and battles.\r\nRequires the HUD Maker Ultra editor.","parameters":{"Auto-Reload HUD Data":"false","Enable Screenshots":"false","Hide Battle Status Window":"false","Hide Battle Selection Window":"false","Fade During Events":"true","Event Fade Opacity":"125","Fade Duration":"10","Map Visibility Code":"return true;","Battle Visibility Code":"return true;"}}
 ];
