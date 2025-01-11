@@ -16,6 +16,8 @@ var $plugins =
 {"name":"VT_TextPicture","status":true,"description":"Displays text as a picture.","parameters":{}},
 {"name":"VT_Battle_Sprite","status":true,"description":"Adjusts the side-view battle sprite positions for 1080p resolution.","parameters":{"OffsetX":"1400","OffsetY":"600","ScaleX":"3","ScaleY":"3","SpacingX":"150","SpacingY":"100"}},
 {"name":"VT_Map_Clock","status":true,"description":"Custom clock plugin that displays hours and minutes on screen.","parameters":{"clockPositionX":"1600","clockPositionY":"10","fontSize":"24","fontColor":"#6fdf11","updateInterval":"60"}},
+{"name":"VT_Battle_BattleStatus","status":true,"description":"Customizes the battle menu UI and functionality.","parameters":{}},
+{"name":"VT_Battle_BattleStatus_Animation","status":true,"description":"Customizes the battle status animation.","parameters":{}},
 {"name":"SRD_UltraBase","status":false,"description":"Contains code required for HUD Maker Ultra. Does not affect the RPG Maker codebase.","parameters":{}},
 {"name":"SRD_HUDMakerUltra","status":false,"description":"Allows you to create and use HUDs for the map and battles.\r\nRequires the HUD Maker Ultra editor.","parameters":{"Auto-Reload HUD Data":"false","Enable Screenshots":"false","Hide Battle Status Window":"false","Hide Battle Selection Window":"false","Fade During Events":"true","Event Fade Opacity":"125","Fade Duration":"10","Map Visibility Code":"return true;","Battle Visibility Code":"return true;"}},
 {"name":"GoldHUD","status":true,"description":"Displays a customizable gold counter with adjustable position and opacity via the Plugin Manager.","parameters":{"Window X":"25","Window Y":"10","Window Opacity":"255"}}
