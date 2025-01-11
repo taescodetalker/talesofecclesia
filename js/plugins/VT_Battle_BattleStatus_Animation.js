@@ -48,6 +48,7 @@
 	// Override the initialize method of Window_BattleStatus
 	Window_BattleStatus.prototype.initialize = function () {
 		_Window_BattleStatus_initialize.call(this);
+		console.log("initialize2");
 
 		// Setup animation for cards
 		this.setupCardAnimations();
@@ -86,9 +87,6 @@
 		}
 		_Window_BattleStatus_destroy.call(this, options);
 	};
-
-	// Store the last selected actor to avoid unnecessary updates
-	let lastSelectedActor = null;
 
 	// Override update to handle the selection highlight
 	const _Window_BattleStatus_update = Window_BattleStatus.prototype.update;

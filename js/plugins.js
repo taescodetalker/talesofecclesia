@@ -15,5 +15,7 @@ var $plugins =
 {"name":"Mini-Map Plugin","status":false,"description":"Adds a mini-map system to your game.","parameters":{"MapWidth":"150","MapHeight":"150","BackgroundColor":"#333","PlayerColor":"#0f0","MarkerColor":"#f00","PositionTop":"20px","PositionRight":"20px"}},
 {"name":"VT_TextPicture","status":true,"description":"Displays text as a picture.","parameters":{}},
 {"name":"VT_Battle_Sprite","status":true,"description":"Adjusts the side-view battle sprite positions for 1080p resolution.","parameters":{"OffsetX":"1400","OffsetY":"600","ScaleX":"3","ScaleY":"3","SpacingX":"150","SpacingY":"100"}},
-{"name":"VT_Map_Clock","status":true,"description":"Custom clock plugin that displays hours and minutes on screen.","parameters":{"clockPositionX":"1600","clockPositionY":"10","fontSize":"24","fontColor":"#6fdf11","updateInterval":"60"}}
+{"name":"VT_Map_Clock","status":true,"description":"Custom clock plugin that displays hours and minutes on screen.","parameters":{"clockPositionX":"1600","clockPositionY":"10","fontSize":"24","fontColor":"#6fdf11","updateInterval":"60"}},
+{"name":"VT_Battle_BattleStatus","status":true,"description":"Customizes the battle menu UI and functionality.","parameters":{}},
+{"name":"VT_Battle_BattleStatus_Animation","status":true,"description":"Customizes the battle status animation.","parameters":{}}
 ];
