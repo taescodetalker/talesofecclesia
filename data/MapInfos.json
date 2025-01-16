@@ -6,7 +6,7 @@ null,
 {"id":4,"expanded":false,"name":"Labryinth Wall 1","order":73,"parentId":10,"scrollX":1344,"scrollY":624.3333333333334,"quick":false},
 {"id":5,"expanded":true,"name":"Felgrand Temple","order":34,"parentId":15,"scrollX":884.7272727272727,"scrollY":525.2727272727273,"quick":false},
 {"id":6,"expanded":true,"name":"Tri-Brigade Rendevouz","order":67,"parentId":17,"scrollX":648.8,"scrollY":378.8,"quick":false},
-{"id":7,"expanded":false,"name":"INTRO","order":3,"parentId":0,"scrollX":884.7272727272727,"scrollY":490.3636363636364},
+{"id":7,"expanded":true,"name":"INTRO","order":3,"parentId":0,"scrollX":884.7272727272727,"scrollY":490.3636363636364},
 {"id":8,"expanded":true,"name":"Dogmatika Nation (1) DESPIA","order":12,"parentId":7,"scrollX":884.7272727272727,"scrollY":722.7272727272727},
 {"id":9,"expanded":true,"name":"Castle Courtyard","order":4,"parentId":7,"scrollX":1211.3333333333333,"scrollY":1302.3333333333333},
 {"id":10,"expanded":false,"name":"Abyss","order":70,"parentId":0,"scrollX":3244.3636363636365,"scrollY":2635.090909090909,"quick":false},
@@ -83,5 +83,5 @@ null,
 {"id":81,"expanded":false,"name":"Call of the Haunted","order":25,"parentId":15,"scrollX":811,"scrollY":921.5,"quick":false},
 {"id":82,"expanded":false,"name":"Dogmatika Outskirts","order":11,"parentId":80,"scrollX":884.7272727272727,"scrollY":1394.7272727272727,"quick":false},
 null,
-{"id":84,"expanded":false,"name":"TestRoom2","order":2,"parentId":0,"scrollX":884.7272727272727,"scrollY":490.3636363636364,"quick":false}
+{"id":84,"expanded":false,"name":"TestRoom2","order":2,"parentId":0,"scrollX":884.7272727272727,"scrollY":673.6363636363636,"quick":false}
 ]
