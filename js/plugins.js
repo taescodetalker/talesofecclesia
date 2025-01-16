@@ -20,5 +20,7 @@ var $plugins =
 {"name":"VT_Battle_BattleStatus_Animation","status":true,"description":"Customizes the battle status animation.","parameters":{}},
 {"name":"SRD_UltraBase","status":false,"description":"Contains code required for HUD Maker Ultra. Does not affect the RPG Maker codebase.","parameters":{}},
 {"name":"SRD_HUDMakerUltra","status":false,"description":"Allows you to create and use HUDs for the map and battles.\r\nRequires the HUD Maker Ultra editor.","parameters":{"Auto-Reload HUD Data":"false","Enable Screenshots":"false","Hide Battle Status Window":"false","Hide Battle Selection Window":"false","Fade During Events":"true","Event Fade Opacity":"125","Fade Duration":"10","Map Visibility Code":"return true;","Battle Visibility Code":"return true;"}},
-{"name":"GoldHUD","status":true,"description":"Displays a customizable gold counter with adjustable position and opacity via the Plugin Manager.","parameters":{"Window X":"25","Window Y":"10","Window Opacity":"255"}}
+{"name":"GoldHUD","status":true,"description":"Displays a customizable gold counter with adjustable position and opacity via the Plugin Manager.","parameters":{"Window X":"25","Window Y":"10","Window Opacity":"255"}},
+{"name":"VT_Shader_Manager","status":true,"description":"Manages and loads custom shaders for use in RPG Maker MZ. Version 1.0","parameters":{"ShaderFolder":"shaders/"}},
+{"name":"VT_Shader_EventLight","status":true,"description":"","parameters":{}}
 ];
