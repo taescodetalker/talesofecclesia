@@ -1,13 +1,13 @@
 /*:
  * @target MZ
- * @plugindesc Manages and loads custom shaders for use in RPG Maker MZ. Version 1.0
- * @author YourName
+ * @plugindesc Manages and loads custom shaders for use in RPG Maker MZ.
+ * @author Vincent Thieu
  *
  * @param ShaderFolder
  * @desc Folder path where shaders are stored (relative to js/ folder).
  * @default shaders/
  *
- * @help ShaderManager.js
+ * @help VT_Shader_Manager.js
  *
  * This plugin dynamically loads and applies custom shaders in RPG Maker MZ.
  *
@@ -16,6 +16,9 @@
  * sprite.filters = [shader];
  *
  * Place GLSL files in the folder specified by ShaderFolder (default: js/shaders/).
+ *
+ * Terms of Use: Commercial.
+ * Version: 1.0.0
  */
 
 var ShaderManager = (function () {

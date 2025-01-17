@@ -1,3 +1,19 @@
+/*:
+ * @target MZ
+ * @plugindesc Event light shader for use in RPG Maker MZ
+ * @author Vincent Thieu
+ *
+ * @param ShaderFolder
+ * @desc Folder path where shaders are stored (relative to js/ folder).
+ * @default shaders/
+ *
+ * @help
+ * Event light shader for use in RPG Maker MZ
+ *
+ * Terms of Use: Commercial.
+ * Version: 1.0.0
+ */
+
 (() => {
 	const eventToLightMap = {}; // Maps event ID to light index
 
