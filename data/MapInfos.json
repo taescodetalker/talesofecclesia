@@ -72,7 +72,7 @@ null,
 {"id":70,"expanded":false,"name":"--","order":78,"parentId":24,"scrollX":816,"scrollY":640,"quick":false},
 {"id":71,"expanded":false,"name":"Demon Castle 3F","order":81,"parentId":28,"scrollX":540.6666666666666,"scrollY":489,"quick":false},
 {"id":72,"expanded":false,"name":"Dogmatika Castle Bedrooms","order":5,"parentId":9,"scrollX":2337.818181818182,"scrollY":1346.7272727272727,"quick":false},
-{"id":73,"expanded":true,"name":"Castle Secret Hall","order":7,"parentId":9,"scrollX":884.7272727272727,"scrollY":634.3636363636364,"quick":false},
+{"id":73,"expanded":true,"name":"Castle Secret Hall","order":7,"parentId":9,"scrollX":893.4545454545455,"scrollY":634.3636363636364,"quick":false},
 {"id":74,"expanded":true,"name":"Swamp Village North","order":30,"parentId":75,"scrollX":893.4545454545455,"scrollY":624.5454545454546,"quick":false},
 {"id":75,"expanded":true,"name":"Aleister's House","order":29,"parentId":57,"scrollX":884.7272727272727,"scrollY":525.2727272727273,"quick":false},
 {"id":76,"expanded":true,"name":"Dogmatika Nation PREVIOUS","order":9,"parentId":7,"scrollX":884.7272727272727,"scrollY":1026},
@@ -83,5 +83,5 @@ null,
 {"id":81,"expanded":false,"name":"Call of the Haunted","order":25,"parentId":15,"scrollX":884.7272727272727,"scrollY":922.3636363636364,"quick":false},
 {"id":82,"expanded":false,"name":"Dogmatika Outskirts","order":11,"parentId":80,"scrollX":893.4545454545455,"scrollY":1394.7272727272727,"quick":false},
 null,
-{"id":84,"expanded":false,"name":"TestRoom2","order":2,"parentId":0,"scrollX":893.4545454545455,"scrollY":635.4545454545455,"quick":false}
+{"id":84,"expanded":false,"name":"TestRoom2","order":2,"parentId":0,"scrollX":884.7272727272727,"scrollY":635.4545454545455,"quick":false}
 ]
