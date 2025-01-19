@@ -17,103 +17,102 @@
  * @text Clock X Position
  * @desc Set the X position for the clock.
  * @type number
- * @default 600
+ * @default 1550
  *
  * @param clockPositionY
  * @text Clock Y Position
  * @desc Set the Y position for the clock.
  * @type number
- * @default 10
+ * @default 0
  *
  * @param fontSize
  * @text Font Size
  * @desc Set the font size for the clock text.
  * @type number
- * @default 28
+ * @default 34
  *
  * @param fontColor
  * @text Font Color
  * @desc Set the font color for the clock text (use hexadecimal color codes).
  * @type string
- * @default #FFFF00
+ * @default #FFD700
  *
- * @param updateInterval
- * @text Update Interval (Frames)
- * @desc The time in frames between updates of the clock (1 second = 60 frames).
- * @type number
- * @default 60
+ * @param outlineColor
+ * @text Outline Color
+ * @desc Set the outline color for the clock text (use hexadecimal color codes).
+ * @type string
+ * @default #000000
+ *
  */
 
 (() => {
 	// Plugin parameters
 	const parameters = PluginManager.parameters("VT_Map_Clock");
-	const clockPositionX = Number(parameters["clockPositionX"] || 1800);
-	const clockPositionY = Number(parameters["clockPositionY"] || 10);
-	const fontSize = Number(parameters["fontSize"] || 28);
-	const fontColor = String(parameters["fontColor"] || "#FFFFFF");
-	const updateInterval = Number(parameters["updateInterval"] || 60);
+	const clockPositionX = Number(parameters["clockPositionX"] || 1550);
+	const clockPositionY = Number(parameters["clockPositionY"] || 0);
+	const fontSize = Number(parameters["fontSize"] || 34);
+	const fontColor = String(parameters["fontColor"] || "#FFD700");
+	const outlineColor = String(parameters["outlineColor"] || "#FFD700");
 
-	// Variables for tracking time
-	let clockUpdateCounter = 0;
+	const CLOCK_VARIABLE_ID = 21; // The variable ID to control visibility
 
 	// Map the "T" key (key code 84) to a custom input symbol, e.g. "toggleClock"
 	Input.keyMapper[84] = "toggleClock";
-	//$gameVariables.setValue(21, 1); // Clock starts "on"
 
-	// Scene_Map update method to handle the clock update
+	// Extend the Scene_Map class to draw the clock
+	const _Scene_Map_createAllWindows = Scene_Map.prototype.createAllWindows;
+	Scene_Map.prototype.createAllWindows = function () {
+		_Scene_Map_createAllWindows.call(this);
+		this.createClock();
+	};
+
+	Scene_Map.prototype.createClock = function () {
+		this._clockWindow = new Window_Clock();
+		this.addChild(this._clockWindow);
+	};
+
 	const _Scene_Map_update = Scene_Map.prototype.update;
 	Scene_Map.prototype.update = function () {
 		_Scene_Map_update.call(this);
 
-		// Check for button press (e.g., TAB key)
-		// if (Input.isTriggered("T")) {
-		// 	// Toggle sprite visibility
-		// 	if ($gameVariables.value(21) != 0) {
-		// 		$gameVariables.setValue(21, 0);
-		// 	} else {
-		// 		$gameVariables.setValue(21, 1);
-		// 	}
-		// 	console.log("T is pressed " + $gameVariables.value(21));
-		// 	if (this._clockSpritesLayer) {
-		// 		// Update the sprite visibility immediately
-		// 		this._clockSpritesLayer.visible = $gameVariables.value(21) != 0;
-		// 	}
-		// }
-
-		// Check if "T" was pressed
+		// Check if the "T" key is pressed
 		if (Input.isTriggered("toggleClock")) {
-			this.toggleClockVisibility();
+			const currentValue = $gameVariables.value(CLOCK_VARIABLE_ID);
+			$gameVariables.setValue(CLOCK_VARIABLE_ID, currentValue === 1 ? 0 : 1);
 		}
-
-		// Update clock every defined interval
-		clockUpdateCounter++;
-		if (clockUpdateCounter >= updateInterval) {
-			clockUpdateCounter = 0;
-			// console.log("updateClock");
-			this.updateClock();
+		if (this._clockWindow) {
+			// Update visibility based on the variable value
+			const isVisible = $gameVariables.value(CLOCK_VARIABLE_ID) === 1;
+			this._clockWindow.visible = isVisible;
 		}
 	};
 
-	// Our toggle function
-	Scene_Map.prototype.toggleClockVisibility = function () {
-		// Read variable 21's current value (assume 0 or 1)
-		const currentValue = $gameVariables.value(21);
+	// Optional: Add script call to toggle variable for debugging
+	const _Game_Interpreter_pluginCommand = Game_Interpreter.prototype.pluginCommand;
+	Game_Interpreter.prototype.pluginCommand = function (command, args) {
+		_Game_Interpreter_pluginCommand.call(this, command, args);
 
-		// Flip the value (if 0 -> 1, if 1 -> 0)
-		const newValue = currentValue === 0 ? 1 : 0;
-		$gameVariables.setValue(21, newValue);
-
-		// Now adjust the clock layer visibility
-		// We assume you created `this._clockSpritesLayer` in your drawClock function
-		// or have a reference to clock sprites. We'll show one approach below.
-		if (SceneManager._scene && SceneManager._scene._clockSpritesLayer) {
-			SceneManager._scene._clockSpritesLayer.visible = newValue === 1;
+		if (command === "ToggleClock") {
+			const currentValue = $gameVariables.value(CLOCK_VARIABLE_ID);
+			$gameVariables.setValue(CLOCK_VARIABLE_ID, currentValue === 1 ? 0 : 1);
 		}
 	};
 
-	// Update the time (checking variables for hours and minutes)
-	Scene_Map.prototype.updateClock = function () {
-		try {
+	// Keep track of last clock update
+	let lastClockUpdate = 0;
+
+	// Define the Gold Counter Window
+	class Window_Clock extends Window_Base {
+		initialize() {
+			const x = clockPositionX;
+			const y = clockPositionY;
+			const rect = new Rectangle(x, y, 260, 64);
+			super.initialize(rect);
+			this.opacity = 180; // Set window opacity from parameters
+			this.refresh();
+		}
+
+		refresh() {
 			let currentMinutes = $gameVariables.value(23) || 0; // Use default 0 if not set
 			let currentHours = $gameVariables.value(22) || 0; // Default to 0 if not set
 			let currentDays = $gameVariables.value(24) || 0;
@@ -137,66 +136,24 @@
 
 			const clockText = `Day ${days} - ${hours}:${minutes}`;
 
-			// Draw the clock on screen
-			// console.log("updateClock");
-			this.drawClock(clockText);
-		} catch (error) {
-			console.error("Error updating time variables:", error);
-		}
-	};
+			this.contents.clear();
+			this.contents.fontSize = fontSize;
+			this.changeTextColor(fontColor);
+			this.contents.outlineColor = outlineColor;
 
-	// Draw the clock on screen
-	Scene_Map.prototype.drawClock = function (clockText) {
-		// Initialize clock layer if it doesn't exist
-		if (!this._clockSpritesLayer) {
-			this._clockSpritesLayer = new PIXI.Container();
-			this._spriteset._pictureContainer.addChildAt(this._clockSpritesLayer, 0);
+			this.drawText(clockText, 0, 0, this.contentsWidth(), "left");
+			this.resetTextColor();
 		}
 
-		// Check if the clock background and text objects already exist
-		if (!this.clockBackground) {
-			// Create a new PIXI.Graphics object for the background
-			this.clockBackground = new PIXI.Graphics();
-			const bgWidth = 220; // Background width
-			const bgHeight = 50; // Background height
-			const bgRadius = 10; // Corner radius
-
-			// Draw the rounded rectangle
-			this.clockBackground.lineStyle(4, 0x544643);
-			this.clockBackground.beginFill(0x5c5d58);
-			this.clockBackground.drawRoundedRect(0, 0, bgWidth, bgHeight, bgRadius);
-			this.clockBackground.endFill();
-
-			// Position the background
-			this.clockBackground.x = clockPositionX - 5; // Slight offset for better alignment
-			this.clockBackground.y = clockPositionY - 5;
-
-			// Add the background to the clock layer
-			this._clockSpritesLayer.addChild(this.clockBackground);
+		// Update the counter dynamically
+		update() {
+			super.update();
+			const deltaTime = Graphics.app.ticker.lastTime - lastClockUpdate;
+			if (deltaTime > 1000) {
+				// Limit the clock update to once per second
+				lastClockUpdate = Graphics.app.ticker.lastTime;
+				this.refresh();
+			}
 		}
-
-		// Check if the clock text object already exists
-		if (!this.clockTextObject) {
-			// Create a new PIXI.Text object
-			const style = new PIXI.TextStyle({
-				fontFamily: "Verdana", // Font family
-				fontSize: fontSize, // Font size (from plugin parameter)
-				fill: fontColor, // Font color (from plugin parameter)
-				align: "right",
-				stroke: "#000000", // Black outline
-				strokeThickness: 4, // Outline thickness
-			});
-
-			this.clockTextObject = new PIXI.Text(clockText, style);
-			this.clockTextObject.x = clockPositionX; // X position (from plugin parameter)
-			this.clockTextObject.y = clockPositionY; // Y position (from plugin parameter)
-
-			// Add the PIXI.Text object to the map's sprite layer
-			this._clockSpritesLayer.addChild(this.clockTextObject);
-		} else {
-			// Update the existing text
-			this.clockTextObject.text = clockText;
-		}
-		this._clockSpritesLayer.visible = $gameVariables.value(21) === 0 ? 0 : 1;
-	};
+	}
 })();
