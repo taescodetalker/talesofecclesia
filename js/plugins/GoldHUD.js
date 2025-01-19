@@ -53,57 +53,70 @@
  */
 
 (() => {
-    const pluginName = "CustomGoldCounter";
+	const pluginName = "CustomGoldCounter";
 
-    // Fetch plugin parameters
-    const parameters = PluginManager.parameters(pluginName);
-    const WINDOW_X_OFFSET = Number(parameters["Window X Offset"] || 110);
-    const WINDOW_Y_OFFSET = Number(parameters["Window Y Offset"] || 60);
-    const WINDOW_OPACITY = Number(parameters["Window Opacity"] || 200);
-    const FONT_SIZE = Number(parameters["Font Size"] || 34);
-    const FONT_COLOR = parameters["Font Color"] || "#FFD700"; // Default to gold
-    const OUTLINE_COLOR = parameters["Outline Color"] || "#000000"; // Default to black
+	// Fetch plugin parameters
+	const parameters = PluginManager.parameters(pluginName);
+	const WINDOW_X_OFFSET = Number(parameters["Window X Offset"] || 110);
+	const WINDOW_Y_OFFSET = Number(parameters["Window Y Offset"] || 60);
+	const WINDOW_OPACITY = Number(parameters["Window Opacity"] || 200);
+	const FONT_SIZE = Number(parameters["Font Size"] || 34);
+	const FONT_COLOR = parameters["Font Color"] || "#FFD700"; // Default to gold
+	const OUTLINE_COLOR = parameters["Outline Color"] || "#000000"; // Default to black
 
-    const GOLD_WIDTH = 210;   // Fixed width of the gold display area
-    const GOLD_HEIGHT = 64;   // Fixed height of the gold display area
+	const GOLD_WIDTH = 210; // Fixed width of the gold display area
+	const GOLD_HEIGHT = 64; // Fixed height of the gold display area
 
-    // Extend the Scene_Map class to draw the gold counter
-    const _Scene_Map_createAllWindows = Scene_Map.prototype.createAllWindows;
-    Scene_Map.prototype.createAllWindows = function () {
-        _Scene_Map_createAllWindows.call(this);
-        this.createGoldCounter();
-    };
+	const CLOCK_VARIABLE_ID = 21; // The variable ID to control visibility
 
-    Scene_Map.prototype.createGoldCounter = function () {
-        this._goldCounterWindow = new Window_GoldCounter();
-        this.addChild(this._goldCounterWindow);
-    };
+	// Extend the Scene_Map class to draw the gold counter
+	const _Scene_Map_createAllWindows = Scene_Map.prototype.createAllWindows;
+	Scene_Map.prototype.createAllWindows = function () {
+		_Scene_Map_createAllWindows.call(this);
+		this.createGoldCounter();
+	};
 
-    // Define the Gold Counter Window
-    class Window_GoldCounter extends Window_Base {
-        initialize() {
-            const x = Graphics.width - GOLD_WIDTH - WINDOW_X_OFFSET;
-            const y = WINDOW_Y_OFFSET;
-            const rect = new Rectangle(x, y, GOLD_WIDTH, GOLD_HEIGHT);
-            super.initialize(rect);
-            this.opacity = WINDOW_OPACITY; // Set window opacity from parameters
-            this.refresh();
-        }
+	Scene_Map.prototype.createGoldCounter = function () {
+		this._goldCounterWindow = new Window_GoldCounter();
+		this.addChild(this._goldCounterWindow);
+	};
 
-        refresh() {
-            this.contents.clear();
-            this.contents.fontSize = FONT_SIZE;
-            this.changeTextColor(FONT_COLOR);
-            this.contents.outlineColor = OUTLINE_COLOR;
-            const goldText = `Gold: ${$gameParty.gold()}`;
-            this.drawText(goldText, 0, 0, this.contentsWidth(), "left");
-            this.resetTextColor();
-        }
+	const _Scene_Map_update = Scene_Map.prototype.update;
+	Scene_Map.prototype.update = function () {
+		_Scene_Map_update.call(this);
 
-        // Update the counter dynamically
-        update() {
-            super.update();
-            this.refresh();
-        }
-    }
+		if (this._goldCounterWindow) {
+			// Update visibility based on the variable value
+			const isVisible = $gameVariables.value(CLOCK_VARIABLE_ID) === 1;
+			this._goldCounterWindow.visible = isVisible;
+		}
+	};
+
+	// Define the Gold Counter Window
+	class Window_GoldCounter extends Window_Base {
+		initialize() {
+			const x = Graphics.width - GOLD_WIDTH - WINDOW_X_OFFSET;
+			const y = WINDOW_Y_OFFSET;
+			const rect = new Rectangle(x, y, GOLD_WIDTH, GOLD_HEIGHT);
+			super.initialize(rect);
+			this.opacity = WINDOW_OPACITY; // Set window opacity from parameters
+			this.refresh();
+		}
+
+		refresh() {
+			this.contents.clear();
+			this.contents.fontSize = FONT_SIZE;
+			this.changeTextColor(FONT_COLOR);
+			this.contents.outlineColor = OUTLINE_COLOR;
+			const goldText = `Gold: ${$gameParty.gold()}`;
+			this.drawText(goldText, 0, 0, this.contentsWidth(), "left");
+			this.resetTextColor();
+		}
+
+		// Update the counter dynamically
+		update() {
+			super.update();
+			this.refresh();
+		}
+	}
 })();
