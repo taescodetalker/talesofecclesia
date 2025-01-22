@@ -36,19 +36,25 @@
 
 	// Update the animation for each card
 	Window_BattleStatus.prototype.updateCardAnimations = function () {
-		if (!this._actorCards) return;
+		const selectedActor = BattleManager.actor(); // Get the currently selected actor
+		if (!this._actorCards || this._actorCards.length === 0) return;
 
 		// console.log(this._actorCards.length);
 
 		for (let i = 0; i < this._actorCards.length; i++) {
 			const card = this._actorCards[i];
+			const actor = $gameParty.battleMembers()[i];
 
-			// Calculate a wobble effect based on time
-			// Ensure the card exists before applying animations
-			if (card && card.transform) {
-				const time = Date.now() / 1000;
-				const rotation = Math.sin(time + i) * 0.05; // Wobble effect
-				card.rotation = rotation;
+			if (actor === selectedActor) {
+				// Calculate a wobble effect based on time
+				// Ensure the card exists before applying animations
+				if (card && card.transform) {
+					const time = Date.now() / 1000;
+					const rotation = Math.sin(time + i) * 0.05; // Wobble effect
+					card.rotation = rotation;
+				}
+			} else {
+				card.rotation = 0;
 			}
 		}
 	};
