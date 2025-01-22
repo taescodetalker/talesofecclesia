@@ -31,7 +31,7 @@
 		this._cardWidth = 300; // Width of each card
 		this._cardHeight = 400; // Height of each card
 		this._padding = 15; // Padding between cards
-		this._faceSize = 260; // Size of the actor face inside the card
+		this._faceSize = this._cardWidth - this._padding * 2; // Size of the actor face inside the card
 		this._cornerRadius = 15; // Rounded corner radius
 		this._parentWindowYPadding = 150; // leave space at top for card animation
 
@@ -53,7 +53,7 @@
 
 			this._cardFrames.push(this.drawCardFrame(i, cardContainer, 0, 0, this._cardWidth, this._cardHeight, this._cornerRadius)); // Draw card frame
 			this.drawActorPicture(cardContainer, actor, 0 + this._padding, 0 + this._padding, this._faceSize); // Draw face
-			this.drawActorStats(cardContainer, actor, 0 + 10, 0); // Draw stats
+			this.drawActorStats(cardContainer, actor, 0 + this._padding, 0); // Draw stats
 		}
 	};
 
