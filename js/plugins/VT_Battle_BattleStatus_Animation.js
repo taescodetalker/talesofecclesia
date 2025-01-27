@@ -12,43 +12,11 @@
  */
 
 (() => {
-	// Override the initialization to ensure the selection cursor is disabled
-	const _Window_BattleStatus_initialize = Window_BattleStatus.prototype.initialize;
-	Window_BattleStatus.prototype.initialize = function (rect) {
-		_Window_BattleStatus_initialize.call(this, rect);
-
-		this.deactivate(); // Deactivate the window so the selection cursor doesn't render
-	};
-
-	// Override the update method to ensure the cursor is not updated
-	Window_BattleStatus.prototype.updateCursor = function () {
-		this.setCursorRect(0, 0, 0, 0); // Completely hide the cursor
-	};
-
-	// Prevent the selection rectangle from being rendered
-	Window_BattleStatus.prototype.select = function (index) {
-		this._index = index; // Update the selected index but do not render the cursor
-	};
-
-	// Prevent drawing the selection background behind items
-	Window_BattleStatus.prototype.drawItemBackground = function (index) {
-		// Leave empty to disable the selection background rendering
-	};
-
-	// Prevent the highlight (focus rectangle) from being drawn
-	Window_BattleStatus.prototype.drawActorSelect = function (index) {
-		// Leave empty to disable the default highlight
-	};
-
-	// Prevent active state from causing visual highlights
-	Window_BattleStatus.prototype.isCursorVisible = function () {
-		return false; // Always return false to prevent the cursor from showing
-	};
-
 	// Override the initialize method of Window_BattleStatus
+	const _Window_BattleStatus_initialize = Window_BattleStatus.prototype.initialize;
 	Window_BattleStatus.prototype.initialize = function () {
 		_Window_BattleStatus_initialize.call(this);
-		console.log("initialize2");
+		// console.log("initialize - animation");
 
 		// Setup animation for cards
 		this.setupCardAnimations();
@@ -56,24 +24,38 @@
 
 	// Setup individual card animations
 	Window_BattleStatus.prototype.setupCardAnimations = function () {
-		this._cardAnimationTicker = new PIXI.Ticker();
-		this._cardAnimationTicker.add(() => {
-			this.updateCardAnimations();
-		});
-		this._cardAnimationTicker.start();
+		if (!this._cardAnimationTicker) {
+			this._cardAnimationTicker = new PIXI.Ticker();
+			this._cardAnimationTicker.add(() => {
+				this.updateCardAnimations();
+			});
+			this._cardAnimationTicker.start();
+			// console.log("setupCardAnimations");
+		}
 	};
 
 	// Update the animation for each card
 	Window_BattleStatus.prototype.updateCardAnimations = function () {
-		if (!this._actorCards) return;
+		const selectedActor = BattleManager.actor(); // Get the currently selected actor
+		if (!this._actorCards || this._actorCards.length === 0) return;
+
+		// console.log(this._actorCards.length);
 
 		for (let i = 0; i < this._actorCards.length; i++) {
 			const card = this._actorCards[i];
+			const actor = $gameParty.battleMembers()[i];
 
-			// Calculate a wobble effect based on time
-			const time = Date.now() / 1000;
-			const rotation = Math.sin(time + i) * 0.05; // Offset each card's wobble slightly
-			card.rotation = rotation;
+			if (actor === selectedActor) {
+				// Calculate a wobble effect based on time
+				// Ensure the card exists before applying animations
+				if (card && card.transform) {
+					const time = Date.now() / 1000;
+					const rotation = Math.sin(time + i) * 0.05; // Wobble effect
+					card.rotation = rotation;
+				}
+			} else {
+				card.rotation = 0;
+			}
 		}
 	};
 
@@ -81,6 +63,7 @@
 	const _Window_BattleStatus_destroy = Window_BattleStatus.prototype.destroy;
 	Window_BattleStatus.prototype.destroy = function (options) {
 		if (this._cardAnimationTicker) {
+			// console.log("Window_BattleStatus destroy");
 			this._cardAnimationTicker.stop();
 			this._cardAnimationTicker.destroy();
 			this._cardAnimationTicker = null;
@@ -104,7 +87,7 @@
 		// Only proceed if the selected actor has changed
 		if (this._lastSelectedActor === selectedActor) return;
 		this._lastSelectedActor = selectedActor; // Update the last selected actor
-		console.log("updateSelectedActorHighlight");
+		// console.log("updateSelectedActorHighlight");
 
 		for (let i = 0; i < this._actorCards.length; i++) {
 			const card = this._actorCards[i];
@@ -126,9 +109,11 @@
 				this.resetGraphicsSettings(cardFrame);
 			}
 		}
+		// console.log("updateSelectedActorHighlight done");
 	};
 
 	Window_BattleStatus.prototype.updateGraphicsSettings = function (actor, graphics, color, alpha) {
+		// console.log("Window_BattleStatus updateGraphicsSettings");
 		// console.log(actor.name());
 		// console.log(graphics._id);
 		const rect = graphics._rect || {}; // Retrieve stored rectangle dimensions
@@ -142,9 +127,11 @@
 		graphics.lineStyle(settings.lineWidth || 0, settings.lineColor || 0x000000);
 		graphics.drawRoundedRect(rect.x, rect.y, rect.width, rect.height, rect.radius || 0);
 		graphics.endFill();
+		// console.log("Window_BattleStatus updateGraphicsSettings done");
 	};
 
 	Window_BattleStatus.prototype.resetGraphicsSettings = function (graphics) {
+		// console.log("Window_BattleStatus resetGraphicsSettings");
 		if (!graphics._settings) return;
 		const settings = graphics._settings || {}; // Retrieve stored settings
 		const rect = graphics._rect || {}; // Retrieve stored rectangle dimensions
@@ -157,5 +144,6 @@
 		graphics.lineStyle(settings.lineWidth || 0, settings.lineColor || 0x000000);
 		graphics.drawRoundedRect(rect.x, rect.y, rect.width, rect.height, rect.radius || 0);
 		graphics.endFill();
+		// console.log("Window_BattleStatus resetGraphicsSettings done");
 	};
 })();
