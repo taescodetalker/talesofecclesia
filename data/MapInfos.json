@@ -66,7 +66,7 @@ null,
 {"id":64,"expanded":true,"name":"Swordsoul Summit","order":57,"parentId":58,"scrollX":1216.5,"scrollY":722.25,"quick":true},
 {"id":65,"expanded":true,"name":"Swordsoul Summit n","order":58,"parentId":64,"scrollX":1216.5,"scrollY":722.25,"quick":false},
 {"id":66,"expanded":false,"name":"Stone Cave","order":56,"parentId":58,"scrollX":821,"scrollY":473.5,"quick":false},
-{"id":67,"expanded":true,"name":"Dogmatika Nation (3)","order":15,"parentId":13,"scrollX":1216.5,"scrollY":1197.75},
+{"id":67,"expanded":true,"name":"Dogmatika Nation (3)","order":15,"parentId":13,"scrollX":1081.3333333333333,"scrollY":936.6666666666666},
 {"id":68,"expanded":true,"name":"Swordsoul Temple","order":59,"parentId":64,"scrollX":1216.5,"scrollY":2397.75,"quick":false},
 {"id":69,"expanded":false,"name":"TEST ROOM","order":1,"parentId":0,"scrollX":811,"scrollY":473.5,"quick":true},
 {"id":70,"expanded":false,"name":"--","order":79,"parentId":24,"scrollX":816,"scrollY":640,"quick":false},
@@ -83,5 +83,6 @@ null,
 {"id":81,"expanded":false,"name":"Call of the Haunted","order":26,"parentId":15,"scrollX":811,"scrollY":481.5,"quick":false},
 {"id":82,"expanded":false,"name":"Dogmatika Outskirts","order":12,"parentId":80,"scrollX":1228.5,"scrollY":963.75,"quick":false},
 {"id":83,"expanded":false,"name":"Dogmatika Staircase","order":10,"parentId":76,"scrollX":1216.5,"scrollY":722.25,"quick":false},
-{"id":84,"expanded":false,"name":"TestRoom2","order":2,"parentId":0,"scrollX":1622,"scrollY":963,"quick":false}
+{"id":84,"expanded":false,"name":"TestRoom2","order":2,"parentId":0,"scrollX":1622,"scrollY":963,"quick":false},
+{"id":85,"expanded":false,"name":"NATALIE Dogmatika Shop","order":85,"parentId":0,"scrollX":2278.6666666666665,"scrollY":1080.6666666666667,"quick":false}
 ]
