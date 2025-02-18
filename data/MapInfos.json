@@ -68,7 +68,7 @@ null,
 {"id":66,"expanded":false,"name":"Stone Cave","order":58,"parentId":58,"scrollX":821,"scrollY":473.5,"quick":false},
 {"id":67,"expanded":true,"name":"Dogmatika Nation (3)","order":17,"parentId":13,"scrollX":1081.3333333333333,"scrollY":936.6666666666666},
 {"id":68,"expanded":true,"name":"Swordsoul Temple","order":61,"parentId":64,"scrollX":1216.5,"scrollY":2397.75,"quick":false},
-{"id":69,"expanded":false,"name":"TEST ROOM","order":1,"parentId":0,"scrollX":1390.2857142857142,"scrollY":825.4285714285713,"quick":true},
+{"id":69,"expanded":false,"name":"TEST ROOM","order":1,"parentId":0,"scrollX":1081.3333333333333,"scrollY":610,"quick":true},
 {"id":70,"expanded":false,"name":"--","order":81,"parentId":24,"scrollX":816,"scrollY":640,"quick":false},
 {"id":71,"expanded":false,"name":"Demon Castle 3F","order":84,"parentId":28,"scrollX":540.6666666666666,"scrollY":489,"quick":false},
 {"id":72,"expanded":false,"name":"Dogmatika Castle Bedrooms","order":5,"parentId":9,"scrollX":2114.4,"scrollY":1155.6,"quick":false},
@@ -84,6 +84,6 @@ null,
 {"id":82,"expanded":false,"name":"Dogmatika Outskirts","order":14,"parentId":80,"scrollX":973.1999999999999,"scrollY":577.8,"quick":false},
 {"id":83,"expanded":false,"name":"Dogmatika Staircase","order":9,"parentId":7,"scrollX":1390.2857142857142,"scrollY":825.4285714285713,"quick":false},
 {"id":84,"expanded":false,"name":"TestRoom2","order":2,"parentId":0,"scrollX":1622,"scrollY":963,"quick":false},
-{"id":85,"expanded":true,"name":"Dogmatika Plaza","order":11,"parentId":76,"scrollX":2544,"scrollY":1806,"quick":false},
-{"id":86,"expanded":false,"name":"Dogmatika Shopping District","order":12,"parentId":85,"scrollX":1722.8571428571427,"scrollY":868.2857142857142,"quick":false}
+{"id":85,"expanded":true,"name":"Dogmatika Plaza","order":11,"parentId":76,"scrollX":2268,"scrollY":1550,"quick":false},
+{"id":86,"expanded":false,"name":"Dogmatika Shopping District","order":12,"parentId":85,"scrollX":1722.6666666666667,"scrollY":868.6666666666666,"quick":false}
 ]
