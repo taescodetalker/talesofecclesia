@@ -82,7 +82,7 @@ null,
 {"id":80,"expanded":true,"name":"Item Shop","order":13,"parentId":76,"scrollX":1216.5,"scrollY":710.25,"quick":false},
 {"id":81,"expanded":false,"name":"Call of the Haunted","order":28,"parentId":15,"scrollX":1622,"scrollY":963,"quick":false},
 {"id":82,"expanded":false,"name":"Dogmatika Outskirts","order":14,"parentId":80,"scrollX":973.1999999999999,"scrollY":577.8,"quick":false},
-{"id":83,"expanded":false,"name":"Dogmatika Staircase","order":9,"parentId":7,"scrollX":1390.2857142857142,"scrollY":825.4285714285713,"quick":false},
+{"id":83,"expanded":false,"name":"Dogmatika Staircase","order":9,"parentId":7,"scrollX":1081.3333333333333,"scrollY":631.3333333333334,"quick":false},
 {"id":84,"expanded":false,"name":"TestRoom2","order":2,"parentId":0,"scrollX":1081.3333333333333,"scrollY":642,"quick":false},
 {"id":85,"expanded":true,"name":"Dogmatika Plaza","order":11,"parentId":76,"scrollX":1946.3999999999999,"scrollY":1136.3999999999999,"quick":false},
 {"id":86,"expanded":false,"name":"Dogmatika Shopping District","order":12,"parentId":85,"scrollX":1722.6666666666667,"scrollY":868.6666666666666,"quick":false}
