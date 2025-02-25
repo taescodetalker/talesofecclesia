@@ -1,5 +1,5 @@
 //=============================================================================
-// rmmz_scenes.js v1.8.0
+// rmmz_scenes.js v1.9.0
 //=============================================================================
 
 //-----------------------------------------------------------------------------
@@ -2019,7 +2019,7 @@ Scene_Equip.prototype.onSlotOk = function() {
     this._slotWindow.hide();
     this._itemWindow.show();
     this._itemWindow.activate();
-    this._itemWindow.select(0);
+    this._itemWindow.forceSelect(0);
 };
 
 Scene_Equip.prototype.onSlotCancel = function() {
@@ -2907,7 +2907,7 @@ Scene_Name.prototype.editWindowRect = function() {
     const inputWindowHeight = this.calcWindowHeight(9, true);
     const padding = $gameSystem.windowPadding();
     const ww = 600;
-    const wh = ImageManager.faceHeight + padding * 2;
+    const wh = ImageManager.standardFaceHeight + padding * 2;
     const wx = (Graphics.boxWidth - ww) / 2;
     const wy = (Graphics.boxHeight - (wh + inputWindowHeight + 8)) / 2;
     return new Rectangle(wx, wy, ww, wh);
