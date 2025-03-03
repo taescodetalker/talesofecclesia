@@ -22,5 +22,6 @@ var $plugins =
 {"name":"VT_Map_Clock","status":true,"description":"Custom clock plugin that displays hours and minutes on screen.","parameters":{"clockPositionX":"1550","clockPositionY":"0","fontSize":"34","fontColor":"#FFD700","outlineColor":"#000000"}},
 {"name":"GoldHUD","status":true,"description":"Displays a customizable gold counter with adjustable position, opacity, and font settings via the Plugin Manager.","parameters":{"Window X Offset":"60","Window Y Offset":"60","Window Opacity":"255","Font Size":"22","Font Color":"#FFD700","Outline Color":"#000000"}},
 {"name":"VT_Shader_Manager","status":true,"description":"Manages and loads custom shaders for use in RPG Maker MZ. Version 1.0","parameters":{"ShaderFolder":"shaders/"}},
-{"name":"VT_Shader_EventLight","status":true,"description":"","parameters":{}}
+{"name":"VT_Shader_EventLight","status":true,"description":"","parameters":{}},
+{"name":"VT_Camera_Transition","status":true,"description":"Adds smooth camera transitions and zoom to RPG Maker MZ.","parameters":{}}
 ];
