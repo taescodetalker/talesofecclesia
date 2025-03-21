@@ -307,16 +307,21 @@
 		return false;
 	};
 
+	const _Scene_Map_createAllWindows = Scene_Map.prototype.createAllWindows;
+	Scene_Map.prototype.createAllWindows = function() {
+		this.createActorOverlay();
+		_Scene_Map_createAllWindows.call(this);
+	};
+
+	Scene_Map.prototype.createActorOverlay = function() {
+		this._partySpritesLayer = new PIXI.Container();
+		this.addChild(this._partySpritesLayer);
+	};
+
 	Scene_Map.prototype._refreshPartySprites = function () {
 		// Clear existing sprites from the party layer
-		if (this._partySpritesLayer) {
-			this._partySpritesLayer.removeChildren();
-		} else {
-			// Create a dedicated container for party sprites
-			this._partySpritesLayer = new PIXI.Container();
-			this._spriteset._pictureContainer.addChildAt(this._partySpritesLayer, 0);
-		}
-
+		this._partySpritesLayer.removeChildren();
+		
 		// Redraw sprites for current party members
 		const partyMembers = $gameParty.members();
 
