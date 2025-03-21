@@ -286,14 +286,14 @@ Graphics._renderer = new PIXI.Renderer({
 		// Ensure the map's spriteset is ready
 		if (this._spriteset && combinedShader) {
 			// this._spriteset.filters = [dayNightShader, lightShader]; // Apply the shader filter
-			this._spriteset.filters = [combinedShader];
+			this._spriteset._baseSprite.filters = [combinedShader];
 
-			const centerX = Graphics.width / 2; // Middle of the screen (X)
-			const centerY = Graphics.height / 2; // Middle of the screen (Y)
+			//const centerX = Graphics.width / 2; // Middle of the screen (X)
+			//const centerY = Graphics.height / 2; // Middle of the screen (Y)
 
 			// Add the light
-			const lightRadius = 0.15; // Light radius (normalized size)
-			const lightIntensity = 1.0; // Light brightness
+			//const lightRadius = 0.15; // Light radius (normalized size)
+			//const lightIntensity = 1.0; // Light brightness
 
 			// addLight(centerX, centerY, lightRadius, lightIntensity);
 		}

@@ -9,6 +9,17 @@ var $plugins =
         "parameters": {}
     },
     {
+        "name": "Zoom",
+        "status": true,
+        "description": "v0.6.0 Map zoom",
+        "parameters": {
+            "Default zoom for maps": "2.00",
+            "Always free camera": "false",
+            "Fix sprite black lines": "true",
+            "Fix map encounter zoom": "true"
+        }
+    },
+    {
         "name": "VT_ActorOverlay",
         "status": true,
         "description": "Displays an overlay with actor picture, HP, and MP bars.",

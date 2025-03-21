@@ -26,8 +26,8 @@
         "name": "Closed Forest",
         "order": 31,
         "parentId": 15,
-        "scrollX": 1389.818181818182,
-        "scrollY": 1185.2727272727273,
+        "scrollX": 1390.2857142857142,
+        "scrollY": 1185.4285714285713,
         "quick": false
     },
     {
@@ -66,8 +66,8 @@
         "name": "INTRO",
         "order": 3,
         "parentId": 0,
-        "scrollX": 884.7272727272727,
-        "scrollY": 525.2727272727273
+        "scrollX": 704.5,
+        "scrollY": 442
     },
     {
         "id": 8,
@@ -114,8 +114,8 @@
         "name": "Sogen ",
         "order": 25,
         "parentId": 7,
-        "scrollX": 1389.818181818182,
-        "scrollY": 812.1818181818182,
+        "scrollX": 1390.2857142857142,
+        "scrollY": 811.7142857142857,
         "quick": false
     },
     {
@@ -143,8 +143,8 @@
         "name": "Forest of Wings (TBC)",
         "order": 28,
         "parentId": 11,
-        "scrollX": 893.4545454545455,
-        "scrollY": 825.2727272727273,
+        "scrollX": 1390.2857142857142,
+        "scrollY": 825.4285714285713,
         "quick": false
     },
     {
@@ -153,8 +153,8 @@
         "name": "Secret  Village",
         "order": 44,
         "parentId": 12,
-        "scrollX": 1094.1818181818182,
-        "scrollY": 2131.090909090909,
+        "scrollX": 1322.5,
+        "scrollY": 2363,
         "quick": false
     },
     {
@@ -213,8 +213,8 @@
         "name": "Castle (AFTER)",
         "order": 19,
         "parentId": 67,
-        "scrollX": 1083.2727272727273,
-        "scrollY": 1382.7272727272727
+        "scrollX": 1390.2857142857142,
+        "scrollY": 1382.5714285714284
     },
     {
         "id": 23,
@@ -462,8 +462,8 @@
         "name": "Abandoned House",
         "order": 30,
         "parentId": 15,
-        "scrollX": 884.7272727272727,
-        "scrollY": 525.2727272727273,
+        "scrollX": 1390.2857142857142,
+        "scrollY": 825.4285714285713,
         "quick": false
     },
     {
@@ -532,8 +532,8 @@
         "name": "TBG Manor ",
         "order": 26,
         "parentId": 12,
-        "scrollX": 884.7272727272727,
-        "scrollY": 516.5454545454546,
+        "scrollX": 1390.2857142857142,
+        "scrollY": 811.7142857142857,
         "quick": false
     },
     {
@@ -552,8 +552,8 @@
         "name": "Goddess' Retreat",
         "order": 43,
         "parentId": 12,
-        "scrollX": 893.4545454545455,
-        "scrollY": 971.4545454545455,
+        "scrollX": 559.3333333333334,
+        "scrollY": 971,
         "quick": true
     },
     {
@@ -612,8 +612,8 @@
         "name": "Dogmatika Nexus",
         "order": 8,
         "parentId": 9,
-        "scrollX": 893.4545454545455,
-        "scrollY": 770.7272727272727,
+        "scrollX": 1390.2857142857142,
+        "scrollY": 825.4285714285713,
         "quick": false
     },
     {
@@ -711,8 +711,8 @@
         "name": "Dogmatika Castle Bedrooms",
         "order": 5,
         "parentId": 9,
-        "scrollX": 2596.3636363636365,
-        "scrollY": 1394.7272727272727,
+        "scrollX": 2596.5,
+        "scrollY": 1470,
         "quick": false
     },
     {
@@ -751,8 +751,8 @@
         "name": "Dogmatika Nation PREVIOUS",
         "order": 10,
         "parentId": 7,
-        "scrollX": 1026.5454545454545,
-        "scrollY": 825.2727272727273
+        "scrollX": 1390.2857142857142,
+        "scrollY": 825.4285714285713
     },
     {
         "id": 77,
@@ -780,8 +780,8 @@
         "name": "Dogmatika Castle Lobby",
         "order": 6,
         "parentId": 72,
-        "scrollX": 2245.090909090909,
-        "scrollY": 3554.727272727273,
+        "scrollX": 2245.5,
+        "scrollY": 3638,
         "quick": false
     },
     {
@@ -790,8 +790,8 @@
         "name": "Item Shop",
         "order": 13,
         "parentId": 76,
-        "scrollX": 884.7272727272727,
-        "scrollY": 516.5454545454546,
+        "scrollX": 1390.2857142857142,
+        "scrollY": 825.4285714285713,
         "quick": false
     },
     {
@@ -810,8 +810,8 @@
         "name": "Dogmatika Outskirts",
         "order": 14,
         "parentId": 80,
-        "scrollX": 884.7272727272727,
-        "scrollY": 897.2727272727274,
+        "scrollX": 1390.2857142857142,
+        "scrollY": 825.4285714285713,
         "quick": false
     },
     {
@@ -840,8 +840,8 @@
         "name": "Dogmatika Plaza",
         "order": 11,
         "parentId": 76,
-        "scrollX": 1947.2727272727273,
-        "scrollY": 1094.7272727272727,
+        "scrollX": 1947.4285714285713,
+        "scrollY": 1094.5714285714284,
         "quick": false
     },
     {
