@@ -17,6 +17,10 @@
 (() => {
 	const eventToLightMap = {}; // Maps event ID to light index
 
+	Game_Event.prototype.lightRadius = function() {
+		return this._lightRadius || 0;
+	};
+
 	const _Spriteset_Map_createCharacters = Spriteset_Map.prototype.createCharacters;
 	Spriteset_Map.prototype.createCharacters = function () {
 		_Spriteset_Map_createCharacters.call(this);
@@ -36,6 +40,7 @@
 				const radius = parseFloat(lightTag[2]) || 0.3; // Default radius
 				const intensity = parseFloat(lightTag[3]) || 0.7; // Default intensity
 
+				event._lightRadius = radius;
 				// Get the event's screen position
 				const x = event.screenX();
 				const y = event.screenY();
@@ -66,15 +71,32 @@
 		console.log("All lights cleared!");
 	};
 
+	Spriteset_Map.prototype.zoomAwareLightsPositionUpdate = function(lightIndex, newX, newY) {
+		if(!$gameScreen) return;
+		const posIndex = lightIndex * 2; // Each light uses 2 slots for position (x, y)
+		const zoomX = $gameScreen.zoomX();
+		const zoomY = $gameScreen.zoomY();
+		const zoomScale = $gameScreen.zoomScale();
+		let x = newX;
+		let y = newY;
+		if(zoomX > 0) {
+			x -= zoomX - Graphics.width / (2 * zoomScale);
+		}
+		if(zoomY > 0) {
+			y -= zoomY - Graphics.height / (2 * zoomScale);
+		}
+		SceneManager._scene.combinedUniforms.lightPos[posIndex] = x / (Graphics.width / zoomScale); 		// Update X
+		SceneManager._scene.combinedUniforms.lightPos[posIndex + 1] = y / (Graphics.height / zoomScale); 	// Update Y
+	};
+
 	Spriteset_Map.prototype.updateEventLights = function () {
-		$gameMap.events().forEach((event) => {
-			const lightIndex = eventToLightMap[event.eventId()];
+		for(e of $gameMap.events()) {
+			const lightIndex = eventToLightMap[e.eventId()];
 			if (lightIndex !== undefined) {
-				const posIndex = lightIndex * 2; // Each light uses 2 slots for position (x, y)
-				SceneManager._scene.combinedUniforms.lightPos[posIndex] = event.screenX() / Graphics.width; // Update X
-				SceneManager._scene.combinedUniforms.lightPos[posIndex + 1] = event.screenY() / Graphics.height; // Update Y
+				this.zoomAwareLightsPositionUpdate(lightIndex, e.screenX(), e.screenY());
+				SceneManager._scene.combinedUniforms.lightRadius[lightIndex] = e.lightRadius() * $gameScreen.zoomScale();
 			}
-		});
+		}
 	};
 
 	let playerLightIndex = null; // Tracks the player's light index
@@ -95,9 +117,7 @@
 				console.log("Player light added.");
 			} else {
 				// Update the player's light position
-				const posIndex = playerLightIndex * 2;
-				SceneManager._scene.combinedUniforms.lightPos[posIndex] = $gamePlayer.screenX() / Graphics.width;
-				SceneManager._scene.combinedUniforms.lightPos[posIndex + 1] = $gamePlayer.screenY() / Graphics.height;
+				this.zoomAwareLightsPositionUpdate(playerLightIndex, $gamePlayer.screenX(), $gamePlayer.screenY());
 			}
 		} else {
 			// Remove the player's light if it exists
