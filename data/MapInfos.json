@@ -66,8 +66,8 @@
         "name": "INTRO",
         "order": 3,
         "parentId": 0,
-        "scrollX": 884.7272727272727,
-        "scrollY": 525.2727272727273
+        "scrollX": 704.5,
+        "scrollY": 442
     },
     {
         "id": 8,
@@ -712,7 +712,7 @@
         "order": 5,
         "parentId": 9,
         "scrollX": 2596.5,
-        "scrollY": 1478,
+        "scrollY": 1470,
         "quick": false
     },
     {
@@ -780,8 +780,8 @@
         "name": "Dogmatika Castle Lobby",
         "order": 6,
         "parentId": 72,
-        "scrollX": 2973.5,
-        "scrollY": 3416,
+        "scrollX": 2245.5,
+        "scrollY": 3638,
         "quick": false
     },
     {
