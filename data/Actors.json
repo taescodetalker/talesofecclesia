@@ -299,7 +299,7 @@
         "maxLevel": 99,
         "name": "Shuraig",
         "nickname": "The Ominious Omen",
-        "note": "<picture:Shuraigface11>",
+        "note": "<picture:Shuraig1face>",
         "profile": ""
     },
     {
@@ -417,11 +417,11 @@
                 "value": 1
             }
         ],
-        "initialLevel": 5,
+        "initialLevel": 3,
         "maxLevel": 99,
         "name": "Rugal",
         "nickname": "The Silver Sheller",
-        "note": "",
+        "note": "<picture:RugalFace>",
         "profile": ""
     },
     {
