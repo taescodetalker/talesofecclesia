@@ -42,55 +42,10 @@ var $plugins =
         }
     },
     {
-        "name": "ButtonPicture",
-        "status": false,
-        "description": "Makes a picture clickable.",
-        "parameters": {}
-    },
-    {
         "name": "AltMenuScreen",
         "status": true,
         "description": "Alternative menu screen layout.",
         "parameters": {}
-    },
-    {
-        "name": "TextPicture",
-        "status": false,
-        "description": "Displays text as a picture.",
-        "parameters": {}
-    },
-    {
-        "name": "PKD_SimpleQuestSystem",
-        "status": false,
-        "description": "(v.1.2.2)[BASIC] Simple quests system",
-        "parameters": {
-            "sqsQuests:structA": "[\"{\\\"id\\\":\\\"Mercourier\\\",\\\"title\\\":\\\"New Quest\\\",\\\"titleForList\\\":\\\"New Quest\\\",\\\"titleImage\\\":\\\"questTitle\\\",\\\"tasks:strA\\\":\\\"[\\\\\\\"First task\\\\\\\"]\\\",\\\"descriptions:strA\\\":\\\"[\\\\\\\"\\\\\\\\\\\\\\\"Find The Mercourier.\\\\\\\\\\\\\\\"\\\\\\\"]\\\",\\\"priority:int\\\":\\\"1\\\",\\\"difficulty:int\\\":\\\"0\\\",\\\"categoryId\\\":\\\"1\\\"}\"]",
-            "sqsPointers:structA": "[\"{\\\"questId\\\":\\\"Mercourier\\\",\\\"pointsData:structA\\\":\\\"[\\\\\\\"{\\\\\\\\\\\\\\\"taskIndex:int\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"1\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"points:structA\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"[]\\\\\\\\\\\\\\\"}\\\\\\\"]\\\"}\"]",
-            "sqsQuestsCategories:structA": "[\"{\\\"position:struct\\\":\\\"{\\\\\\\"x\\\\\\\":\\\\\\\"250\\\\\\\",\\\\\\\"y\\\\\\\":\\\\\\\"Graphics.height - 56\\\\\\\"}\\\",\\\"categoryId\\\":\\\"\\\",\\\"buttonImage:struct\\\":\\\"{\\\\\\\"main\\\\\\\":\\\\\\\"Cat_All_00\\\\\\\",\\\\\\\"hover\\\\\\\":\\\\\\\"Cat_All_01\\\\\\\",\\\\\\\"disabled\\\\\\\":\\\\\\\"Cat_All_03\\\\\\\"}\\\"}\",\"{\\\"position:struct\\\":\\\"{\\\\\\\"x\\\\\\\":\\\\\\\"370\\\\\\\",\\\\\\\"y\\\\\\\":\\\\\\\"Graphics.height - 56\\\\\\\"}\\\",\\\"categoryId\\\":\\\"Main\\\",\\\"buttonImage:struct\\\":\\\"{\\\\\\\"main\\\\\\\":\\\\\\\"Cat_Main_00\\\\\\\",\\\\\\\"hover\\\\\\\":\\\\\\\"Cat_Main_01\\\\\\\",\\\\\\\"disabled\\\\\\\":\\\\\\\"Cat_Main_03\\\\\\\"}\\\"}\",\"{\\\"position:struct\\\":\\\"{\\\\\\\"x\\\\\\\":\\\\\\\"510\\\\\\\",\\\\\\\"y\\\\\\\":\\\\\\\"Graphics.height - 56\\\\\\\"}\\\",\\\"categoryId\\\":\\\"Side\\\",\\\"buttonImage:struct\\\":\\\"{\\\\\\\"main\\\\\\\":\\\\\\\"Cat_Side_00\\\\\\\",\\\\\\\"hover\\\\\\\":\\\\\\\"Cat_Side_01\\\\\\\",\\\\\\\"disabled\\\\\\\":\\\\\\\"Cat_Side_03\\\\\\\"}\\\"}\",\"{\\\"position:struct\\\":\\\"{\\\\\\\"x\\\\\\\":\\\\\\\"630\\\\\\\",\\\\\\\"y\\\\\\\":\\\\\\\"Graphics.height - 56\\\\\\\"}\\\",\\\"categoryId\\\":\\\"Other\\\",\\\"buttonImage:struct\\\":\\\"{\\\\\\\"main\\\\\\\":\\\\\\\"Cat_Other_00\\\\\\\",\\\\\\\"hover\\\\\\\":\\\\\\\"Cat_Other_01\\\\\\\",\\\\\\\"disabled\\\\\\\":\\\\\\\"Cat_Other_03\\\\\\\"}\\\"}\"]",
-            "isNeedMenuCommand:b": "true",
-            "menuCommandText": "Quests",
-            "isSortByNew:b": "false",
-            "isSortByActive:b": "false",
-            "buttonForOpenJournal": "j",
-            "spacer|visualSettings": "",
-            "visualSettings": "",
-            "questJournalBackground:struct": "{\"x\":\"(Graphics.width / 2) - 408\",\"y\":\"(Graphics.height / 2) - 312\"}",
-            "questJournalLine:struct": "{\"x\":\"234\",\"y\":\"140\"}",
-            "questsListSettings:struct": "{\"position:struct\":\"{\\\"x\\\":\\\"20\\\",\\\"y\\\":\\\"176\\\"}\",\"height:int\":\"360\",\"textLine:struct\":\"{\\\"lineSize:struct\\\":\\\"{\\\\\\\"w\\\\\\\":\\\\\\\"200\\\\\\\",\\\\\\\"h\\\\\\\":\\\\\\\"36\\\\\\\"}\\\",\\\"face:str\\\":\\\"\\\",\\\"size:int\\\":\\\"20\\\"}\"}",
-            "questsListCursor:struct": "{\"x\":\"186\",\"y\":\"18\"}",
-            "questsListActive:struct": "{\"x\":\"186\",\"y\":\"18\"}",
-            "questsListNewMark:struct": "{\"x\":\"2\",\"y\":\"0\"}",
-            "questHeaderSettings:struct": "{\"position:struct\":\"{\\\"x\\\":\\\"386\\\",\\\"y\\\":\\\"100\\\"}\",\"position2:struct\":\"{\\\"x\\\":\\\"250\\\",\\\"y\\\":\\\"80\\\"}\",\"textLine:struct\":\"{\\\"lineSize:struct\\\":\\\"{\\\\\\\"w\\\\\\\":\\\\\\\"256\\\\\\\",\\\\\\\"h\\\\\\\":\\\\\\\"84\\\\\\\"}\\\",\\\"face:str\\\":\\\"\\\",\\\"size:int\\\":\\\"20\\\"}\"}",
-            "questDescSettings:struct": "{\"position:struct\":\"{\\\"x\\\":\\\"270\\\",\\\"y\\\":\\\"160\\\"}\",\"textLine:struct\":\"{\\\"lineSize:struct\\\":\\\"{\\\\\\\"w\\\\\\\":\\\\\\\"460\\\\\\\",\\\\\\\"h\\\\\\\":\\\\\\\"140\\\\\\\"}\\\",\\\"face:str\\\":\\\"\\\",\\\"size:int\\\":\\\"14\\\"}\"}",
-            "questTaskHeaderSettings:struct": "{\"x\":\"230\",\"y\":\"300\"}",
-            "questGroupButtonA:struct": "{\"x\":\"30\",\"y\":\"80\"}",
-            "questGroupButtonB:struct": "{\"x\":\"140\",\"y\":\"80\"}",
-            "questsTasksSettings:struct": "{\"positions:structA\":\"[\\\"{\\\\\\\"x\\\\\\\":\\\\\\\"270\\\\\\\",\\\\\\\"y\\\\\\\":\\\\\\\"340\\\\\\\"}\\\",\\\"{\\\\\\\"x\\\\\\\":\\\\\\\"270\\\\\\\",\\\\\\\"y\\\\\\\":\\\\\\\"370\\\\\\\"}\\\",\\\"{\\\\\\\"x\\\\\\\":\\\\\\\"270\\\\\\\",\\\\\\\"y\\\\\\\":\\\\\\\"400\\\\\\\"}\\\",\\\"{\\\\\\\"x\\\\\\\":\\\\\\\"270\\\\\\\",\\\\\\\"y\\\\\\\":\\\\\\\"430\\\\\\\"}\\\",\\\"{\\\\\\\"x\\\\\\\":\\\\\\\"270\\\\\\\",\\\\\\\"y\\\\\\\":\\\\\\\"460\\\\\\\"}\\\",\\\"{\\\\\\\"x\\\\\\\":\\\\\\\"270\\\\\\\",\\\\\\\"y\\\\\\\":\\\\\\\"490\\\\\\\"}\\\",\\\"{\\\\\\\"x\\\\\\\":\\\\\\\"270\\\\\\\",\\\\\\\"y\\\\\\\":\\\\\\\"520\\\\\\\"}\\\",\\\"{\\\\\\\"x\\\\\\\":\\\\\\\"270\\\\\\\",\\\\\\\"y\\\\\\\":\\\\\\\"550\\\\\\\"}\\\"]\",\"position:struct\":\"{\\\"x\\\":\\\"-24\\\",\\\"y\\\":\\\"4\\\"}\",\"textLine:struct\":\"{\\\"lineSize:struct\\\":\\\"{\\\\\\\"w\\\\\\\":\\\\\\\"420\\\\\\\",\\\\\\\"h\\\\\\\":\\\\\\\"60\\\\\\\"}\\\",\\\"face:str\\\":\\\"\\\",\\\"size:int\\\":\\\"20\\\"}\"}",
-            "questJournalActiveHelp:struct": "{\"x\":\"36\",\"y\":\"Graphics.height - 56\"}",
-            "visualPointers:structA": "[\"{\\\"image\\\":\\\"QuestArrow_A\\\",\\\"color:color\\\":\\\"#bfcc2f\\\"}\",\"{\\\"image\\\":\\\"QuestArrow_A\\\",\\\"color:color\\\":\\\"#277fc2\\\"}\",\"{\\\"image\\\":\\\"QuestArrow_A\\\",\\\"color:color\\\":\\\"#c7205d\\\"}\"]",
-            "journalNotifyPosition:struct": "{\"x\":\"Graphics.width / 2 - 200\",\"y\":\"32\"}",
-            "questDifficultyPosition:struct": "{\"x\":\"Graphics.width - 104\",\"y\":\"85\"}"
-        }
     },
     {
         "name": "healthbar",
@@ -164,20 +119,6 @@ var $plugins =
         }
     },
     {
-        "name": "Mini-Map Plugin",
-        "status": false,
-        "description": "Adds a mini-map system to your game.",
-        "parameters": {
-            "MapWidth": "150",
-            "MapHeight": "150",
-            "BackgroundColor": "#333",
-            "PlayerColor": "#0f0",
-            "MarkerColor": "#f00",
-            "PositionTop": "20px",
-            "PositionRight": "20px"
-        }
-    },
-    {
         "name": "VT_TextPicture",
         "status": true,
         "description": "Displays text as a picture.",
@@ -207,28 +148,6 @@ var $plugins =
         "status": true,
         "description": "Customizes the battle status animation.",
         "parameters": {}
-    },
-    {
-        "name": "SRD_UltraBase",
-        "status": false,
-        "description": "Contains code required for HUD Maker Ultra. Does not affect the RPG Maker codebase.",
-        "parameters": {}
-    },
-    {
-        "name": "SRD_HUDMakerUltra",
-        "status": false,
-        "description": "Allows you to create and use HUDs for the map and battles.\r\nRequires the HUD Maker Ultra editor.",
-        "parameters": {
-            "Auto-Reload HUD Data": "false",
-            "Enable Screenshots": "false",
-            "Hide Battle Status Window": "false",
-            "Hide Battle Selection Window": "false",
-            "Fade During Events": "true",
-            "Event Fade Opacity": "125",
-            "Fade Duration": "10",
-            "Map Visibility Code": "return true;",
-            "Battle Visibility Code": "return true;"
-        }
     },
     {
         "name": "VT_Map_Clock",
