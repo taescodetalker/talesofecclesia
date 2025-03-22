@@ -191,7 +191,15 @@ var $plugins =
     {
         "name": "DJ_BattleStatus",
         "status": true,
-        "description": "",
-        "parameters": {}
+        "description": "Customizes the battle status menu.",
+        "parameters": {
+            "hpBarColor": "rgb(255, 68, 68)",
+            "mpBarColor": "rgb(0, 38, 255)",
+            "tpBarColor": "rgb(0, 173, 0)",
+            "hpBarColor2": "rgb(255, 68, 68)",
+            "mpBarColor2": "rgb(0, 38, 255)",
+            "tpBarColor2": "rgb(0, 173, 0)",
+            "gaugesWidth": "256"
+        }
     }
 ];
