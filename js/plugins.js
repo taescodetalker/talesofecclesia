@@ -139,13 +139,13 @@ var $plugins =
     },
     {
         "name": "VT_Battle_BattleStatus",
-        "status": true,
+        "status": false,
         "description": "Customizes the battle menu UI and functionality.",
         "parameters": {}
     },
     {
         "name": "VT_Battle_BattleStatus_Animation",
-        "status": true,
+        "status": false,
         "description": "Customizes the battle status animation.",
         "parameters": {}
     },
@@ -184,6 +184,12 @@ var $plugins =
     },
     {
         "name": "VT_Shader_EventLight",
+        "status": true,
+        "description": "",
+        "parameters": {}
+    },
+    {
+        "name": "DJ_BattleStatus",
         "status": true,
         "description": "",
         "parameters": {}
