@@ -139,13 +139,13 @@ var $plugins =
     },
     {
         "name": "VT_Battle_BattleStatus",
-        "status": true,
+        "status": false,
         "description": "Customizes the battle menu UI and functionality.",
         "parameters": {}
     },
     {
         "name": "VT_Battle_BattleStatus_Animation",
-        "status": true,
+        "status": false,
         "description": "Customizes the battle status animation.",
         "parameters": {}
     },
@@ -187,5 +187,19 @@ var $plugins =
         "status": true,
         "description": "",
         "parameters": {}
+    },
+    {
+        "name": "DJ_BattleStatus",
+        "status": true,
+        "description": "Customizes the battle status menu.",
+        "parameters": {
+            "hpBarColor": "rgb(255, 68, 68)",
+            "mpBarColor": "rgb(0, 38, 255)",
+            "tpBarColor": "rgb(0, 173, 0)",
+            "hpBarColor2": "rgb(255, 68, 68)",
+            "mpBarColor2": "rgb(0, 38, 255)",
+            "tpBarColor2": "rgb(0, 173, 0)",
+            "gaugesWidth": "256"
+        }
     }
 ];
