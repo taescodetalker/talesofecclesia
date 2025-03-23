@@ -66,6 +66,12 @@ Window_BattleStatus.prototype.loadFaceImages = function() {
 };
 
 Window_BattleStatus.prototype.drawActorFace = function(actor, x, y, width, height) {
+    const pictureName = this.getPictureName(actor);
+    if(!pictureName) {
+        Window_StatusBase.prototype.drawActorFace.call(this, actor, x, y, width, height);
+        return;
+    }
+    
     width = width || ImageManager.standardFaceWidth;
     height = height || ImageManager.standardFaceHeight;
     const targetSize = width - this.padding * 2;
@@ -127,7 +133,8 @@ Window_BattleStatus.prototype.preparePartyRefresh = function() {
 DJ.BS.Window_BattleStatus_drawItemStatus = Window_BattleStatus.prototype.drawItemStatus;
 Window_BattleStatus.prototype.drawItemStatus = function(index) {
     DJ.BS.Window_BattleStatus_drawItemStatus.call(this, index);
-    this.drawActorLevel(this.actor(index), this.padding, this.padding);
+    const faceRect = this.faceRect(index);
+    this.drawActorLevel(this.actor(index), faceRect.x + this.padding, faceRect.y + this.padding);
 };
 
 Window_BattleStatus.prototype.drawActorLevel = function(actor, x, y) {
