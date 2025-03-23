@@ -26621,6 +26621,13 @@
                             "parameters": []
                         },
                         {
+                            "code": 230,
+                            "indent": 0,
+                            "parameters": [
+                                60
+                            ]
+                        },
+                        {
                             "code": 0,
                             "indent": 0,
                             "parameters": []
@@ -26655,7 +26662,7 @@
                         "selfSwitchCh": "A",
                         "selfSwitchValid": true,
                         "switch1Id": 10,
-                        "switch1Valid": true,
+                        "switch1Valid": false,
                         "switch2Id": 1,
                         "switch2Valid": false,
                         "variableId": 1,
