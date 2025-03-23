@@ -128,7 +128,7 @@
         "pitch": 70,
         "volume": 90
     },
-    "editMapId": 16,
+    "editMapId": 77,
     "elements": [
         "",
         "Physical",
@@ -439,7 +439,7 @@
         "",
         "maximus",
         "",
-        "",
+        "hidden chest",
         "",
         "AFTER SWITCH",
         "he gone",
@@ -666,7 +666,7 @@
         "",
         ""
     ],
-    "versionId": 50641724,
+    "versionId": 56646979,
     "victoryMe": {
         "name": "Victory2",
         "pan": 0,
