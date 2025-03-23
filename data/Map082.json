@@ -12390,7 +12390,7 @@
                                         }
                                     ],
                                     "repeat": false,
-                                    "skippable": false,
+                                    "skippable": true,
                                     "wait": true
                                 }
                             ]
@@ -12449,7 +12449,7 @@
                                         }
                                     ],
                                     "repeat": false,
-                                    "skippable": false,
+                                    "skippable": true,
                                     "wait": true
                                 }
                             ]
