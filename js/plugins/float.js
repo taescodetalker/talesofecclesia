@@ -17,7 +17,7 @@
 
 (() => {
     // Configurable float settings
-    const floatHeight = 10; // Maximum height the sprite will move up or down
+    const floatHeight = 15; // Maximum height the sprite will move up or down
     const floatSpeed = 60; // Speed of the float (higher is slower)
 
     // Extend the Sprite_Enemy class to include floating movement
@@ -30,7 +30,7 @@
     // Add floating motion
     Sprite_Enemy.prototype.applyFloatingMotion = function() {
         const time = Graphics.frameCount; // Use the frame count for smooth animation
-        const offset = Math.sin((time + this._enemy.index() * floatSpeed) / floatSpeed) * floatHeight;
+        const offset = Math.floor(Math.sin((time + this._enemy.index() * floatSpeed) / floatSpeed) * floatHeight);
         this.y += offset;
     };
 })();
