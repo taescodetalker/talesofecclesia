@@ -128,7 +128,7 @@
         "pitch": 70,
         "volume": 90
     },
-    "editMapId": 77,
+    "editMapId": 9,
     "elements": [
         "",
         "Physical",
@@ -145,7 +145,8 @@
         "Shield",
         "Head",
         "Body",
-        "Accessory"
+        "Accessory",
+        "Boots"
     ],
     "gameTitle": "The Branded Chronicles: Stories of Ecclesia",
     "gameoverMe": {
@@ -613,10 +614,10 @@
     "title1Name": "tales",
     "title2Name": "",
     "titleBgm": {
-        "name": "yu-gi-oh-ost-passionate-duelist-_mp3convert.org_",
+        "name": "Intro Music",
         "pan": 0,
         "pitch": 100,
-        "volume": 35
+        "volume": 80
     },
     "titleCommandWindow": {
         "offsetX": 0,
@@ -666,7 +667,7 @@
         "",
         ""
     ],
-    "versionId": 56646979,
+    "versionId": 13530023,
     "victoryMe": {
         "name": "Victory2",
         "pan": 0,
