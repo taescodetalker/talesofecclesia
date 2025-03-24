@@ -14,6 +14,62 @@ DJ.WRDB.pluginName = 'DJ_Wardrobe';
  * @text Wardrobe Processing
  * @desc Launch wardrobe menu where actor can change equipment from available ones. 
  * 
+ * @command gainOutfit
+ * @text Give Outfit to Actor
+ * @desc Use this command to give an outfit to an actor. Actor will be able to access it using wardrobe. 
+ * 
+ * @arg actor
+ * @text Actor gaining outfit
+ * @desc Actor gaining outfit. Leave None for party leader.
+ * @type actor
+ * @default
+ * 
+ * @arg outfit
+ * @text Outfit
+ * @desc Outfit which will be gained by actor or party leader. 
+ * 
+ * @arg outfitName
+ * @text Name
+ * @desc Name of outfit
+ * @parent outfit
+ * @type string
+ * @default Unnamed Outfit
+ * 
+ * @arg characterName
+ * @text Character Name
+ * @desc Name of file from img/characters without extension (Actor1 for img/characters/Actor1.png)
+ * @parent outfit
+ * @type string
+ * @default Actor1
+ * 
+ * @arg characterIndex
+ * @text Character Index
+ * @desc Index of character to be used (one file contains 8 spritesets)
+ * @parent outfit
+ * @type string
+ * @default 1
+ * 
+ * @arg faceName
+ * @text Face Name
+ * @desc Name of file from img/faces without extension (Actor1 for img/faces/Actor1.png)
+ * @parent outfit
+ * @type string
+ * @default Actor1
+ * 
+ * @arg faceIndex
+ * @text Face Index
+ * @desc Index of face to be used (one file contains 8 faces)
+ * @parent outfit
+ * @type string
+ * @default 1
+ * 
+ * @arg battlerName
+ * @text Battler Name 
+ * @desc Name of file from img/sv_actors without extension (Actor2_1 for img/sv_actors/Actor2_1.png)
+ * @parent outfit
+ * @type string
+ * @default
+ * 
  * @help
  * This plugin enables wardrobe access. More help later.
  *
@@ -22,9 +78,26 @@ DJ.WRDB.pluginName = 'DJ_Wardrobe';
  * Version: 0.1.0
  */
 
-PluginManager.registerCommand(DJ.WRDB.pluginName, 'wardrobeProcessing', args => {
+PluginManager.registerCommand(DJ.WRDB.pluginName, 'wardrobeProcessing', _ => {
     SceneManager.push(Scene_Wardrobe);
     SceneManager.prepareNextScene($gameParty.leader())
+});
+
+PluginManager.registerCommand(DJ.WRDB.pluginName, 'gainOutfit', args => {
+    const leader = $gameParty.leader();
+    if(leader) {
+        const actorId = Number(args.actor) || leader.actorId()
+        const actor = $gameActors.actor(actorId);
+        if(actor) {
+            let outfit = new Game_Outfit();
+            outfit.setName(args.outfitName);
+            outfit.setCharacter(args.characterName, Number(args.characterIndex));
+            outfit.setFace(args.faceName, Number(args.faceIndex));
+            outfit.setBattler(args.battlerName);
+            actor.gainOutfit(outfit)
+        }
+    }
+    //else -> party is empty. 
 });
 
 // -----------------------------------------
@@ -69,7 +142,8 @@ Game_Outfit.prototype.setBattler = function(battlerName) {
 Game_Outfit.prototype.equipTo = function(actor) {
     actor.setCharacterImage(this._characterName, this._characterIndex);
     actor.setFaceImage(this._faceName, this._faceIndex);
-    actor.setBattler(this._battlerName);
+    actor.setBattlerImage(this._battlerName);
+    $gamePlayer.refresh();
 };
 
 // -----------------------------------------
@@ -99,6 +173,14 @@ Game_Actor.prototype.initOutfits = function() {
     this._outfitIndex = 0;
 };
 
+Game_Actor.prototype.getOutfits = function() {
+    return this._outfits.slice();
+};
+
+Game_Actor.prototype.getOutfitIndex = function() {
+    return this._outfitIndex;
+};
+
 Game_Actor.prototype.gainOutfit = function(outfit) {
     this._outfits.push(outfit);
 };
@@ -117,10 +199,10 @@ Game_Actor.prototype.loseOutfit = function(outfitName) {
 Game_Actor.prototype.findOutfitIndex = function(outfitName) {
     let index = -1;
     for(outfit of this._outfits) {
+        ++index;
         if(outfit.name() === outfitName) {
             break;
         }
-        ++index;
     }
     return index;
 };
@@ -129,7 +211,7 @@ Game_Actor.prototype.equipOutfit = function(outfitName) {
     const index = this.findOutfitIndex(outfitName);
     if(index === -1) return false;
     this._outfitIndex = index;
-    const outfit = this._outfit[this._outfitIndex];
+    const outfit = this._outfits[this._outfitIndex];
     outfit.equipTo(this);
     return true;
 };
@@ -212,8 +294,8 @@ Scene_Wardrobe.prototype.createWardrobeWindow = function() {
     const rect = this.wardrobeWindowRect();
     this._mainWindow = new Window_WardrobeMain(rect);
     this._mainWindow.setupOutfits(this._actor);
-    //this._mainWindow.setHelpWindow(this._helpWindow);
-    //this._mainWindow.setStatusWindow(this._statusWindow);
+    this._mainWindow.setHelpWindow(this._helpWindow);
+    this._mainWindow.setStatusWindow(this._statusWindow);
     this._mainWindow.hide();
     this._mainWindow.setHandler("ok", this.onChangeOk.bind(this));
     this._mainWindow.setHandler("cancel", this.onChangeCancel.bind(this));
@@ -229,7 +311,7 @@ Scene_Wardrobe.prototype.wardrobeWindowRect = function() {
 };
 
 Scene_Wardrobe.prototype.statusWidth = function() {
-    return Graphics.boxWidth / 2;
+    return 216;
 };
 
 Scene_Wardrobe.prototype.activateMainWindow = function() {
@@ -244,7 +326,13 @@ Scene_Wardrobe.prototype.commandWardrobe = function() {
 };
 
 Scene_Wardrobe.prototype.onChangeOk = function() {
+    this._commandWindow.activate();
     this._mainWindow.hide();
+    this._statusWindow.hide();
+    this._dummyWindow.show();
+    this._helpWindow.clear();
+    const outfit = this._mainWindow.outfit();
+    this._actor.equipOutfit(outfit.name());
 };
 
 Scene_Wardrobe.prototype.onChangeCancel = function() {
@@ -295,7 +383,67 @@ Window_WardrobeMain.prototype.initialize = function(rect) {
 };
 
 Window_WardrobeMain.prototype.setupOutfits = function(actor) {
-    //
+    this.setActorName(actor);
+    this._outfits = actor.getOutfits();
+    this._outfitIndex = actor.getOutfitIndex();
+    this.refresh();
+    this.select(this._outfitIndex);
+};
+
+Window_WardrobeMain.prototype.setActorName = function(actor) {
+    this._actorName = "";
+    if(actor) {
+        this._actorName += actor.name();
+        const actorNickname = actor.nickname();
+        if(actorNickname) {
+            this._actorName += " (" + actorNickname + ")";
+        }
+    }
+}
+
+Window_WardrobeMain.prototype.maxItems = function() {
+    return this._outfits ? this._outfits.length : 1;
+};
+
+Window_WardrobeMain.prototype.outfit = function() {
+    return this.outfitAt(this.index());
+};
+
+Window_WardrobeMain.prototype.outfitAt = function(index) {
+    return this._outfits && index >= 0 ? this._outfits[index] : null;
+};
+
+Window_WardrobeMain.prototype.isEnabled = function(outfit) {
+    return (
+        outfit && outfit !== this.outfitAt(this._outfitIndex)
+    );
+};
+
+Window_WardrobeMain.prototype.drawItem = function(index) {
+    const outfit = this.outfitAt(index);
+    const rect = this.itemLineRect(index);
+    this.changePaintOpacity(this.isEnabled(outfit));
+    this.drawOutfitName(outfit, rect.x, rect.y, rect.width);
+    this.changePaintOpacity(true);
+};
+
+Window_WardrobeMain.prototype.drawOutfitName = function(outfit, x, y, width) {
+    if(outfit) {
+        this.resetTextColor();
+        this.drawText(outfit.name(), x, y, width);
+    }
+};
+
+Window_WardrobeMain.prototype.setStatusWindow = function(statusWindow) {
+    this._statusWindow = statusWindow;
+    this.callUpdateHelp();
+};
+
+Window_WardrobeMain.prototype.updateHelp = function() {
+    this._helpWindow.setText(this._actorName)
+    if(this._statusWindow) {
+        this._statusWindow.setOutfit(this.outfit());
+    }
 };
 
 // -----------------------------------------
@@ -311,4 +459,29 @@ Window_WardrobeStatus.prototype.constructor = Window_WardrobeStatus;
 
 Window_WardrobeStatus.prototype.initialize = function(rect) {
     Window_StatusBase.prototype.initialize.call(this, rect);
+    this._outfit = null;
+    this.refresh();
+};
+
+Window_WardrobeStatus.prototype.refresh = function() {
+    this.contents.clear();
+    if(this._outfit) {
+        this.drawFace(
+            this._outfit._faceName,
+            this._outfit._faceIndex,
+            10,
+            10
+        );
+        this.drawCharacter(
+            this._outfit._characterName,
+            this._outfit._characterIndex,
+            ImageManager.standardFaceWidth + 20,
+            ImageManager.standardFaceHeight + 10
+        )
+    }
+}
+
+Window_WardrobeStatus.prototype.setOutfit = function(outfit) {
+    this._outfit = outfit;
+    this.refresh();
 };
