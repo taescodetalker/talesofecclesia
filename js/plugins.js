@@ -201,5 +201,11 @@ var $plugins =
             "tpBarColor2": "rgb(0, 173, 0)",
             "gaugesWidth": "256"
         }
+    },
+    {
+        "name": "DJ_Wardrobe",
+        "status": true,
+        "description": "Make it possible to access wardrobe system via plugin commands.",
+        "parameters": {}
     }
 ];
