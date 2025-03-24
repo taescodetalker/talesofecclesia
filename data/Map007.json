@@ -4,10 +4,10 @@
     "battleback1Name": "",
     "battleback2Name": "",
     "bgm": {
-        "name": "yu-gi-oh-ost-passionate-duelist-_mp3convert.org_",
+        "name": "Intro Music",
         "pan": 0,
-        "pitch": 80,
-        "volume": 60
+        "pitch": 70,
+        "volume": 80
     },
     "bgs": {
         "name": "",

@@ -649,25 +649,35 @@
     {
         "id": 24,
         "atypeId": 2,
-        "description": "[Magic Equipment] A cloak that houses the power of\nspirits.",
+        "description": "Protects from Fire and Burns",
         "etypeId": 4,
         "traits": [
             {
                 "code": 22,
                 "dataId": 1,
                 "value": 0
+            },
+            {
+                "code": 23,
+                "dataId": 8,
+                "value": 0
+            },
+            {
+                "code": 14,
+                "dataId": 11,
+                "value": 1
             }
         ],
         "iconIndex": 139,
-        "name": "Elemental Cloak",
+        "name": "Elemental Cloak Fire",
         "note": "",
         "params": [
             0,
             0,
             0,
-            28,
-            20,
-            32,
+            5,
+            0,
+            5,
             0,
             0
         ],
@@ -2958,9 +2968,9 @@
     },
     {
         "id": 104,
-        "atypeId": 0,
-        "description": "",
-        "etypeId": 2,
+        "atypeId": 2,
+        "description": "Boots of Fire protection",
+        "etypeId": 5,
         "traits": [
             {
                 "code": 22,
@@ -2968,20 +2978,20 @@
                 "value": 0
             }
         ],
-        "iconIndex": 0,
-        "name": "",
+        "iconIndex": 140,
+        "name": "Fire Waders",
         "note": "",
         "params": [
             0,
             0,
             0,
-            0,
-            0,
-            0,
+            5,
+            5,
+            5,
             0,
             0
         ],
-        "price": 0
+        "price": 650
     },
     {
         "id": 105,
