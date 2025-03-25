@@ -1503,6 +1503,13 @@
                 "conditionType": 1,
                 "conditionParam1": 1,
                 "conditionParam2": 3
+            },
+            {
+                "skillId": 57,
+                "rating": 8,
+                "conditionType": 1,
+                "conditionParam1": 2,
+                "conditionParam2": 0
             }
         ],
         "battlerHue": 0,
