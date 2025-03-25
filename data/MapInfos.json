@@ -104,8 +104,8 @@
         "name": "Oath of the Tri-Brigade",
         "order": 27,
         "parentId": 54,
-        "scrollX": 811,
-        "scrollY": 473.5,
+        "scrollX": 589.8181818181819,
+        "scrollY": 369.8181818181818,
         "quick": false
     },
     {
@@ -462,8 +462,8 @@
         "name": "Abandoned House",
         "order": 30,
         "parentId": 15,
-        "scrollX": 811,
-        "scrollY": 481.5,
+        "scrollX": 589.8181818181819,
+        "scrollY": 417.8181818181818,
         "quick": false
     },
     {
@@ -532,8 +532,8 @@
         "name": "TBG Manor ",
         "order": 26,
         "parentId": 12,
-        "scrollX": 811,
-        "scrollY": 481.5,
+        "scrollX": 589.8181818181819,
+        "scrollY": 417.8181818181818,
         "quick": false
     },
     {
@@ -731,8 +731,8 @@
         "name": "Swamp Village North",
         "order": 34,
         "parentId": 75,
-        "scrollX": 819,
-        "scrollY": 674.5,
+        "scrollX": 610.1818181818181,
+        "scrollY": 674.5454545454545,
         "quick": false
     },
     {
@@ -751,8 +751,8 @@
         "name": "Dogmatika Nation PREVIOUS",
         "order": 10,
         "parentId": 7,
-        "scrollX": 1027,
-        "scrollY": 825.5
+        "scrollX": 1026.909090909091,
+        "scrollY": 825.8181818181819
     },
     {
         "id": 77,
@@ -810,8 +810,8 @@
         "name": "Dogmatika Outskirts",
         "order": 14,
         "parentId": 80,
-        "scrollX": 861,
-        "scrollY": 897.5,
+        "scrollX": 855.2727272727273,
+        "scrollY": 988,
         "quick": false
     },
     {
@@ -840,8 +840,8 @@
         "name": "Dogmatika Plaza",
         "order": 11,
         "parentId": 76,
-        "scrollX": 1947,
-        "scrollY": 1094.5,
+        "scrollX": 1946.909090909091,
+        "scrollY": 1094.1818181818182,
         "quick": false
     },
     {
