@@ -47,7 +47,9 @@ DJ.WRDB.pluginName = 'DJ_Wardrobe';
  * @desc Index of character to be used (one file contains 8 spritesets)
  * @parent outfit
  * @type string
- * @default 1
+ * @default 0
+ * @max 7
+ * @min 0
  * 
  * @arg faceName
  * @text Face Name
@@ -61,7 +63,9 @@ DJ.WRDB.pluginName = 'DJ_Wardrobe';
  * @desc Index of face to be used (one file contains 8 faces)
  * @parent outfit
  * @type string
- * @default 1
+ * @default 0
+ * @max 7
+ * @min 0
  * 
  * @arg battlerName
  * @text Battler Name 
@@ -70,12 +74,67 @@ DJ.WRDB.pluginName = 'DJ_Wardrobe';
  * @type string
  * @default
  * 
+ * @command equipOutfit
+ * @text Equip Outfit
+ * @desc Make actor equip an outfit
+ * 
+ * @arg actor
+ * @text Actor
+ * @desc actor that will equip outfit if it has one. Leave empty for party leader.
+ * @type actor
+ * @default
+ * 
+ * @arg outfitName
+ * @text Outfit Name
+ * @desc Name of the outfit to equip
+ * @type string
+ * @default
+ * 
+ * @command loseOutfit
+ * @text Take away Outfit from Actor
+ * @desc If actor has an outfit this command will take it away unless it is equipped.
+ * 
+ * @arg actor
+ * @text Actor
+ * @desc actor that will equip outfit if it has one. Leave empty for party leader.
+ * @type actor
+ * @default
+ * 
+ * @arg outfitName
+ * @text Outfit Name
+ * @desc Name of the outfit to equip
+ * @type string
+ * @default
+ * 
  * @help
- * This plugin enables wardrobe access. More help later.
+ * This plugin enables wardrobe access. Each actor now has a possibility of 
+ * having 1 or more outfits. Outfit is collection of player character sprite,
+ * face and battler. Each outfit has a name. Actor default outfit is what is 
+ * set in the editor. Actor's outfits are saved in save files.
+ * 
+ * Wardrobe gives player an access to menu in which one can see available 
+ * outfits and change them.
+ * 
+ * This plugin has 4 commands:
+ * 1) Wardrobe processing:
+ *    Displays a menu where player can change outfits.
+ * 
+ * 2) Give Outfit to Actor:
+ *    Here the outfit is named and defined (sprites are selected) and given 
+ *    to selected actor. Character sprite and Face are located on spritesheets
+ *    and need index apart from file name. These indices are 0 based! from 
+ *    top left to right bottom. Valid range is 0-7
+ * 
+ * 3) Take away Outfit from Actor:
+ *    If outfit is not equipped it can be taken away using this command.
+ * 
+ * 4) Equip Outfit:
+ *    Force actor to equip certain outfit if it has it available. 
  *
- * Terms of Use: Commercial.
+ * 
+ * Terms of Use: Free
  *
- * Version: 0.1.0
+ * Version: 1.0.0
  */
 
 PluginManager.registerCommand(DJ.WRDB.pluginName, 'wardrobeProcessing', _ => {
@@ -84,9 +143,13 @@ PluginManager.registerCommand(DJ.WRDB.pluginName, 'wardrobeProcessing', _ => {
 });
 
 PluginManager.registerCommand(DJ.WRDB.pluginName, 'gainOutfit', args => {
-    const leader = $gameParty.leader();
-    if(leader) {
-        const actorId = Number(args.actor) || leader.actorId()
+    let actorId = Number(args.actor);
+    if(!actorId) {
+        const leader = $gameParty.leader();
+        if(!leader) return;
+        actorId = leader.actorId();
+    }
+    if(actorId) {
         const actor = $gameActors.actor(actorId);
         if(actor) {
             let outfit = new Game_Outfit();
@@ -97,7 +160,36 @@ PluginManager.registerCommand(DJ.WRDB.pluginName, 'gainOutfit', args => {
             actor.gainOutfit(outfit)
         }
     }
-    //else -> party is empty. 
+});
+
+PluginManager.registerCommand(DJ.WRDB.pluginName, 'equipOutfit', args => {
+    let actorId = Number(args.actor);
+    if(!actorId) {
+        const leader = $gameParty.leader();
+        if(!leader) return;
+        actorId = leader.actorId();
+    }
+    if(actorId) {
+        const actor = $gameActors.actor(actorId);
+        if(actor) {
+            actor.equipOutfit(args.outfitName);
+        }
+    }
+});
+
+PluginManager.registerCommand(DJ.WRDB.pluginName, 'loseOutfit', args => {
+    let actorId = Number(args.actor);
+    if(!actorId) {
+        const leader = $gameParty.leader();
+        if(!leader) return;
+        actorId = leader.actorId();
+    }
+    if(actorId) {
+        const actor = $gameActors.actor(actorId);
+        if(actor) {
+            actor.loseOutfit(args.outfitName);
+        }
+    }
 });
 
 // -----------------------------------------
@@ -190,7 +282,7 @@ Game_Actor.prototype.loseOutfit = function(outfitName) {
     if(index >= 0) {
         if(index === this._outfitIndex) return false;
         if(index < this._outfitIndex) this._outfitIndex--;
-        this._outfits.removeAt(index);
+        this._outfits.splice(index, 1);
         return true;
     }
     return false;
@@ -333,6 +425,7 @@ Scene_Wardrobe.prototype.onChangeOk = function() {
     this._helpWindow.clear();
     const outfit = this._mainWindow.outfit();
     this._actor.equipOutfit(outfit.name());
+    this._mainWindow.setupOutfits(this._actor);
 };
 
 Scene_Wardrobe.prototype.onChangeCancel = function() {
@@ -417,6 +510,10 @@ Window_WardrobeMain.prototype.isEnabled = function(outfit) {
     return (
         outfit && outfit !== this.outfitAt(this._outfitIndex)
     );
+};
+
+Window_WardrobeMain.prototype.isCurrentItemEnabled = function() {
+    return this.isEnabled(this.outfitAt(this.index()));
 };
 
 Window_WardrobeMain.prototype.drawItem = function(index) {
