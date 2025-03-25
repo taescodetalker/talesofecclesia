@@ -47,7 +47,9 @@ DJ.WRDB.pluginName = 'DJ_Wardrobe';
  * @desc Index of character to be used (one file contains 8 spritesets)
  * @parent outfit
  * @type string
- * @default 1
+ * @default 0
+ * @max 7
+ * @min 0
  * 
  * @arg faceName
  * @text Face Name
@@ -61,7 +63,9 @@ DJ.WRDB.pluginName = 'DJ_Wardrobe';
  * @desc Index of face to be used (one file contains 8 faces)
  * @parent outfit
  * @type string
- * @default 1
+ * @default 0
+ * @max 7
+ * @min 0
  * 
  * @arg battlerName
  * @text Battler Name 
@@ -87,7 +91,7 @@ DJ.WRDB.pluginName = 'DJ_Wardrobe';
  * @default
  * 
  * @command loseOutfit
- * @text Lose Outfit
+ * @text Take away Outfit from Actor
  * @desc If actor has an outfit this command will take it away unless it is equipped.
  * 
  * @arg actor
@@ -103,11 +107,34 @@ DJ.WRDB.pluginName = 'DJ_Wardrobe';
  * @default
  * 
  * @help
- * This plugin enables wardrobe access. More help later.
+ * This plugin enables wardrobe access. Each actor now has a possibility of 
+ * having 1 or more outfits. Outfit is collection of player character sprite,
+ * face and battler. Each outfit has a name. Actor default outfit is what is 
+ * set in the editor. Actor's outfits are saved in save files.
+ * 
+ * Wardrobe gives player an access to menu in which one can see available 
+ * outfits and change them.
+ * 
+ * This plugin has 4 commands:
+ * 1) Wardrobe processing:
+ *    Displays a menu where player can change outfits.
+ * 
+ * 2) Give Outfit to Actor:
+ *    Here the outfit is named and defined (sprites are selected) and given 
+ *    to selected actor. Character sprite and Face are located on spritesheets
+ *    and need index apart from file name. These indices are 0 based! from 
+ *    top left to right bottom. Valid range is 0-7
+ * 
+ * 3) Take away Outfit from Actor:
+ *    If outfit is not equipped it can be taken away using this command.
+ * 
+ * 4) Equip Outfit:
+ *    Force actor to equip certain outfit if it has it available. 
  *
- * Terms of Use: Commercial.
+ * 
+ * Terms of Use: Free
  *
- * Version: 0.1.0
+ * Version: 1.0.0
  */
 
 PluginManager.registerCommand(DJ.WRDB.pluginName, 'wardrobeProcessing', _ => {
