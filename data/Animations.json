@@ -601,7 +601,7 @@
     },
     {
         "id": 12,
-        "displayType": 1,
+        "displayType": 0,
         "effectName": "PierceEffect",
         "flashTimings": [
             {
@@ -4992,7 +4992,7 @@
         "offsetX": 0,
         "offsetY": 0,
         "rotation": {
-            "x": 0,
+            "x": 10,
             "y": 0,
             "z": 0
         },
@@ -5017,7 +5017,9 @@
                 }
             }
         ],
-        "speed": 100
+        "speed": 100,
+        "timings": [],
+        "alignBottom": false
     },
     {
         "id": 55,
@@ -9756,7 +9758,8 @@
         },
         "scale": 100,
         "soundTimings": [],
-        "speed": 100
+        "speed": 100,
+        "timings": []
     },
     {
         "id": 124,

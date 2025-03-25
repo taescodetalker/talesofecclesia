@@ -1346,10 +1346,10 @@
             },
             {
                 "skillId": 18,
-                "rating": 5,
-                "conditionType": 2,
-                "conditionParam1": 0.5,
-                "conditionParam2": 0.5
+                "rating": 8,
+                "conditionType": 1,
+                "conditionParam1": 2,
+                "conditionParam2": 0
             }
         ],
         "battlerHue": 0,
@@ -1484,17 +1484,31 @@
         "id": 21,
         "actions": [
             {
-                "skillId": 51,
+                "skillId": 1,
                 "rating": 5,
                 "conditionType": 0,
                 "conditionParam1": 0,
                 "conditionParam2": 0
             },
             {
+                "skillId": 51,
+                "rating": 5,
+                "conditionType": 2,
+                "conditionParam1": 0,
+                "conditionParam2": 0.5
+            },
+            {
                 "skillId": 47,
                 "rating": 5,
-                "conditionType": 0,
-                "conditionParam1": 0,
+                "conditionType": 1,
+                "conditionParam1": 1,
+                "conditionParam2": 3
+            },
+            {
+                "skillId": 57,
+                "rating": 8,
+                "conditionType": 1,
+                "conditionParam1": 2,
                 "conditionParam2": 0
             }
         ],
