@@ -11389,10 +11389,10 @@
                                 "Dogmatika Fleurdelis The Knighted - Full",
                                 0,
                                 0,
-                                712,
-                                240,
-                                50,
-                                50,
+                                480,
+                                325,
+                                25,
+                                25,
                                 255,
                                 0
                             ]
@@ -11438,10 +11438,10 @@
                                 "Ecclesia - Full - Left",
                                 0,
                                 0,
-                                1296,
-                                248,
-                                50,
-                                50,
+                                1184,
+                                325,
+                                25,
+                                25,
                                 255,
                                 0
                             ]
@@ -11480,19 +11480,18 @@
                             ]
                         },
                         {
-                            "code": 231,
+                            "code": 234,
                             "indent": 0,
                             "parameters": [
                                 2,
-                                "Dogmatika Fleurdelis The Knighted - Full",
-                                0,
-                                0,
-                                448,
-                                256,
-                                50,
-                                50,
-                                255,
-                                0
+                                [
+                                    0,
+                                    0,
+                                    0,
+                                    0
+                                ],
+                                10,
+                                false
                             ]
                         },
                         {
@@ -11586,10 +11585,10 @@
                                 "",
                                 0,
                                 0,
-                                0,
-                                200,
-                                100,
-                                100,
+                                480,
+                                370,
+                                50,
+                                50,
                                 255,
                                 0
                             ]
@@ -11616,10 +11615,10 @@
                                 "Dogmatika Fleurdelis The Knighted - Full",
                                 0,
                                 0,
-                                0,
-                                112,
-                                50,
-                                50,
+                                480,
+                                325,
+                                25,
+                                25,
                                 255,
                                 0
                             ]
@@ -11699,10 +11698,10 @@
                                 "",
                                 0,
                                 0,
-                                0,
-                                200,
-                                100,
-                                100,
+                                480,
+                                370,
+                                50,
+                                50,
                                 255,
                                 0
                             ]
@@ -11729,10 +11728,10 @@
                                 "Ecclesia - Full - Left",
                                 0,
                                 0,
-                                1408,
-                                112,
-                                50,
-                                50,
+                                1184,
+                                325,
+                                25,
+                                25,
                                 255,
                                 0
                             ]
@@ -11778,10 +11777,10 @@
                                 "Dogmatika Fleurdelis The Knighted - Full",
                                 0,
                                 0,
-                                0,
-                                100,
-                                50,
-                                50,
+                                480,
+                                325,
+                                25,
+                                25,
                                 255,
                                 0
                             ]
@@ -11863,19 +11862,18 @@
                             ]
                         },
                         {
-                            "code": 231,
+                            "code": 234,
                             "indent": 0,
                             "parameters": [
                                 3,
-                                "Ecclesia - Full - Left",
-                                0,
-                                0,
-                                1408,
-                                112,
-                                50,
-                                50,
-                                255,
-                                0
+                                [
+                                    0,
+                                    0,
+                                    0,
+                                    0
+                                ],
+                                10,
+                                false
                             ]
                         },
                         {
@@ -11953,26 +11951,12 @@
                                 "",
                                 0,
                                 0,
-                                48,
-                                192,
-                                100,
-                                100,
+                                480,
+                                370,
+                                50,
+                                50,
                                 255,
                                 0
-                            ]
-                        },
-                        {
-                            "code": 230,
-                            "indent": 0,
-                            "parameters": [
-                                260
-                            ]
-                        },
-                        {
-                            "code": 235,
-                            "indent": 0,
-                            "parameters": [
-                                1
                             ]
                         },
                         {
@@ -12044,6 +12028,79 @@
                     },
                     "list": [
                         {
+                            "code": 230,
+                            "indent": 0,
+                            "parameters": [
+                                260
+                            ]
+                        },
+                        {
+                            "code": 235,
+                            "indent": 0,
+                            "parameters": [
+                                1
+                            ]
+                        },
+                        {
+                            "code": 123,
+                            "indent": 0,
+                            "parameters": [
+                                "B",
+                                0
+                            ]
+                        },
+                        {
+                            "code": 0,
+                            "indent": 0,
+                            "parameters": []
+                        }
+                    ],
+                    "moveFrequency": 3,
+                    "moveRoute": {
+                        "list": [
+                            {
+                                "code": 0,
+                                "parameters": []
+                            }
+                        ],
+                        "repeat": true,
+                        "skippable": false,
+                        "wait": false
+                    },
+                    "moveSpeed": 3,
+                    "moveType": 1,
+                    "priorityType": 1,
+                    "stepAnime": false,
+                    "through": false,
+                    "trigger": 4,
+                    "walkAnime": true
+                },
+                {
+                    "conditions": {
+                        "actorId": 1,
+                        "actorValid": false,
+                        "itemId": 1,
+                        "itemValid": false,
+                        "selfSwitchCh": "B",
+                        "selfSwitchValid": true,
+                        "switch1Id": 1,
+                        "switch1Valid": false,
+                        "switch2Id": 1,
+                        "switch2Valid": false,
+                        "variableId": 1,
+                        "variableValid": false,
+                        "variableValue": 0
+                    },
+                    "directionFix": false,
+                    "image": {
+                        "tileId": 0,
+                        "characterName": "Actor2",
+                        "direction": 4,
+                        "pattern": 1,
+                        "characterIndex": 1
+                    },
+                    "list": [
+                        {
                             "code": 231,
                             "indent": 0,
                             "parameters": [
@@ -12051,10 +12108,10 @@
                                 "Dogmatika Fleurdelis The Knighted - Full",
                                 0,
                                 0,
-                                0,
-                                100,
-                                50,
-                                50,
+                                480,
+                                325,
+                                25,
+                                25,
                                 255,
                                 0
                             ]
@@ -12063,7 +12120,7 @@
                             "code": 101,
                             "indent": 0,
                             "parameters": [
-                                "Actor1",
+                                "",
                                 0,
                                 0,
                                 1,
