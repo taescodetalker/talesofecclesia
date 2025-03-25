@@ -333,6 +333,7 @@ Scene_Wardrobe.prototype.onChangeOk = function() {
     this._helpWindow.clear();
     const outfit = this._mainWindow.outfit();
     this._actor.equipOutfit(outfit.name());
+    this._mainWindow.setupOutfits(this._actor);
 };
 
 Scene_Wardrobe.prototype.onChangeCancel = function() {
@@ -417,6 +418,10 @@ Window_WardrobeMain.prototype.isEnabled = function(outfit) {
     return (
         outfit && outfit !== this.outfitAt(this._outfitIndex)
     );
+};
+
+Window_WardrobeMain.prototype.isCurrentItemEnabled = function() {
+    return this.isEnabled(this.outfitAt(this.index()));
 };
 
 Window_WardrobeMain.prototype.drawItem = function(index) {
