@@ -70,6 +70,38 @@ DJ.WRDB.pluginName = 'DJ_Wardrobe';
  * @type string
  * @default
  * 
+ * @command equipOutfit
+ * @text Equip Outfit
+ * @desc Make actor equip an outfit
+ * 
+ * @arg actor
+ * @text Actor
+ * @desc actor that will equip outfit if it has one. Leave empty for party leader.
+ * @type actor
+ * @default
+ * 
+ * @arg outfitName
+ * @text Outfit Name
+ * @desc Name of the outfit to equip
+ * @type string
+ * @default
+ * 
+ * @command loseOutfit
+ * @text Lose Outfit
+ * @desc If actor has an outfit this command will take it away unless it is equipped.
+ * 
+ * @arg actor
+ * @text Actor
+ * @desc actor that will equip outfit if it has one. Leave empty for party leader.
+ * @type actor
+ * @default
+ * 
+ * @arg outfitName
+ * @text Outfit Name
+ * @desc Name of the outfit to equip
+ * @type string
+ * @default
+ * 
  * @help
  * This plugin enables wardrobe access. More help later.
  *
@@ -84,9 +116,13 @@ PluginManager.registerCommand(DJ.WRDB.pluginName, 'wardrobeProcessing', _ => {
 });
 
 PluginManager.registerCommand(DJ.WRDB.pluginName, 'gainOutfit', args => {
-    const leader = $gameParty.leader();
-    if(leader) {
-        const actorId = Number(args.actor) || leader.actorId()
+    let actorId = Number(args.actor);
+    if(!actorId) {
+        const leader = $gameParty.leader();
+        if(!leader) return;
+        actorId = leader.actorId();
+    }
+    if(actorId) {
         const actor = $gameActors.actor(actorId);
         if(actor) {
             let outfit = new Game_Outfit();
@@ -97,7 +133,36 @@ PluginManager.registerCommand(DJ.WRDB.pluginName, 'gainOutfit', args => {
             actor.gainOutfit(outfit)
         }
     }
-    //else -> party is empty. 
+});
+
+PluginManager.registerCommand(DJ.WRDB.pluginName, 'equipOutfit', args => {
+    let actorId = Number(args.actor);
+    if(!actorId) {
+        const leader = $gameParty.leader();
+        if(!leader) return;
+        actorId = leader.actorId();
+    }
+    if(actorId) {
+        const actor = $gameActors.actor(actorId);
+        if(actor) {
+            actor.equipOutfit(args.outfitName);
+        }
+    }
+});
+
+PluginManager.registerCommand(DJ.WRDB.pluginName, 'loseOutfit', args => {
+    let actorId = Number(args.actor);
+    if(!actorId) {
+        const leader = $gameParty.leader();
+        if(!leader) return;
+        actorId = leader.actorId();
+    }
+    if(actorId) {
+        const actor = $gameActors.actor(actorId);
+        if(actor) {
+            actor.loseOutfit(args.outfitName);
+        }
+    }
 });
 
 // -----------------------------------------
@@ -190,7 +255,7 @@ Game_Actor.prototype.loseOutfit = function(outfitName) {
     if(index >= 0) {
         if(index === this._outfitIndex) return false;
         if(index < this._outfitIndex) this._outfitIndex--;
-        this._outfits.removeAt(index);
+        this._outfits.splice(index, 1);
         return true;
     }
     return false;
