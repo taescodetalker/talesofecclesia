@@ -2240,7 +2240,7 @@
     },
     {
         "id": 59,
-        "animationId": -1,
+        "animationId": 91,
         "damage": {
             "critical": false,
             "elementId": 0,
