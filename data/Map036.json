@@ -3802,7 +3802,7 @@
                                 "",
                                 0,
                                 0,
-                                0,
+                                1,
                                 ""
                             ]
                         },
@@ -4381,7 +4381,7 @@
                                 "",
                                 0,
                                 0,
-                                0,
+                                1,
                                 ""
                             ]
                         },
@@ -4630,7 +4630,7 @@
                             "code": 401,
                             "indent": 0,
                             "parameters": [
-                                "←Gold Sea of Golgonda "
+                                "\u2190Gold Sea of Golgonda "
                             ]
                         },
                         {
@@ -4648,7 +4648,7 @@
                             "code": 401,
                             "indent": 0,
                             "parameters": [
-                                "Secret Village →"
+                                "Secret Village \u2192"
                             ]
                         },
                         {
