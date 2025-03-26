@@ -45852,6 +45852,18 @@
                             ]
                         },
                         {
+                            "code": 250,
+                            "indent": 1,
+                            "parameters": [
+                                {
+                                    "name": "Magic2",
+                                    "volume": 50,
+                                    "pitch": 100,
+                                    "pan": 0
+                                }
+                            ]
+                        },
+                        {
                             "code": 0,
                             "indent": 1,
                             "parameters": []
@@ -48943,9 +48955,10 @@
             "x": 38,
             "y": 44
         },
+        null,
         {
-            "id": 40,
-            "name": "EV040",
+            "id": 41,
+            "name": "EV041",
             "note": "",
             "pages": [
                 {
@@ -48954,7 +48967,7 @@
                         "actorValid": false,
                         "itemId": 1,
                         "itemValid": false,
-                        "selfSwitchCh": "A",
+                        "selfSwitchCh": "B",
                         "selfSwitchValid": false,
                         "switch1Id": 9,
                         "switch1Valid": true,
@@ -48964,9 +48977,9 @@
                         "variableValid": false,
                         "variableValue": 0
                     },
-                    "directionFix": true,
+                    "directionFix": false,
                     "image": {
-                        "tileId": 323,
+                        "tileId": 320,
                         "characterName": "",
                         "characterIndex": 0,
                         "direction": 2,
@@ -48974,43 +48987,12 @@
                     },
                     "list": [
                         {
-                            "code": 101,
-                            "indent": 0,
-                            "parameters": [
-                                "",
-                                0,
-                                0,
-                                1,
-                                ""
-                            ]
-                        },
-                        {
-                            "code": 401,
-                            "indent": 0,
-                            "parameters": [
-                                "Learned Magical Blast!"
-                            ]
-                        },
-                        {
-                            "code": 250,
-                            "indent": 0,
-                            "parameters": [
-                                {
-                                    "name": "Chime2",
-                                    "volume": 90,
-                                    "pitch": 110,
-                                    "pan": 0
-                                }
-                            ]
-                        },
-                        {
-                            "code": 318,
+                            "code": 212,
                             "indent": 0,
                             "parameters": [
                                 0,
-                                4,
-                                0,
-                                54
+                                127,
+                                false
                             ]
                         },
                         {
@@ -49044,7 +49026,7 @@
                     "priorityType": 1,
                     "stepAnime": false,
                     "through": false,
-                    "trigger": 0,
+                    "trigger": 3,
                     "walkAnime": true
                 },
                 {
@@ -49055,66 +49037,6 @@
                         "itemValid": false,
                         "selfSwitchCh": "A",
                         "selfSwitchValid": true,
-                        "switch1Id": 1,
-                        "switch1Valid": false,
-                        "switch2Id": 1,
-                        "switch2Valid": false,
-                        "variableId": 1,
-                        "variableValid": false,
-                        "variableValue": 0
-                    },
-                    "directionFix": false,
-                    "image": {
-                        "characterIndex": 0,
-                        "characterName": "",
-                        "direction": 2,
-                        "pattern": 0,
-                        "tileId": 0
-                    },
-                    "list": [
-                        {
-                            "code": 0,
-                            "indent": 0,
-                            "parameters": []
-                        }
-                    ],
-                    "moveFrequency": 3,
-                    "moveRoute": {
-                        "list": [
-                            {
-                                "code": 0,
-                                "parameters": []
-                            }
-                        ],
-                        "repeat": true,
-                        "skippable": false,
-                        "wait": false
-                    },
-                    "moveSpeed": 3,
-                    "moveType": 0,
-                    "priorityType": 0,
-                    "stepAnime": false,
-                    "through": false,
-                    "trigger": 0,
-                    "walkAnime": true
-                }
-            ],
-            "x": 32,
-            "y": 70
-        },
-        {
-            "id": 41,
-            "name": "EV041",
-            "note": "",
-            "pages": [
-                {
-                    "conditions": {
-                        "actorId": 1,
-                        "actorValid": false,
-                        "itemId": 1,
-                        "itemValid": false,
-                        "selfSwitchCh": "A",
-                        "selfSwitchValid": false,
                         "switch1Id": 9,
                         "switch1Valid": true,
                         "switch2Id": 1,
@@ -49125,7 +49047,7 @@
                     },
                     "directionFix": false,
                     "image": {
-                        "tileId": 321,
+                        "tileId": 320,
                         "characterName": "",
                         "characterIndex": 0,
                         "direction": 2,
@@ -49176,7 +49098,7 @@
                             "code": 123,
                             "indent": 0,
                             "parameters": [
-                                "A",
+                                "B",
                                 0
                             ]
                         },
@@ -49212,7 +49134,7 @@
                         "actorValid": false,
                         "itemId": 1,
                         "itemValid": false,
-                        "selfSwitchCh": "A",
+                        "selfSwitchCh": "B",
                         "selfSwitchValid": true,
                         "switch1Id": 1,
                         "switch1Valid": false,
@@ -55034,7 +54956,233 @@
             "x": 28,
             "y": 67
         },
-        null,
+        {
+            "id": 110,
+            "name": "EV110",
+            "note": "",
+            "pages": [
+                {
+                    "conditions": {
+                        "actorId": 1,
+                        "actorValid": false,
+                        "itemId": 1,
+                        "itemValid": false,
+                        "selfSwitchCh": "A",
+                        "selfSwitchValid": false,
+                        "switch1Id": 9,
+                        "switch1Valid": true,
+                        "switch2Id": 1,
+                        "switch2Valid": false,
+                        "variableId": 1,
+                        "variableValid": false,
+                        "variableValue": 0
+                    },
+                    "directionFix": false,
+                    "image": {
+                        "tileId": 323,
+                        "characterName": "",
+                        "characterIndex": 0,
+                        "direction": 2,
+                        "pattern": 0
+                    },
+                    "list": [
+                        {
+                            "code": 212,
+                            "indent": 0,
+                            "parameters": [
+                                0,
+                                127,
+                                false
+                            ]
+                        },
+                        {
+                            "code": 123,
+                            "indent": 0,
+                            "parameters": [
+                                "A",
+                                0
+                            ]
+                        },
+                        {
+                            "code": 0,
+                            "indent": 0,
+                            "parameters": []
+                        }
+                    ],
+                    "moveFrequency": 3,
+                    "moveRoute": {
+                        "list": [
+                            {
+                                "code": 0,
+                                "parameters": []
+                            }
+                        ],
+                        "repeat": true,
+                        "skippable": false,
+                        "wait": false
+                    },
+                    "moveSpeed": 3,
+                    "moveType": 0,
+                    "priorityType": 1,
+                    "stepAnime": false,
+                    "through": false,
+                    "trigger": 4,
+                    "walkAnime": true
+                },
+                {
+                    "conditions": {
+                        "actorId": 1,
+                        "actorValid": false,
+                        "itemId": 1,
+                        "itemValid": false,
+                        "selfSwitchCh": "A",
+                        "selfSwitchValid": true,
+                        "switch1Id": 9,
+                        "switch1Valid": false,
+                        "switch2Id": 1,
+                        "switch2Valid": false,
+                        "variableId": 1,
+                        "variableValid": false,
+                        "variableValue": 0
+                    },
+                    "directionFix": false,
+                    "image": {
+                        "tileId": 323,
+                        "characterName": "",
+                        "characterIndex": 0,
+                        "direction": 2,
+                        "pattern": 0
+                    },
+                    "list": [
+                        {
+                            "code": 101,
+                            "indent": 0,
+                            "parameters": [
+                                "",
+                                0,
+                                0,
+                                1,
+                                ""
+                            ]
+                        },
+                        {
+                            "code": 401,
+                            "indent": 0,
+                            "parameters": [
+                                "Learned Magic Drain!"
+                            ]
+                        },
+                        {
+                            "code": 250,
+                            "indent": 0,
+                            "parameters": [
+                                {
+                                    "name": "Chime2",
+                                    "volume": 90,
+                                    "pitch": 110,
+                                    "pan": 0
+                                }
+                            ]
+                        },
+                        {
+                            "code": 318,
+                            "indent": 0,
+                            "parameters": [
+                                0,
+                                4,
+                                0,
+                                54
+                            ]
+                        },
+                        {
+                            "code": 123,
+                            "indent": 0,
+                            "parameters": [
+                                "B",
+                                0
+                            ]
+                        },
+                        {
+                            "code": 0,
+                            "indent": 0,
+                            "parameters": []
+                        }
+                    ],
+                    "moveFrequency": 3,
+                    "moveRoute": {
+                        "list": [
+                            {
+                                "code": 0,
+                                "parameters": []
+                            }
+                        ],
+                        "repeat": true,
+                        "skippable": false,
+                        "wait": false
+                    },
+                    "moveSpeed": 3,
+                    "moveType": 0,
+                    "priorityType": 1,
+                    "stepAnime": false,
+                    "through": false,
+                    "trigger": 0,
+                    "walkAnime": true
+                },
+                {
+                    "conditions": {
+                        "actorId": 1,
+                        "actorValid": false,
+                        "itemId": 1,
+                        "itemValid": false,
+                        "selfSwitchCh": "B",
+                        "selfSwitchValid": true,
+                        "switch1Id": 1,
+                        "switch1Valid": false,
+                        "switch2Id": 1,
+                        "switch2Valid": false,
+                        "variableId": 1,
+                        "variableValid": false,
+                        "variableValue": 0
+                    },
+                    "directionFix": false,
+                    "image": {
+                        "characterIndex": 0,
+                        "characterName": "",
+                        "direction": 2,
+                        "pattern": 0,
+                        "tileId": 0
+                    },
+                    "list": [
+                        {
+                            "code": 0,
+                            "indent": 0,
+                            "parameters": []
+                        }
+                    ],
+                    "moveFrequency": 3,
+                    "moveRoute": {
+                        "list": [
+                            {
+                                "code": 0,
+                                "parameters": []
+                            }
+                        ],
+                        "repeat": true,
+                        "skippable": false,
+                        "wait": false
+                    },
+                    "moveSpeed": 3,
+                    "moveType": 0,
+                    "priorityType": 0,
+                    "stepAnime": false,
+                    "through": false,
+                    "trigger": 0,
+                    "walkAnime": true
+                }
+            ],
+            "x": 32,
+            "y": 70
+        },
         null,
         {
             "id": 112,

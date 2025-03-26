@@ -128,7 +128,7 @@
         "pitch": 70,
         "volume": 90
     },
-    "editMapId": 62,
+    "editMapId": 11,
     "elements": [
         "",
         "Physical",
@@ -611,7 +611,7 @@
         }
     ],
     "testTroopId": 32,
-    "title1Name": "tales2",
+    "title1Name": "tales",
     "title2Name": "",
     "titleBgm": {
         "name": "Intro Music",
@@ -667,7 +667,7 @@
         "",
         ""
     ],
-    "versionId": 61985629,
+    "versionId": 25612306,
     "victoryMe": {
         "name": "Victory2",
         "pan": 0,
