@@ -45831,7 +45831,7 @@
                             "code": 401,
                             "indent": 1,
                             "parameters": [
-                                "Why don’t you look around in my study and see what you can learn from these ancient books"
+                                "Why don\u2019t you look around in my study and see what you can learn from these ancient books"
                             ]
                         },
                         {
@@ -46219,7 +46219,7 @@
                             "code": 401,
                             "indent": 0,
                             "parameters": [
-                                "Couldn’t have done it without your help Adin. Thank you for all your lessons so far."
+                                "Couldn\u2019t have done it without your help Adin. Thank you for all your lessons so far."
                             ]
                         },
                         {
@@ -46601,7 +46601,7 @@
                                 "",
                                 0,
                                 0,
-                                0,
+                                1,
                                 ""
                             ]
                         },
@@ -46836,7 +46836,7 @@
                             "code": 401,
                             "indent": 0,
                             "parameters": [
-                                "Good morning Ecclesia. You’re up and early nicely today"
+                                "Good morning Ecclesia. You\u2019re up and early nicely today"
                             ]
                         },
                         {
@@ -46915,7 +46915,7 @@
                             "code": 401,
                             "indent": 0,
                             "parameters": [
-                                "Haha! I like your enthusiasm kiddo. But aren’t we "
+                                "Haha! I like your enthusiasm kiddo. But aren\u2019t we "
                             ]
                         },
                         {
@@ -46958,7 +46958,7 @@
                             "code": 401,
                             "indent": 0,
                             "parameters": [
-                                "No warrior is complete without their weapon. I see you don’t have your hammer yet. Go to the armory and fetch it up!"
+                                "No warrior is complete without their weapon. I see you don\u2019t have your hammer yet. Go to the armory and fetch it up!"
                             ]
                         },
                         {
@@ -47285,7 +47285,7 @@
                             "code": 401,
                             "indent": 1,
                             "parameters": [
-                                "No warrior is complete without their weapon. I see you don’t have your hammer yet. Go to the armory and fetch it up!"
+                                "No warrior is complete without their weapon. I see you don\u2019t have your hammer yet. Go to the armory and fetch it up!"
                             ]
                         },
                         {
@@ -47898,7 +47898,7 @@
                                 "",
                                 0,
                                 0,
-                                0,
+                                1,
                                 ""
                             ]
                         },
@@ -49299,7 +49299,7 @@
                                 "set",
                                 "Set Text Picture",
                                 {
-                                    "text": "Read Adin’s books and learn about magic",
+                                    "text": "Read Adin\u2019s books and learn about magic",
                                     "bg_color": "black",
                                     "bg_opacity": "192"
                                 }
@@ -49309,7 +49309,7 @@
                             "code": 657,
                             "indent": 0,
                             "parameters": [
-                                "Text = Read Adin’s books and learn about magic"
+                                "Text = Read Adin\u2019s books and learn about magic"
                             ]
                         },
                         {
@@ -53285,7 +53285,7 @@
                                 "",
                                 0,
                                 0,
-                                0,
+                                1,
                                 ""
                             ]
                         },
@@ -53664,7 +53664,7 @@
                                 "",
                                 0,
                                 0,
-                                0,
+                                1,
                                 ""
                             ]
                         },
