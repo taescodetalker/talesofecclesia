@@ -683,7 +683,7 @@
                             "code": 657,
                             "indent": 0,
                             "parameters": [
-                                "Text =    This is a beta. Some things will be subject to ch…"
+                                "Text =    This is a beta. Some things will be subject to ch\u2026"
                             ]
                         },
                         {
@@ -1309,7 +1309,7 @@
                             "code": 657,
                             "indent": 0,
                             "parameters": [
-                                "Text =    This is a beta. Some things will be subject to ch…"
+                                "Text =    This is a beta. Some things will be subject to ch\u2026"
                             ]
                         },
                         {
@@ -1374,7 +1374,7 @@
                             "code": 657,
                             "indent": 0,
                             "parameters": [
-                                "Text = Special Thanks to:  QuestionaBull, Vincent Thieu, Di…"
+                                "Text = Special Thanks to:  QuestionaBull, Vincent Thieu, Di\u2026"
                             ]
                         },
                         {
@@ -1458,7 +1458,7 @@
                             "code": 657,
                             "indent": 0,
                             "parameters": [
-                                "Text = Our journey begins in the land of the abyss. A divid…"
+                                "Text = Our journey begins in the land of the abyss. A divid\u2026"
                             ]
                         },
                         {
@@ -1546,7 +1546,7 @@
                             "code": 657,
                             "indent": 0,
                             "parameters": [
-                                "Text = Standing on top of this church is Maximus. The pope …"
+                                "Text = Standing on top of this church is Maximus. The pope \u2026"
                             ]
                         },
                         {
@@ -1634,7 +1634,7 @@
                             "code": 657,
                             "indent": 0,
                             "parameters": [
-                                "Text = The Dogmatika Nexus. A statue said to be given to th…"
+                                "Text = The Dogmatika Nexus. A statue said to be given to th\u2026"
                             ]
                         },
                         {
@@ -1722,7 +1722,7 @@
                             "code": 657,
                             "indent": 0,
                             "parameters": [
-                                "Text = Protecting the leader of the nation, are the Ashiyan…"
+                                "Text = Protecting the leader of the nation, are the Ashiyan\u2026"
                             ]
                         },
                         {
@@ -1810,7 +1810,7 @@
                             "code": 657,
                             "indent": 0,
                             "parameters": [
-                                "Text = In this nation, dictated by the laws of the church. …"
+                                "Text = In this nation, dictated by the laws of the church. \u2026"
                             ]
                         },
                         {

@@ -23713,7 +23713,7 @@
                             "code": 657,
                             "indent": 0,
                             "parameters": [
-                                "Text = To move your character, left click on a space or use…"
+                                "Text = To move your character, left click on a space or use\u2026"
                             ]
                         },
                         {
@@ -23838,7 +23838,7 @@
                             "code": 657,
                             "indent": 0,
                             "parameters": [
-                                "Text = Get Dressed and meet up with Fleurdelis in the court…"
+                                "Text = Get Dressed and meet up with Fleurdelis in the court\u2026"
                             ]
                         },
                         {
@@ -24817,7 +24817,7 @@
                                 "",
                                 0,
                                 0,
-                                0,
+                                1,
                                 ""
                             ]
                         },
@@ -28710,7 +28710,7 @@
                                 "SF_Actor2",
                                 3,
                                 0,
-                                2,
+                                1,
                                 "Ecclesia"
                             ]
                         },

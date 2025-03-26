@@ -1655,7 +1655,7 @@
     {
         "id": 50,
         "animationId": 0,
-        "consumable": true,
+        "consumable": false,
         "damage": {
             "critical": false,
             "elementId": 0,
@@ -1663,17 +1663,17 @@
             "type": 0,
             "variance": 20
         },
-        "description": "",
+        "description": "A piece of bread with Ecclesia's Stigmata on it.\nFull of rightous flavour, perfect for a banquet!",
         "effects": [],
         "hitType": 0,
-        "iconIndex": 0,
-        "itypeId": 1,
-        "name": "",
+        "iconIndex": 266,
+        "itypeId": 2,
+        "name": "Saintly Bread",
         "note": "",
-        "occasion": 0,
+        "occasion": 3,
         "price": 0,
         "repeats": 1,
-        "scope": 7,
+        "scope": 0,
         "speed": 0,
         "successRate": 100,
         "tpGain": 0
