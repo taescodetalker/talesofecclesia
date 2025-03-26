@@ -55,6 +55,10 @@ DJ.BS.pluginName = 'DJ_BattleStatus';
 
 DJ.BS.params = PluginManager.parameters(DJ.BS.pluginName);
 
+// -------------------------------------------------------
+// Window_BattleStatus
+// -------------------------------------------------------
+
 DJ.BS.Window_BattleStatus_initialize = Window_BattleStatus.prototype.initialize;
 Window_BattleStatus.prototype.initialize = function(rect) {
     DJ.BS.Window_BattleStatus_initialize.call(this, rect);
@@ -144,7 +148,9 @@ Window_BattleStatus.prototype.drawActorLevel = function(actor, x, y) {
     this.drawText(actor.level, x + 36, y - 16, 36, "left");
 };
 
-// ***** Scene_Battle *****
+// -------------------------------------------------------
+// Scene_Battle
+// -------------------------------------------------------
 
 Scene_Battle.prototype.statusWindowRect = function() {
     const extra = 40;
@@ -159,12 +165,15 @@ Scene_Battle.prototype.windowAreaHeight = function() {
     return this.calcWindowHeight(7, true);
 };
 
-// ***** Sprite_Gauge *****
+// -------------------------------------------------------
+// Sprite_Gauge
+// -------------------------------------------------------
+
 Sprite_Gauge.prototype.bitmapWidth = function() {
     return DJ.BS.params["gaugesWidth"];
 };
 
-_DJ_BattleStatus_Sprite_Gauge_gaugeColor1 = Sprite_Gauge.prototype.gaugeColor1;
+DJ.BS.Sprite_Gauge_gaugeColor1 = Sprite_Gauge.prototype.gaugeColor1;
 Sprite_Gauge.prototype.gaugeColor1 = function() {
     switch (this._statusType) {
         case "hp":
@@ -174,11 +183,11 @@ Sprite_Gauge.prototype.gaugeColor1 = function() {
         case "tp":
             return DJ.BS.params["tpBarColor"];
         default:
-            return _DJ_BattleStatus_Sprite_Gauge_gaugeColor1.call(this);
+            return DJ.BS.Sprite_Gauge_gaugeColor1.call(this);
     }
 };
 
-_DJ_BattleStatus_Sprite_Gauge_gaugeColor2 = Sprite_Gauge.prototype.gaugeColor2;
+DJ.BS.Sprite_Gauge_gaugeColor2 = Sprite_Gauge.prototype.gaugeColor2;
 Sprite_Gauge.prototype.gaugeColor2 = function() {
     switch (this._statusType) {
         case "hp":
@@ -188,6 +197,128 @@ Sprite_Gauge.prototype.gaugeColor2 = function() {
         case "tp":
             return DJ.BS.params["tpBarColor2"];
         default:
-            return _DJ_BattleStatus_Sprite_Gauge_gaugeColor2.call(this);
+            return DJ.BS.Sprite_Gauge_gaugeColor2.call(this);
     }
 };
+
+// -------------------------------------------------------
+// Sprite_ClickableStateIcon
+// -------------------------------------------------------
+
+function Sprite_ClickableStateIcon() {
+    this.initialize(...arguments);
+}
+
+Sprite_ClickableStateIcon.prototype = Object.create(Sprite_Clickable.prototype);
+Sprite_ClickableStateIcon.prototype.constructor = Sprite_ClickableStateIcon;
+
+Sprite_ClickableStateIcon.prototype.initialize = function() {
+    Sprite_Clickable.prototype.initialize.call(this);
+    this.initMembers();
+    this.loadBitmap();
+};
+
+Sprite_ClickableStateIcon.prototype.initMembers = function() {
+    this._battler = null;
+    this._stateIndex = 0;
+    this._iconIndex = 0;
+    this._waitCounter = 0;
+    this.anchor.x = 0.5;
+    this.anchor.y = 0.5;
+};
+
+Sprite_ClickableStateIcon.prototype.loadBitmap = function() {
+    this.bitmap = ImageManager.loadSystem("IconSet");
+    this.setFrame(0, 0, 0, 0);
+};
+
+Sprite_ClickableStateIcon.prototype.setup = function(battler, stateIndex) {
+    if(this.battler !== battler) {
+        this._battler = battler;
+        this._stateIndex = stateIndex;
+        this._waitCounter = this.refreshWait();
+    }
+};
+
+Sprite_ClickableStateIcon.prototype.update = function() {
+    Sprite_Clickable.prototype.update.call(this);
+    this._waitCounter++;
+    if(this.waitCounter >= this.refreshWait()) {
+        this.updateIcon();
+        this.updateFrame();
+        this._waitCounter = 0;
+    }
+};
+
+Sprite_ClickableStateIcon.prototype.refreshWait = function() {
+    return 30;
+};
+
+Sprite_ClickableStateIcon.prototype.updateIcon = function() {
+    const states = [];
+    if(this.shouldDisplay()) {
+        states.push(...this._battler.states());
+    }
+    if(this._stateIndex < states.length) {
+        this._iconIndex = states[this._stateIndex].iconIndex;   
+    }
+    else {
+        const buffIndex = this._stateIndex - states.length;
+        const buffIcons = this._battler.buffIcons();
+        if(buffIndex < buffIcons.length) {
+            this._iconIndex = buffIcons[buffIndex];
+        }
+        else {
+            this._iconIndex = 0;
+            this._waitCounter = 0;
+        }
+    }
+};
+
+Sprite_ClickableStateIcon.prototype.shouldDisplay = function() {
+    const battler = this._battler;
+    return battler && (battler.isActor() || battler.isAlive());
+};
+
+Sprite_ClickableStateIcon.prototype.updateFrame = function() {
+    const pw = ImageManager.iconWidth;
+    const ph = ImageManager.iconHeight;
+    const sx = (this._iconIndex % 16) * pw;;
+    const sy = Math.floor(this._iconIndex / 16) * ph;
+    this.setFrame(sx, sy, pw, ph);
+}
+
+// -------------------------------------------------------
+// Spriteset_ClickableStateIcons
+// -------------------------------------------------------
+
+function Spriteset_ClickableStateIcons() {
+    this.initialize(...arguments);
+}
+
+Spriteset_ClickableStateIcons.prototype = Object.create(Sprite.prototype);
+Spriteset_ClickableStateIcons.prototype.constructor = Spriteset_ClickableStateIcons;
+
+Spriteset_ClickableStateIcons.prototype.initialize = function(iconsX, iconsY) {
+    Sprite.prototype.initialize.call(this);
+    this.createClickableStateIcons(iconsX, iconsY);
+};
+
+Spriteset_ClickableStateIcons.prototype.createClickableStateIcons = function(iconsX, iconsY) {
+    this._clickableIcons = [];
+    for(let y = 0; y < iconsY; ++y) {
+        for(let x = 0; x < iconsX; ++x) {
+            const iconSprite = new Sprite_ClickableStateIcon();
+            iconSprite.x = x * ImageManager.iconWidth;
+            iconSprite.y = y * ImageManager.iconHeight;
+            this.addChild(iconSprite);
+            this._clickableIcons.push(iconSprite);
+        }
+    }
+};
+
+Spriteset_ClickableStateIcons.prototype.setup = function (battler) {
+    for(let i = 0; i < this._clickableIcons.length; ++i) {
+        this.clickableIcons[i].setup(battler, i);
+    }
+}
