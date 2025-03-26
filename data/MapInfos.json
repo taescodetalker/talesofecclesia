@@ -85,8 +85,8 @@
         "name": "Castle Courtyard",
         "order": 4,
         "parentId": 7,
-        "scrollX": 787.6363636363636,
-        "scrollY": 1735.6363636363637
+        "scrollX": 1378.1818181818182,
+        "scrollY": 1569.090909090909
     },
     {
         "id": 10,
@@ -124,8 +124,8 @@
         "name": "Dogmatika Nation (2)",
         "order": 17,
         "parentId": 8,
-        "scrollX": 1035.2727272727273,
-        "scrollY": 1110
+        "scrollX": 1035.6363636363637,
+        "scrollY": 1110.1818181818182
     },
     {
         "id": 14,
@@ -612,8 +612,8 @@
         "name": "Dogmatika Nexus",
         "order": 8,
         "parentId": 9,
-        "scrollX": 819,
-        "scrollY": 770.5,
+        "scrollX": 589.8181818181819,
+        "scrollY": 873.0909090909091,
         "quick": false
     },
     {
@@ -712,7 +712,7 @@
         "order": 5,
         "parentId": 9,
         "scrollX": 2596.3636363636365,
-        "scrollY": 1190.909090909091,
+        "scrollY": 1103.6363636363637,
         "quick": false
     },
     {
@@ -780,8 +780,8 @@
         "name": "Dogmatika Castle Lobby",
         "order": 6,
         "parentId": 72,
-        "scrollX": 2245.090909090909,
-        "scrollY": 3554.5454545454545,
+        "scrollX": 1452.3636363636363,
+        "scrollY": 3470.909090909091,
         "quick": false
     },
     {
@@ -790,8 +790,8 @@
         "name": "Item Shop",
         "order": 13,
         "parentId": 76,
-        "scrollX": 884.7272727272727,
-        "scrollY": 516.5454545454546,
+        "scrollX": 589.8181818181819,
+        "scrollY": 465.8181818181818,
         "quick": false
     },
     {
@@ -810,8 +810,8 @@
         "name": "Dogmatika Outskirts",
         "order": 14,
         "parentId": 80,
-        "scrollX": 855.2727272727273,
-        "scrollY": 988,
+        "scrollX": 864,
+        "scrollY": 1042.5454545454545,
         "quick": false
     },
     {
@@ -820,8 +820,8 @@
         "name": "Dogmatika Staircase",
         "order": 9,
         "parentId": 7,
-        "scrollX": 811,
-        "scrollY": 481.5,
+        "scrollX": 589.8181818181819,
+        "scrollY": 481.8181818181818,
         "quick": false
     },
     {
@@ -840,8 +840,8 @@
         "name": "Dogmatika Plaza",
         "order": 11,
         "parentId": 76,
-        "scrollX": 1946.909090909091,
-        "scrollY": 1094.1818181818182,
+        "scrollX": 1246.5454545454545,
+        "scrollY": 1626.5454545454545,
         "quick": false
     },
     {
@@ -850,8 +850,8 @@
         "name": "Dogmatika Shopping District",
         "order": 12,
         "parentId": 85,
-        "scrollX": 1404,
-        "scrollY": 853.6363636363636,
+        "scrollX": 1404.3636363636363,
+        "scrollY": 853.4545454545455,
         "quick": false
     },
     {
@@ -860,8 +860,8 @@
         "name": "Dogmatika Plaza (2) DESPIA",
         "order": 16,
         "parentId": 8,
-        "scrollX": 1759,
-        "scrollY": 1414.5,
+        "scrollX": 1394.1818181818182,
+        "scrollY": 1638.1818181818182,
         "quick": false
     },
     {

@@ -11274,6 +11274,24 @@
                             ]
                         },
                         {
+                            "code": 101,
+                            "indent": 0,
+                            "parameters": [
+                                "SF_Actor2",
+                                4,
+                                0,
+                                1,
+                                "Fleurdelis"
+                            ]
+                        },
+                        {
+                            "code": 401,
+                            "indent": 0,
+                            "parameters": [
+                                "And don't forget to use your Luminous Spark spell if it gets too dark!"
+                            ]
+                        },
+                        {
                             "code": 123,
                             "indent": 0,
                             "parameters": [
