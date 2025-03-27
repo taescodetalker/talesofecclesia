@@ -344,3 +344,39 @@ Spriteset_ClickableStateIcons.prototype.setup = function (battler, iconsX, icons
         this._clickableIcons[i].setup(battler, i);
     }
 }
+
+// -------------------------------------------------------
+// Sprite_Enemy
+// -------------------------------------------------------
+
+Sprite_Enemy.prototype.createStateIconSprite = function() {
+    //Replace standard state icon with new one
+    this._stateIconSprite = new Spriteset_ClickableStateIcons();
+    this.addChild(this._stateIconSprite);
+};
+
+Sprite_Enemy.prototype.updateStateSprite = function() {
+    this._stateIconSprite.y = 10;
+    if(Theo && Theo.EnemyHPGauge) {
+        this._stateIconSprite.y += Number(Theo.EnemyHPGauge._params["height"]);
+        this._stateIconSprite.y += Number(Theo.EnemyHPGauge._params["border"])*2;
+        this._stateIconSprite.y += 3;
+    }   
+    this._stateIconSprite.x = (this.bitmap.width / 2) - (ImageManager.standardIconWidth * this.iconsX()) - 4;
+
+};
+
+Sprite_Enemy.prototype.setBattler = function(battler) {
+    Sprite_Battler.prototype.setBattler.call(this, battler);
+    this._enemy = battler;
+    this.setHome(battler.screenX(), battler.screenY());
+    this._stateIconSprite.setup(this._enemy, this.iconsX(), this.iconsY());
+};
+
+Sprite_Enemy.prototype.iconsX = function() {
+    return 8;
+};
+
+Sprite_Enemy.prototype.iconsY = function() {
+    return 3;
+};
