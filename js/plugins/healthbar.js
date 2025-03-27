@@ -274,33 +274,37 @@ Theo.EnemyHPGauge = function(){
             }
         }
 
-        createGaugeBitmap(){
-            const bmp = new Bitmap(this.width - this.thickness*2, this.height - this.thickness*2)
+        createGaugeBitmap(width){
+            const w = width || this.width;
+            const bmp = new Bitmap(w - this.thickness*2, this.height - this.thickness*2)
             const gradleft = ColorManager.textColor(this.color1)
             const gradright = ColorManager.textColor(this.color2)
             bmp.gradientFillRect(0, 0, bmp.width, bmp.height, gradleft, gradright)
             return bmp
         }
 
-        createBackBitmap(){
-            const bmp = new Bitmap(this.width, this.height)
+        createBackBitmap(width){
+            const w = width || this.width;
+            const bmp = new Bitmap(w, this.height)
             const color = ColorManager.textColor(this.backColor)
             bmp.fillRect(0, 0, bmp.width, bmp.height, color)
             return bmp
         }
 
-        createSegmentBitmap(){
-            const bmp = new Bitmap(this.width, this.height)
+        createSegmentBitmap(width){
+            const w = width || this.width;
+            const bmp = new Bitmap(w, this.height)
             const color = ColorManager.textColor(this.backColor)
             for(let i = 0; i < this.segments; i++){
-                const segmentPos = (i/this.segments) * this.width
+                const segmentPos = (i/this.segments) * w
                 bmp.fillRect(segmentPos, 0, this.thickness, bmp.height, color)
             }
             return bmp
         }
 
-        createAfterimageBitmap(){
-            const bmp = new Bitmap(this.width - this.thickness*2, this.height - this.thickness*2)
+        createAfterimageBitmap(width){
+            const w = width || this.width;
+            const bmp = new Bitmap(w - this.thickness*2, this.height - this.thickness*2)
             const color = ColorManager.textColor(this.afterimageColor) + hexConverter(this.afterimageAlpha)
             bmp.fillRect(0, 0, bmp.width, bmp.height, color)
             return bmp
@@ -328,7 +332,7 @@ Theo.EnemyHPGauge = function(){
         }
 
         createAfterimageSprite(){
-            const bmp = this.gaugeOpt().createAfterimageBitmap()
+            const bmp = this.gaugeOpt().createAfterimageBitmap(this._refSprite.width)
             const gauge = new Sprite(bmp)
             gauge.x = -gauge.bitmap.width/2
             if(this.gaugeOpt().pos === "Top"){
@@ -339,7 +343,7 @@ Theo.EnemyHPGauge = function(){
         }
 
         createGaugeSprite(){
-            const bmp = this.gaugeOpt().createGaugeBitmap()
+            const bmp = this.gaugeOpt().createGaugeBitmap(this._refSprite.width)
             const gauge = new Sprite(bmp)
             gauge.x = -gauge.bitmap.width/2
             if(this.gaugeOpt().pos === "Top"){
@@ -350,7 +354,7 @@ Theo.EnemyHPGauge = function(){
         }
 
         createBackSprite(){
-            const bmp = this.gaugeOpt().createBackBitmap()
+            const bmp = this.gaugeOpt().createBackBitmap(this._refSprite.width)
             const backSprite = new Sprite(bmp)
             backSprite.anchor.x = 0.5
             if(this.gaugeOpt().pos === "Top"){
@@ -367,7 +371,7 @@ Theo.EnemyHPGauge = function(){
             if(this.gaugeOpt().segments === 1){
                 return
             }
-            const bmp = this.gaugeOpt().createSegmentBitmap()
+            const bmp = this.gaugeOpt().createSegmentBitmap(this._refSprite.width)
             const segSpr = new Sprite(bmp)
             segSpr.anchor.x = 0.5
             if(this.gaugeOpt().pos === "Top"){
@@ -451,6 +455,14 @@ Theo.EnemyHPGauge = function(){
             }
         }
 
+        recreateSprites() {
+            this.removeChildren(0, 3);
+            this.createBackSprite();
+            this.createAfterimageSprite();
+            this.createGaugeSprite();
+            this.createSegmentSprite();
+        }
+
         updatePosition(){
             if(this.gaugeOpt().pos === "Bottom"){
                 this.x = this._refSprite.x + this.gaugeOpt().offsetX
@@ -458,6 +470,9 @@ Theo.EnemyHPGauge = function(){
             }else{
                 this.x = this._refSprite.x + this.gaugeOpt().offsetX
                 this.y = this._refSprite.y + this.gaugeOpt().offsetY - this._refSprite.height
+            }
+            if(this._backGauge.width !== this._refSprite.width) {
+                this.recreateSprites();
             }
         }
 
