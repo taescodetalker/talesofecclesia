@@ -69,6 +69,30 @@ Window_BattleStatus.prototype.loadFaceImages = function() {
     //Hide StatusBase function as we are loading pictures instead of faces.
 };
 
+Window_BattleStatus.prototype.placeStateIcon = function(actor, x, y) {
+    const key = "actor%1-stateIcon".format(actor.actorId());
+    const sprite = this.createInnerSprite(key, Spriteset_ClickableStateIcons);
+    sprite.setup(actor, this.stateIconsX(), this.stateIconsY());
+    sprite.move(x, y);
+    sprite.show();
+};
+
+Window_BattleStatus.prototype.stateIconsX = function() {
+    return 5;
+};
+
+Window_BattleStatus.prototype.stateIconsY = function() {
+    return 6;
+};
+
+Window_BattleStatus.prototype.stateIconX = function(rect) {
+    return rect.x + rect.width - ImageManager.standardIconWidth * this.stateIconsX();
+};
+
+Window_BattleStatus.prototype.stateIconY = function(rect) {
+    return rect.y + this.padding;
+};
+
 Window_BattleStatus.prototype.drawActorFace = function(actor, x, y, width, height) {
     const pictureName = this.getPictureName(actor);
     if(!pictureName) {
@@ -223,8 +247,6 @@ Sprite_ClickableStateIcon.prototype.initMembers = function() {
     this._stateIndex = 0;
     this._iconIndex = 0;
     this._waitCounter = 0;
-    this.anchor.x = 0.5;
-    this.anchor.y = 0.5;
 };
 
 Sprite_ClickableStateIcon.prototype.loadBitmap = function() {
@@ -233,7 +255,7 @@ Sprite_ClickableStateIcon.prototype.loadBitmap = function() {
 };
 
 Sprite_ClickableStateIcon.prototype.setup = function(battler, stateIndex) {
-    if(this.battler !== battler) {
+    if(this._battler !== battler) {
         this._battler = battler;
         this._stateIndex = stateIndex;
         this._waitCounter = this.refreshWait();
@@ -243,7 +265,7 @@ Sprite_ClickableStateIcon.prototype.setup = function(battler, stateIndex) {
 Sprite_ClickableStateIcon.prototype.update = function() {
     Sprite_Clickable.prototype.update.call(this);
     this._waitCounter++;
-    if(this.waitCounter >= this.refreshWait()) {
+    if(this._waitCounter >= this.refreshWait()) {
         this.updateIcon();
         this.updateFrame();
         this._waitCounter = 0;
@@ -299,15 +321,14 @@ function Spriteset_ClickableStateIcons() {
 Spriteset_ClickableStateIcons.prototype = Object.create(Sprite.prototype);
 Spriteset_ClickableStateIcons.prototype.constructor = Spriteset_ClickableStateIcons;
 
-Spriteset_ClickableStateIcons.prototype.initialize = function(iconsX, iconsY) {
+Spriteset_ClickableStateIcons.prototype.initialize = function() {
     Sprite.prototype.initialize.call(this);
-    this.createClickableStateIcons(iconsX, iconsY);
+    this._clickableIcons = [];
 };
 
 Spriteset_ClickableStateIcons.prototype.createClickableStateIcons = function(iconsX, iconsY) {
-    this._clickableIcons = [];
     for(let y = 0; y < iconsY; ++y) {
-        for(let x = 0; x < iconsX; ++x) {
+        for(let x = iconsX - 1; x >= 0; --x) {
             const iconSprite = new Sprite_ClickableStateIcon();
             iconSprite.x = x * ImageManager.iconWidth;
             iconSprite.y = y * ImageManager.iconHeight;
@@ -317,8 +338,9 @@ Spriteset_ClickableStateIcons.prototype.createClickableStateIcons = function(ico
     }
 };
 
-Spriteset_ClickableStateIcons.prototype.setup = function (battler) {
+Spriteset_ClickableStateIcons.prototype.setup = function (battler, iconsX, iconsY) {
+    this.createClickableStateIcons(iconsX, iconsY);
     for(let i = 0; i < this._clickableIcons.length; ++i) {
-        this.clickableIcons[i].setup(battler, i);
+        this._clickableIcons[i].setup(battler, i);
     }
 }
