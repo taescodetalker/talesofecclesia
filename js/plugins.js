@@ -64,10 +64,10 @@ var $plugins =
             "border": "2",
             "segments": "1",
             "gaugecolor": "",
-            "lcolorindex": "18",
-            "rcolorindex": "18",
-            "bcolorindex": "19",
-            "aftImage": "19",
+            "lcolorindex": "10",
+            "rcolorindex": "29",
+            "bcolorindex": "15",
+            "aftImage": "18",
             "aftAlpha": "200"
         }
     },
