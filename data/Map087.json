@@ -20083,8 +20083,8 @@
                                 0,
                                 0,
                                 0,
-                                280,
-                                155,
+                                100,
+                                100,
                                 255,
                                 0
                             ]
@@ -20262,7 +20262,7 @@
                                 0,
                                 -8,
                                 -40,
-                                175,
+                                100,
                                 100,
                                 255,
                                 0
@@ -20343,7 +20343,7 @@
                             "code": 401,
                             "indent": 0,
                             "parameters": [
-                                "A big pearl on his head, pointy ears and sharpened teeth. Upon first look it looked human, but Ecclesia soon realised it wasn\u2019t as simple as that."
+                                "A big pearl on his head, pointy ears and sharpened teeth. Upon first look it looked human, but Ecclesia soon realised it wasn’t as simple as that."
                             ]
                         },
                         {
@@ -20515,7 +20515,7 @@
                                 "set",
                                 "Set Text Picture",
                                 {
-                                    "text": "Ecclesia, who was already hesitant to strike, was not completely frozen in shock.\nNot only was the enemy before her no longer the dragon attacking the city, but he also spoke to her.\nHis voice was trembling in fear and his breath was heavy, just like Ecclesia\u2019s.\nEcclesia didn\u2019t know what to do anymore. All her instincts told her to attack him, but something inside kept her from doing so.",
+                                    "text": "Ecclesia, who was already hesitant to strike, was not completely frozen in shock.\nNot only was the enemy before her no longer the dragon attacking the city, but he also spoke to her.\nHis voice was trembling in fear and his breath was heavy, just like Ecclesia’s.\nEcclesia didn’t know what to do anymore. All her instincts told her to attack him, but something inside kept her from doing so.",
                                     "bg_color": "black",
                                     "bg_opacity": "192"
                                 }
@@ -20525,7 +20525,7 @@
                             "code": 657,
                             "indent": 0,
                             "parameters": [
-                                "Text = Ecclesia, who was already hesitant to strike, was no\u2026"
+                                "Text = Ecclesia, who was already hesitant to strike, was no…"
                             ]
                         },
                         {
@@ -20856,8 +20856,8 @@
                                 0,
                                 -8,
                                 -16,
-                                225,
-                                150,
+                                100,
+                                100,
                                 255,
                                 0
                             ]
@@ -20985,7 +20985,7 @@
                             "code": 401,
                             "indent": 0,
                             "parameters": [
-                                "The skilled femme fatal\u00e9 with sniping skills unmatched. Her aim and procision with her sniper rifle can easily"
+                                "The skilled femme fatalé with sniping skills unmatched. Her aim and procision with her sniper rifle can easily"
                             ]
                         },
                         {
@@ -21005,8 +21005,8 @@
                                 0,
                                 -7,
                                 -43,
-                                225,
-                                130,
+                                100,
+                                100,
                                 255,
                                 0
                             ]
