@@ -4,7 +4,7 @@ var $plugins =
 [
     {
         "name": "VT_FullScreen",
-        "status": true,
+        "status": false,
         "description": "Automatically starts the game in fullscreen mode and quit option.",
         "parameters": {}
     },

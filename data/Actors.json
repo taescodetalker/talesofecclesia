@@ -14,7 +14,7 @@
             81
         ],
         "faceIndex": 6,
-        "faceName": "SF_Actor2",
+        "faceName": "SF_Actor2 (2)",
         "traits": [
             {
                 "code": 31,
@@ -43,7 +43,7 @@
             0
         ],
         "faceIndex": 5,
-        "faceName": "SF_Actor2",
+        "faceName": "SF_Actor2 (2)",
         "traits": [],
         "initialLevel": 20,
         "maxLevel": 99,
@@ -111,7 +111,7 @@
             25
         ],
         "faceIndex": 3,
-        "faceName": "SF_Actor2",
+        "faceName": "SF_Actor2 (2)",
         "traits": [
             {
                 "code": 31,
@@ -160,7 +160,7 @@
             82
         ],
         "faceIndex": 4,
-        "faceName": "SF_Actor2",
+        "faceName": "SF_Actor2 (2)",
         "traits": [
             {
                 "code": 31,
@@ -278,7 +278,7 @@
             93
         ],
         "faceIndex": 7,
-        "faceName": "SF_Actor2",
+        "faceName": "SF_Actor2 (2)",
         "traits": [
             {
                 "code": 43,
@@ -410,7 +410,7 @@
             93
         ],
         "faceIndex": 5,
-        "faceName": "ecclesia",
+        "faceName": "ecclesia (2)",
         "traits": [
             {
                 "code": 43,
@@ -514,7 +514,7 @@
             0
         ],
         "faceIndex": 1,
-        "faceName": "ecclesia2",
+        "faceName": "ecclesia2 (2)",
         "traits": [],
         "initialLevel": 1,
         "maxLevel": 99,
@@ -537,7 +537,7 @@
             0
         ],
         "faceIndex": 0,
-        "faceName": "ecclesia2",
+        "faceName": "ecclesia2 (2)",
         "traits": [],
         "initialLevel": 1,
         "maxLevel": 99,
@@ -606,7 +606,7 @@
             0
         ],
         "faceIndex": 0,
-        "faceName": "SF_Actor2",
+        "faceName": "SF_Actor2 (2)",
         "traits": [
             {
                 "code": 41,
@@ -635,7 +635,7 @@
             0
         ],
         "faceIndex": 1,
-        "faceName": "SF_Actor2",
+        "faceName": "SF_Actor2 (2)",
         "traits": [
             {
                 "code": 41,
@@ -664,7 +664,7 @@
             0
         ],
         "faceIndex": 2,
-        "faceName": "SF_Actor2",
+        "faceName": "SF_Actor2 (2)",
         "traits": [],
         "initialLevel": 50,
         "maxLevel": 99,
@@ -1376,51 +1376,25 @@
     },
     {
         "id": 46,
-        "battlerName": "ecclesia",
+        "battlerName": "",
         "characterIndex": 0,
-        "characterName": "Ecclesia_Spritesheet",
-        "classId": 9,
+        "characterName": "",
+        "classId": 1,
         "equips": [
             0,
             0,
             0,
-            101,
-            25
+            0,
+            0
         ],
-        "faceIndex": 3,
-        "faceName": "SF_Actor2",
-        "traits": [
-            {
-                "code": 31,
-                "dataId": 4,
-                "value": 1
-            },
-            {
-                "code": 51,
-                "dataId": 13,
-                "value": 1
-            },
-            {
-                "code": 43,
-                "dataId": 23,
-                "value": 1
-            },
-            {
-                "code": 43,
-                "dataId": 64,
-                "value": 1
-            },
-            {
-                "code": 43,
-                "dataId": 63,
-                "value": 1
-            }
-        ],
-        "initialLevel": 4,
+        "faceIndex": 0,
+        "faceName": "",
+        "traits": [],
+        "initialLevel": 1,
         "maxLevel": 99,
-        "name": "Ecclesia",
-        "nickname": "The Virtuous",
-        "note": "<picture:EcclesiaFace>",
+        "name": "",
+        "nickname": "",
+        "note": "",
         "profile": ""
     },
     {
