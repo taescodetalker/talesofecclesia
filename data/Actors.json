@@ -14,7 +14,7 @@
             81
         ],
         "faceIndex": 6,
-        "faceName": "SF_Actor2 (2)",
+        "faceName": "SF_Actor2",
         "traits": [
             {
                 "code": 31,
@@ -43,7 +43,7 @@
             0
         ],
         "faceIndex": 5,
-        "faceName": "SF_Actor2 (2)",
+        "faceName": "SF_Actor2",
         "traits": [],
         "initialLevel": 20,
         "maxLevel": 99,
@@ -111,7 +111,7 @@
             25
         ],
         "faceIndex": 3,
-        "faceName": "SF_Actor2 (2)",
+        "faceName": "SF_Actor2",
         "traits": [
             {
                 "code": 31,
@@ -160,7 +160,7 @@
             82
         ],
         "faceIndex": 4,
-        "faceName": "SF_Actor2 (2)",
+        "faceName": "SF_Actor2",
         "traits": [
             {
                 "code": 31,
@@ -278,7 +278,7 @@
             93
         ],
         "faceIndex": 7,
-        "faceName": "SF_Actor2 (2)",
+        "faceName": "SF_Actor2",
         "traits": [
             {
                 "code": 43,
@@ -346,7 +346,7 @@
         "id": 9,
         "battlerName": "ecclesia222",
         "characterIndex": 0,
-        "characterName": "ecclesia22 (2)",
+        "characterName": "ecclesia22",
         "classId": 9,
         "equips": [
             0,
@@ -410,7 +410,7 @@
             93
         ],
         "faceIndex": 5,
-        "faceName": "ecclesia (2)",
+        "faceName": "ecclesia",
         "traits": [
             {
                 "code": 43,
@@ -428,8 +428,8 @@
     {
         "id": 11,
         "battlerName": "Actor3_5",
-        "characterIndex": 4,
-        "characterName": "Actor3",
+        "characterIndex": 2,
+        "characterName": "2_DF_Actor",
         "classId": 10,
         "equips": [
             38,
@@ -439,7 +439,7 @@
             93
         ],
         "faceIndex": 0,
-        "faceName": "SF_Actor3",
+        "faceName": "",
         "traits": [
             {
                 "code": 43,
@@ -606,7 +606,7 @@
             0
         ],
         "faceIndex": 0,
-        "faceName": "SF_Actor2 (2)",
+        "faceName": "SF_Actor2",
         "traits": [
             {
                 "code": 41,
@@ -635,7 +635,7 @@
             0
         ],
         "faceIndex": 1,
-        "faceName": "SF_Actor2 (2)",
+        "faceName": "SF_Actor2",
         "traits": [
             {
                 "code": 41,
@@ -664,7 +664,7 @@
             0
         ],
         "faceIndex": 2,
-        "faceName": "SF_Actor2 (2)",
+        "faceName": "SF_Actor2",
         "traits": [],
         "initialLevel": 50,
         "maxLevel": 99,
@@ -1042,7 +1042,7 @@
         "id": 33,
         "battlerName": "People2_6",
         "characterIndex": 5,
-        "characterName": "People2",
+        "characterName": "Clerics2AveryMZa",
         "classId": 9,
         "equips": [
             0,

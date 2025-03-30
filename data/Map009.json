@@ -11461,7 +11461,7 @@
                             "code": 401,
                             "indent": 0,
                             "parameters": [
-                                "Good morning Fleu- I mean, Good morning teacher. Yes, I slept good and I\u2019m ready to get to work today"
+                                "Good morning Fleu- I mean, Good morning teacher. Yes, I slept good and I’m ready to get to work today"
                             ]
                         },
                         {
@@ -11550,7 +11550,7 @@
                                 "set",
                                 "Set Text Picture",
                                 {
-                                    "text": "Ecclesia\u2019s face shifted to a more nervous and held back expression.\nFleurdelis was quick to notice it.\n",
+                                    "text": "Ecclesia’s face shifted to a more nervous and held back expression.\nFleurdelis was quick to notice it.\n",
                                     "bg_color": "black",
                                     "bg_opacity": "192"
                                 }
@@ -11560,7 +11560,7 @@
                             "code": 657,
                             "indent": 0,
                             "parameters": [
-                                "Text = Ecclesia\u2019s face shifted to a more nervous and held \u2026"
+                                "Text = Ecclesia’s face shifted to a more nervous and held …"
                             ]
                         },
                         {
@@ -11638,7 +11638,7 @@
                             "code": 401,
                             "indent": 0,
                             "parameters": [
-                                "Don\u2019t be nervous Ecclesia. You will be alright and you will do great as the next great saint. You have been an amazing virtue "
+                                "Don’t be nervous Ecclesia. You will be alright and you will do great as the next great saint. You have been an amazing virtue "
                             ]
                         },
                         {
@@ -11673,7 +11673,7 @@
                             "code": 657,
                             "indent": 0,
                             "parameters": [
-                                "Text = Ecclesia cheered up and smiled towards Fleurdelis.  \u2026"
+                                "Text = Ecclesia cheered up and smiled towards Fleurdelis.  …"
                             ]
                         },
                         {
@@ -11818,14 +11818,14 @@
                             "code": 401,
                             "indent": 0,
                             "parameters": [
-                                "To start off, I want you to meet up with \\c[9]Theo\\c[0] and \\c[11]Adin \\c[0]first for your morning practice. We\u2019ll need to be on guard for "
+                                "To start off, I want you to meet up with \\c[9]Theo\\c[0] and \\c[11]Adin \\c[0]first for your morning practice. We’ll need to be on guard for "
                             ]
                         },
                         {
                             "code": 401,
                             "indent": 0,
                             "parameters": [
-                                "tomorrow\u2019s ceremony."
+                                "tomorrow’s ceremony."
                             ]
                         },
                         {
@@ -11926,7 +11926,7 @@
                             "code": 657,
                             "indent": 0,
                             "parameters": [
-                                "Text = -Meet up with Theo for combat lessons at the trainin\u2026"
+                                "Text = -Meet up with Theo for combat lessons at the trainin…"
                             ]
                         },
                         {
@@ -14506,10 +14506,10 @@
                                 "Nadir Servant 8",
                                 0,
                                 0,
-                                480.0,
-                                262.0,
-                                80.0,
-                                47.5,
+                                480,
+                                262,
+                                80,
+                                48,
                                 255,
                                 0
                             ]
@@ -14522,10 +14522,10 @@
                                 "Titaniklad the ash dragon 11",
                                 0,
                                 0,
-                                480.0,
-                                266.0,
-                                82.5,
-                                47.5,
+                                480,
+                                266,
+                                83,
+                                48,
                                 255,
                                 0
                             ]
@@ -14616,7 +14616,7 @@
                                 0,
                                 87,
                                 24,
-                                30,
+                                26,
                                 8,
                                 0
                             ]
@@ -15729,7 +15729,7 @@
                             "code": 657,
                             "indent": 0,
                             "parameters": [
-                                "Text = Accompany Fleurdelis to the Dogmatika Outskirts outs\u2026"
+                                "Text = Accompany Fleurdelis to the Dogmatika Outskirts outs…"
                             ]
                         },
                         {
@@ -15756,8 +15756,8 @@
                                 0,
                                 480,
                                 270,
-                                50.0,
-                                50.0,
+                                50,
+                                50,
                                 255,
                                 0
                             ]
@@ -15854,7 +15854,7 @@
                             "code": 657,
                             "indent": 0,
                             "parameters": [
-                                "Text = Accompany Fleurdelis to the Dogmatika Outskirts outs\u2026"
+                                "Text = Accompany Fleurdelis to the Dogmatika Outskirts outs…"
                             ]
                         },
                         {
@@ -15881,8 +15881,8 @@
                                 0,
                                 480,
                                 270,
-                                50.0,
-                                50.0,
+                                50,
+                                50,
                                 255,
                                 0
                             ]
