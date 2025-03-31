@@ -85,8 +85,8 @@
         "name": "Castle Courtyard",
         "order": 4,
         "parentId": 7,
-        "scrollX": 1120,
-        "scrollY": 924.5
+        "scrollX": 982.8,
+        "scrollY": 1630.1999999999998
     },
     {
         "id": 10,
@@ -114,8 +114,8 @@
         "name": "Sogen ",
         "order": 25,
         "parentId": 7,
-        "scrollX": 1389.818181818182,
-        "scrollY": 812.1818181818182,
+        "scrollX": 1426.8,
+        "scrollY": 568.1999999999999,
         "quick": false
     },
     {
@@ -532,8 +532,8 @@
         "name": "TBG Manor ",
         "order": 26,
         "parentId": 12,
-        "scrollX": 816,
-        "scrollY": 624,
+        "scrollX": 973.1999999999999,
+        "scrollY": 568.1999999999999,
         "quick": false
     },
     {
@@ -721,8 +721,8 @@
         "name": "Castle Secret Hall",
         "order": 7,
         "parentId": 9,
-        "scrollX": 811,
-        "scrollY": 596.5,
+        "scrollX": 973.1999999999999,
+        "scrollY": 597,
         "quick": false
     },
     {
@@ -780,8 +780,8 @@
         "name": "Dogmatika Castle Lobby",
         "order": 6,
         "parentId": 72,
-        "scrollX": 2246,
-        "scrollY": 3370.5,
+        "scrollX": 2246.4,
+        "scrollY": 3370.2,
         "quick": false
     },
     {

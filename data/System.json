@@ -3,8 +3,8 @@
         "gameId": 12608609,
         "screenWidth": 1920,
         "screenHeight": 1080,
-        "uiAreaWidth": 1920,
-        "uiAreaHeight": 1080,
+        "uiAreaWidth": 950,
+        "uiAreaHeight": 600,
         "numberFontFilename": "Yu-Gi-Oh! Matrix Regular Small Caps 2.woff2",
         "fallbackFonts": "Verdana, sans-serif",
         "fontSize": 30,
@@ -128,7 +128,7 @@
         "pitch": 70,
         "volume": 90
     },
-    "editMapId": 9,
+    "editMapId": 79,
     "elements": [
         "",
         "Physical",
@@ -667,7 +667,7 @@
         "",
         ""
     ],
-    "versionId": 63088668,
+    "versionId": 78701150,
     "victoryMe": {
         "name": "Victory2",
         "pan": 0,
