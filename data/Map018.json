@@ -1552,7 +1552,7 @@
         0,
         91,
         135,
-        0,
+        373,
         0,
         120,
         0,
@@ -3335,7 +3335,7 @@
                             "code": 401,
                             "indent": 2,
                             "parameters": [
-                                "You don\u2019t have enough money."
+                                "You don’t have enough money."
                             ]
                         },
                         {
@@ -3390,7 +3390,7 @@
                         "wait": false
                     },
                     "moveSpeed": 3,
-                    "moveType": 1,
+                    "moveType": 0,
                     "priorityType": 1,
                     "stepAnime": false,
                     "through": false,
