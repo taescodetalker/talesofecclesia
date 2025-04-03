@@ -4,10 +4,10 @@
     "battleback1Name": "Castle1",
     "battleback2Name": "Castle3",
     "bgm": {
-        "name": "Bond-Of-Friendship-By-Yu-Gi-Oh",
+        "name": "Castle3",
         "pan": 0,
         "pitch": 100,
-        "volume": 100
+        "volume": 40
     },
     "bgs": {
         "name": "",

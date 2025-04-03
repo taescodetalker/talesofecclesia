@@ -1,8 +1,8 @@
 {
     "autoplayBgm": false,
     "autoplayBgs": false,
-    "battleback1Name": "",
-    "battleback2Name": "",
+    "battleback1Name": "Cobblestones4",
+    "battleback2Name": "Ruins1",
     "bgm": {
         "name": "",
         "pan": 0,
@@ -28,7 +28,7 @@
     "parallaxSx": 0,
     "parallaxSy": -6,
     "scrollType": 0,
-    "specifyBattleback": false,
+    "specifyBattleback": true,
     "tilesetId": 2,
     "width": 70,
     "data": [

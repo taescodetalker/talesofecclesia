@@ -683,7 +683,7 @@
                             "code": 657,
                             "indent": 0,
                             "parameters": [
-                                "Text =    This is a beta. Some things will be subject to ch\u2026"
+                                "Text =    This is a beta. Some things will be subject to ch…"
                             ]
                         },
                         {
@@ -1292,133 +1292,106 @@
                             ]
                         },
                         {
-                            "code": 357,
+                            "code": 101,
                             "indent": 0,
                             "parameters": [
-                                "VT_TextPicture",
-                                "set",
-                                "Set Text Picture",
-                                {
-                                    "text": "\n\n\nThis is a beta. Some things will be subject to change and\nalteration. This is not the final product as the project\nis still a work in progress. Have a great day and enjoy :)\n-taescodetalker",
-                                    "bg_color": "black",
-                                    "bg_opacity": "192"
-                                }
-                            ]
-                        },
-                        {
-                            "code": 657,
-                            "indent": 0,
-                            "parameters": [
-                                "Text =    This is a beta. Some things will be subject to ch\u2026"
-                            ]
-                        },
-                        {
-                            "code": 657,
-                            "indent": 0,
-                            "parameters": [
-                                "Background color = black"
-                            ]
-                        },
-                        {
-                            "code": 657,
-                            "indent": 0,
-                            "parameters": [
-                                "Background opacity = 192"
-                            ]
-                        },
-                        {
-                            "code": 231,
-                            "indent": 0,
-                            "parameters": [
-                                1,
                                 "",
                                 0,
                                 0,
-                                500,
-                                200,
-                                100,
-                                100,
-                                255,
-                                0
-                            ]
-                        },
-                        {
-                            "code": 230,
-                            "indent": 0,
-                            "parameters": [
-                                300
-                            ]
-                        },
-                        {
-                            "code": 235,
-                            "indent": 0,
-                            "parameters": [
-                                1
-                            ]
-                        },
-                        {
-                            "code": 357,
-                            "indent": 0,
-                            "parameters": [
-                                "VT_TextPicture",
-                                "set",
-                                "Set Text Picture",
-                                {
-                                    "text": "Special Thanks to:\n\nQuestionaBull, Vincent Thieu, DiSTORTION311, UnamusedWaffle,\nMetaGamesGX, Galzo, Uri Diaz, Team Solemn Circus, NyxTheBranded, \nOstsamu Masto, FlipelyFlip, Chandelurechan, ZoodiacScreamScream,\nFalcon",
-                                    "bg_color": "black",
-                                    "bg_opacity": "192"
-                                }
-                            ]
-                        },
-                        {
-                            "code": 657,
-                            "indent": 0,
-                            "parameters": [
-                                "Text = Special Thanks to:  QuestionaBull, Vincent Thieu, Di\u2026"
-                            ]
-                        },
-                        {
-                            "code": 657,
-                            "indent": 0,
-                            "parameters": [
-                                "Background color = black"
-                            ]
-                        },
-                        {
-                            "code": 657,
-                            "indent": 0,
-                            "parameters": [
-                                "Background opacity = 192"
-                            ]
-                        },
-                        {
-                            "code": 231,
-                            "indent": 0,
-                            "parameters": [
                                 1,
+                                ""
+                            ]
+                        },
+                        {
+                            "code": 401,
+                            "indent": 0,
+                            "parameters": [
+                                "This is a beta. Some things will be subject to change and"
+                            ]
+                        },
+                        {
+                            "code": 401,
+                            "indent": 0,
+                            "parameters": [
+                                "alteration. This is not the final product as the project"
+                            ]
+                        },
+                        {
+                            "code": 401,
+                            "indent": 0,
+                            "parameters": [
+                                "is still a work in progress. Have a great day and enjoy :)"
+                            ]
+                        },
+                        {
+                            "code": 401,
+                            "indent": 0,
+                            "parameters": [
+                                "-taescodetalker"
+                            ]
+                        },
+                        {
+                            "code": 101,
+                            "indent": 0,
+                            "parameters": [
                                 "",
                                 0,
                                 0,
-                                500,
-                                448,
-                                100,
-                                100,
-                                255,
-                                0
+                                1,
+                                ""
                             ]
                         },
                         {
-                            "code": 230,
+                            "code": 401,
                             "indent": 0,
                             "parameters": [
-                                240
+                                "Special Thanks to:"
                             ]
                         },
                         {
-                            "code": 235,
+                            "code": 401,
                             "indent": 0,
                             "parameters": [
-                                1
+                                ""
+                            ]
+                        },
+                        {
+                            "code": 401,
+                            "indent": 0,
+                            "parameters": [
+                                "QuestionaBull, Vincent Thieu, DiSTORTION311, UnamusedWaffle,"
+                            ]
+                        },
+                        {
+                            "code": 401,
+                            "indent": 0,
+                            "parameters": [
+                                "MetaGamesGX, Galzo, Uri Diaz, Team Solemn Circus, NyxTheBranded, "
+                            ]
+                        },
+                        {
+                            "code": 101,
+                            "indent": 0,
+                            "parameters": [
+                                "",
+                                0,
+                                0,
+                                1,
+                                ""
+                            ]
+                        },
+                        {
+                            "code": 401,
+                            "indent": 0,
+                            "parameters": [
+                                "Ostsamu Masto, FlipelyFlip, Chandelurechan, ZoodiacScreamScream,"
+                            ]
+                        },
+                        {
+                            "code": 401,
+                            "indent": 0,
+                            "parameters": [
+                                "Falcon, SetoFreakingKaiba"
                             ]
                         },
                         {
@@ -1441,54 +1414,42 @@
                             "parameters": []
                         },
                         {
-                            "code": 357,
+                            "code": 101,
                             "indent": 0,
                             "parameters": [
-                                "VT_TextPicture",
-                                "set",
-                                "Set Text Picture",
-                                {
-                                    "text": "Our journey begins in the land of the abyss. A divided world consisting of several factions spread across this vast world. One of those are the people of a land ruled by god.\nIn the far north of the continent we find ourselves in the Dogmatika Nation\nA empire of those faithful to the leadership of the Dogmatika Church",
-                                    "bg_color": "Black",
-                                    "bg_opacity": "192"
-                                }
-                            ]
-                        },
-                        {
-                            "code": 657,
-                            "indent": 0,
-                            "parameters": [
-                                "Text = Our journey begins in the land of the abyss. A divid\u2026"
-                            ]
-                        },
-                        {
-                            "code": 657,
-                            "indent": 0,
-                            "parameters": [
-                                "Background color = Black"
-                            ]
-                        },
-                        {
-                            "code": 657,
-                            "indent": 0,
-                            "parameters": [
-                                "Background opacity = 192"
-                            ]
-                        },
-                        {
-                            "code": 231,
-                            "indent": 0,
-                            "parameters": [
-                                2,
                                 "",
                                 0,
-                                0,
-                                16,
-                                8,
-                                100,
-                                100,
-                                255,
-                                0
+                                1,
+                                1,
+                                ""
+                            ]
+                        },
+                        {
+                            "code": 401,
+                            "indent": 0,
+                            "parameters": [
+                                "Our journey begins in the land of the abyss. A divided world consisting of several factions"
+                            ]
+                        },
+                        {
+                            "code": 401,
+                            "indent": 0,
+                            "parameters": [
+                                "spread across this vast world."
+                            ]
+                        },
+                        {
+                            "code": 401,
+                            "indent": 0,
+                            "parameters": [
+                                "One of those are the people of a land ruled by god."
+                            ]
+                        },
+                        {
+                            "code": 401,
+                            "indent": 0,
+                            "parameters": [
+                                "In the far north of the continent we find ourselves in the Dogmatika Nation"
                             ]
                         },
                         {
@@ -1546,7 +1507,7 @@
                             "code": 657,
                             "indent": 0,
                             "parameters": [
-                                "Text = Standing on top of this church is Maximus. The pope \u2026"
+                                "Text = Standing on top of this church is Maximus. The pope …"
                             ]
                         },
                         {
@@ -1634,7 +1595,7 @@
                             "code": 657,
                             "indent": 0,
                             "parameters": [
-                                "Text = The Dogmatika Nexus. A statue said to be given to th\u2026"
+                                "Text = The Dogmatika Nexus. A statue said to be given to th…"
                             ]
                         },
                         {
@@ -1722,7 +1683,7 @@
                             "code": 657,
                             "indent": 0,
                             "parameters": [
-                                "Text = Protecting the leader of the nation, are the Ashiyan\u2026"
+                                "Text = Protecting the leader of the nation, are the Ashiyan…"
                             ]
                         },
                         {
@@ -1810,7 +1771,7 @@
                             "code": 657,
                             "indent": 0,
                             "parameters": [
-                                "Text = In this nation, dictated by the laws of the church. \u2026"
+                                "Text = In this nation, dictated by the laws of the church. …"
                             ]
                         },
                         {
