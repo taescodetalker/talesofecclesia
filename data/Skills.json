@@ -1276,7 +1276,7 @@
                 "value2": 0
             }
         ],
-        "hitType": 0,
+        "hitType": 1,
         "iconIndex": 76,
         "message1": "%1 attacks!",
         "message2": "",

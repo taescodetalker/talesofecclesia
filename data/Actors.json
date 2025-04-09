@@ -26,7 +26,7 @@
         "maxLevel": 99,
         "name": "?????",
         "nickname": "The Fallen",
-        "note": "<picture:AlbazFace>",
+        "note": "<picture:AlbazFace>\n<Battle Portrait: AlbazPixel_Small>\n<Menu Portrait: AlbazPixel_Small>",
         "profile": ""
     },
     {
@@ -143,7 +143,7 @@
         "maxLevel": 99,
         "name": "Ecclesia",
         "nickname": "The Virtuous",
-        "note": "<picture:EcclesiaFace>",
+        "note": "<picture:EcclesiaFace>\n<Battle Portrait: Ecclesia - Full>\n<Menu Portrait: Ecclesia - Full>",
         "profile": ""
     },
     {
