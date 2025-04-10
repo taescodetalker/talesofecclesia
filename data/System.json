@@ -15,7 +15,7 @@
     },
     "airship": {
         "bgm": {
-            "name": "yu-gi-oh-ost-passionate-duelist-_mp3convert.org_",
+            "name": "valhalla-instrumental-quest-adventure-rpg-journey-electronic-135450",
             "pan": 0,
             "pitch": 130,
             "volume": 25
@@ -98,10 +98,10 @@
         }
     ],
     "battleBgm": {
-        "name": "Yu Gi Oh OST - jonouchi",
+        "name": "Battle2",
         "pan": 0,
         "pitch": 100,
-        "volume": 35
+        "volume": 25
     },
     "battleback1Name": "Ground1",
     "battleback2Name": "Cyberspace",
@@ -128,7 +128,7 @@
         "pitch": 70,
         "volume": 90
     },
-    "editMapId": 26,
+    "editMapId": 11,
     "elements": [
         "",
         "Physical",
@@ -153,7 +153,7 @@
         "name": "Gameover2",
         "pan": 0,
         "pitch": 70,
-        "volume": 70
+        "volume": 55
     },
     "itemCategories": [
         true,
@@ -207,17 +207,17 @@
         {
             "name": "Cursor3",
             "pan": 0,
-            "pitch": 60,
-            "volume": 55
+            "pitch": 90,
+            "volume": 25
         },
         {
-            "name": "Decision3",
+            "name": "Decision4",
             "pan": 0,
             "pitch": 110,
-            "volume": 60
+            "volume": 25
         },
         {
-            "name": "Cancel3",
+            "name": "Cancel1",
             "pan": 0,
             "pitch": 100,
             "volume": 50
@@ -229,16 +229,16 @@
             "volume": 90
         },
         {
-            "name": "Equip2",
+            "name": "Equip3",
             "pan": 0,
             "pitch": 100,
-            "volume": 90
+            "volume": 55
         },
         {
             "name": "Save1",
             "pan": 0,
-            "pitch": 130,
-            "volume": 100
+            "pitch": 70,
+            "volume": 75
         },
         {
             "name": "Load1",
@@ -247,16 +247,16 @@
             "volume": 50
         },
         {
-            "name": "Battle2",
+            "name": "Battle3",
             "pan": 0,
             "pitch": 90,
-            "volume": 90
+            "volume": 75
         },
         {
             "name": "Run",
             "pan": 40,
             "pitch": 100,
-            "volume": 50
+            "volume": 30
         },
         {
             "name": "Attack2",
@@ -286,17 +286,17 @@
             "name": "Collapse3",
             "pan": 0,
             "pitch": 100,
-            "volume": 90
+            "volume": 55
         },
         {
-            "name": "Collapse1",
+            "name": "Damage4",
             "pan": 0,
             "pitch": 100,
-            "volume": 85
+            "volume": 50
         },
         {
             "name": "yu-gi-oh-life-point-sound-effect",
-            "pan": 100,
+            "pan": 60,
             "pitch": 100,
             "volume": 100
         },
@@ -304,7 +304,7 @@
             "name": "Recovery",
             "pan": 0,
             "pitch": 100,
-            "volume": 90
+            "volume": 50
         },
         {
             "name": "Miss",
@@ -334,18 +334,18 @@
             "name": "Shop1",
             "pan": 0,
             "pitch": 100,
-            "volume": 90
+            "volume": 55
+        },
+        {
+            "name": "Item2",
+            "pan": 0,
+            "pitch": 90,
+            "volume": 75
         },
         {
             "name": "Item3",
             "pan": 0,
-            "pitch": 100,
-            "volume": 90
-        },
-        {
-            "name": "Item3",
-            "pan": 0,
-            "pitch": 100,
+            "pitch": 80,
             "volume": 90
         }
     ],
@@ -409,7 +409,7 @@
         "statue",
         "LadyDefeated",
         "",
-        "",
+        "Hammerpickedup",
         "",
         "TELEPORTER",
         "Serp",
@@ -610,14 +610,14 @@
             ]
         }
     ],
-    "testTroopId": 32,
+    "testTroopId": 1,
     "title1Name": "tales2",
     "title2Name": "",
     "titleBgm": {
         "name": "Intro Music",
         "pan": 0,
         "pitch": 100,
-        "volume": 80
+        "volume": 60
     },
     "titleCommandWindow": {
         "offsetX": 0,
@@ -667,12 +667,12 @@
         "",
         ""
     ],
-    "versionId": 91873120,
+    "versionId": 76873430,
     "victoryMe": {
         "name": "Victory2",
         "pan": 0,
         "pitch": 100,
-        "volume": 80
+        "volume": 55
     },
     "weaponTypes": [
         "",

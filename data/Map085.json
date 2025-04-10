@@ -1,5 +1,5 @@
 {
-    "autoplayBgm": true,
+    "autoplayBgm": false,
     "autoplayBgs": false,
     "battleback1Name": "Cobblestones4",
     "battleback2Name": "Castle1",
@@ -28,7 +28,7 @@
     "parallaxSx": 0,
     "parallaxSy": -6,
     "scrollType": 0,
-    "specifyBattleback": true,
+    "specifyBattleback": false,
     "tilesetId": 2,
     "width": 70,
     "data": [

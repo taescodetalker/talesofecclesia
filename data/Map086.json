@@ -4,10 +4,10 @@
     "battleback1Name": "Cobblestones4",
     "battleback2Name": "Town1",
     "bgm": {
-        "name": "Town8",
+        "name": "valhalla-instrumental-quest-adventure-rpg-journey-electronic-135450",
         "pan": 0,
         "pitch": 100,
-        "volume": 50
+        "volume": 35
     },
     "bgs": {
         "name": "",
@@ -15024,7 +15024,7 @@
                             "code": 401,
                             "indent": 0,
                             "parameters": [
-                                "Good morning. I am here to see if the banquet for tomorrow\u2019s ceremony is on schedule."
+                                "Good morning. I am here to see if the banquet for tomorrow’s ceremony is on schedule."
                             ]
                         },
                         {
@@ -15049,7 +15049,7 @@
                             "code": 401,
                             "indent": 0,
                             "parameters": [
-                                "Oui, of course madame Ecclesia. My apprentices have been working all morning to collect le ingr\u00e9diants for the meals. Rest assured that the ceremony\u2019s banquet will be fantastique!"
+                                "Oui, of course madame Ecclesia. My apprentices have been working all morning to collect le ingrédiants for the meals. Rest assured that the ceremony’s banquet will be fantastique!"
                             ]
                         },
                         {
@@ -15085,7 +15085,7 @@
                             "code": 401,
                             "indent": 0,
                             "parameters": [
-                                "Hahaha. Don\u2019t worry my dear saint. All of the bakery knows you appr\u00e9cier delicious good food more than anyone in the nation."
+                                "Hahaha. Don’t worry my dear saint. All of the bakery knows you apprécier delicious good food more than anyone in the nation."
                             ]
                         },
                         {
