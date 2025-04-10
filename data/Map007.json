@@ -1306,21 +1306,7 @@
                             "code": 401,
                             "indent": 0,
                             "parameters": [
-                                "This is a beta. Some things will be subject to change and"
-                            ]
-                        },
-                        {
-                            "code": 401,
-                            "indent": 0,
-                            "parameters": [
-                                "alteration. This is not the final product as the project"
-                            ]
-                        },
-                        {
-                            "code": 401,
-                            "indent": 0,
-                            "parameters": [
-                                "is still a work in progress. Have a great day and enjoy :)"
+                                "This is a beta. Some things will be subject to change and alteration. This is not the final product as the project is still a work in progress. Have a great day and enjoy :)"
                             ]
                         },
                         {
