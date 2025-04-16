@@ -4,10 +4,10 @@
     "battleback1Name": "Castle1",
     "battleback2Name": "Room1",
     "bgm": {
-        "name": "",
+        "name": "Castle3",
         "pan": 0,
-        "pitch": 100,
-        "volume": 35
+        "pitch": 80,
+        "volume": 30
     },
     "bgs": {
         "name": "",
