@@ -7,7 +7,7 @@
         "uiAreaHeight": 1080,
         "numberFontFilename": "Yu-Gi-Oh! Matrix Regular Small Caps 2.woff2",
         "fallbackFonts": "Verdana, sans-serif",
-        "fontSize": 30,
+        "fontSize": 26,
         "mainFontFilename": "Yu-Gi-Oh! Matrix Regular Small Caps 2.woff2",
         "screenScale": 1,
         "windowOpacity": 192,
@@ -128,7 +128,7 @@
         "pitch": 70,
         "volume": 90
     },
-    "editMapId": 11,
+    "editMapId": 9,
     "elements": [
         "",
         "Physical",
@@ -566,36 +566,36 @@
     },
     "testBattlers": [
         {
-            "actorId": 4,
-            "level": 4,
+            "actorId": 9,
+            "level": 7,
             "equips": [
                 0,
                 0,
                 0,
-                2,
-                25
+                4,
+                0
             ]
         },
         {
-            "actorId": 0,
-            "level": 19,
-            "equips": [
-                6,
-                0,
-                61,
-                17,
-                93
-            ]
-        },
-        {
-            "actorId": 0,
-            "level": 4,
+            "actorId": 1,
+            "level": 8,
             "equips": [
                 4,
                 0,
                 0,
                 13,
                 81
+            ]
+        },
+        {
+            "actorId": 7,
+            "level": 9,
+            "equips": [
+                6,
+                0,
+                61,
+                17,
+                93
             ]
         },
         {
@@ -610,7 +610,7 @@
             ]
         }
     ],
-    "testTroopId": 1,
+    "testTroopId": 2,
     "title1Name": "tales2",
     "title2Name": "",
     "titleBgm": {
@@ -667,7 +667,7 @@
         "",
         ""
     ],
-    "versionId": 76873430,
+    "versionId": 88197947,
     "victoryMe": {
         "name": "Victory2",
         "pan": 0,

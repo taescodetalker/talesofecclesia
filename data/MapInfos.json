@@ -16,8 +16,8 @@
         "name": "Great Sea Golgonda 1",
         "order": 65,
         "parentId": 7,
-        "scrollX": 2383.2,
-        "scrollY": 1087.8,
+        "scrollX": 2209.714285714286,
+        "scrollY": 811.7142857142857,
         "quick": true
     },
     {
@@ -75,8 +75,8 @@
         "name": "Dogmatika Nation (1) DESPIA",
         "order": 15,
         "parentId": 7,
-        "scrollX": 811,
-        "scrollY": 832.5,
+        "scrollX": 1390.2857142857142,
+        "scrollY": 832.2857142857142,
         "quick": true
     },
     {
@@ -86,7 +86,7 @@
         "order": 4,
         "parentId": 7,
         "scrollX": 1390.2857142857142,
-        "scrollY": 811.7142857142857
+        "scrollY": 1031.142857142857
     },
     {
         "id": 10,
@@ -312,8 +312,8 @@
         "name": "Archfiend's Court",
         "order": 49,
         "parentId": 16,
-        "scrollX": 973.1999999999999,
-        "scrollY": 1291.8,
+        "scrollX": 1390.2857142857142,
+        "scrollY": 1531.7142857142856,
         "quick": false
     },
     {
@@ -502,8 +502,8 @@
         "name": "Abandoned Village (AFTER)",
         "order": 23,
         "parentId": 55,
-        "scrollX": 1463,
-        "scrollY": 1242.5,
+        "scrollX": 1462.2857142857142,
+        "scrollY": 1242,
         "quick": false
     },
     {
@@ -532,8 +532,8 @@
         "name": "TBG Manor ",
         "order": 26,
         "parentId": 12,
-        "scrollX": 973.1999999999999,
-        "scrollY": 568.1999999999999,
+        "scrollX": 1390.2857142857142,
+        "scrollY": 811.7142857142857,
         "quick": false
     },
     {
@@ -612,8 +612,8 @@
         "name": "Dogmatika Nexus",
         "order": 8,
         "parentId": 9,
-        "scrollX": 563.3333333333334,
-        "scrollY": 611.6666666666666,
+        "scrollX": 816,
+        "scrollY": 624,
         "quick": false
     },
     {
@@ -810,8 +810,8 @@
         "name": "Dogmatika Outskirts",
         "order": 14,
         "parentId": 80,
-        "scrollX": 1139.3333333333333,
-        "scrollY": 989,
+        "scrollX": 1404,
+        "scrollY": 988.2857142857142,
         "quick": false
     },
     {

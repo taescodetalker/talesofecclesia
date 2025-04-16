@@ -6,8 +6,8 @@
     "bgm": {
         "name": "Castle3",
         "pan": 0,
-        "pitch": 100,
-        "volume": 40
+        "pitch": 80,
+        "volume": 30
     },
     "bgs": {
         "name": "",
