@@ -1414,28 +1414,7 @@
                             "code": 401,
                             "indent": 0,
                             "parameters": [
-                                "Our journey begins in the land of the abyss. A divided world consisting of several factions"
-                            ]
-                        },
-                        {
-                            "code": 401,
-                            "indent": 0,
-                            "parameters": [
-                                "spread across this vast world."
-                            ]
-                        },
-                        {
-                            "code": 401,
-                            "indent": 0,
-                            "parameters": [
-                                "One of those are the people of a land ruled by god."
-                            ]
-                        },
-                        {
-                            "code": 401,
-                            "indent": 0,
-                            "parameters": [
-                                "In the far north of the continent we find ourselves in the Dogmatika Nation"
+                                "Our journey begins in the land of the abyss. A divided world consisting of several factions spread across this vast world. One of those are the people of a land ruled by god. In the far north of the continent we find ourselves in the Dogmatika Nation"
                             ]
                         },
                         {
@@ -1455,10 +1434,28 @@
                             ]
                         },
                         {
-                            "code": 230,
+                            "code": 101,
                             "indent": 0,
                             "parameters": [
-                                500
+                                "",
+                                0,
+                                0,
+                                0,
+                                ""
+                            ]
+                        },
+                        {
+                            "code": 401,
+                            "indent": 0,
+                            "parameters": [
+                                "Standing on top of this church is Maximus. The pope and leader of the dogmatika."
+                            ]
+                        },
+                        {
+                            "code": 401,
+                            "indent": 0,
+                            "parameters": [
+                                "According to the laws of the dogmatika, he is a vessel of god who rules over the nation with his 666 laws. His magnificence bestows the Brand onto those who are faithful to the dogmatika."
                             ]
                         },
                         {
@@ -1473,41 +1470,6 @@
                             "indent": 0,
                             "parameters": [
                                 1
-                            ]
-                        },
-                        {
-                            "code": 357,
-                            "indent": 0,
-                            "parameters": [
-                                "VT_TextPicture",
-                                "set",
-                                "Set Text Picture",
-                                {
-                                    "text": "Standing on top of this church is Maximus. The pope and leader of the dogmatika.\nAccording to the laws of the dogmatika, he is a vessel of god who rules over the nation with his 666 laws. His magnificence bestows the Brand onto those who are faithful to the dogmatika.",
-                                    "bg_color": "Black",
-                                    "bg_opacity": "192"
-                                }
-                            ]
-                        },
-                        {
-                            "code": 657,
-                            "indent": 0,
-                            "parameters": [
-                                "Text = Standing on top of this church is Maximus. The pope …"
-                            ]
-                        },
-                        {
-                            "code": 657,
-                            "indent": 0,
-                            "parameters": [
-                                "Background color = Black"
-                            ]
-                        },
-                        {
-                            "code": 657,
-                            "indent": 0,
-                            "parameters": [
-                                "Background opacity = 192"
                             ]
                         },
                         {
@@ -1540,13 +1502,6 @@
                                 110,
                                 255,
                                 0
-                            ]
-                        },
-                        {
-                            "code": 230,
-                            "indent": 0,
-                            "parameters": [
-                                500
                             ]
                         },
                         {
@@ -1631,13 +1586,6 @@
                             ]
                         },
                         {
-                            "code": 230,
-                            "indent": 0,
-                            "parameters": [
-                                500
-                            ]
-                        },
-                        {
                             "code": 235,
                             "indent": 0,
                             "parameters": [
@@ -1719,13 +1667,6 @@
                             ]
                         },
                         {
-                            "code": 230,
-                            "indent": 0,
-                            "parameters": [
-                                500
-                            ]
-                        },
-                        {
                             "code": 235,
                             "indent": 0,
                             "parameters": [
@@ -1804,13 +1745,6 @@
                                 110,
                                 255,
                                 0
-                            ]
-                        },
-                        {
-                            "code": 230,
-                            "indent": 0,
-                            "parameters": [
-                                500
                             ]
                         },
                         {

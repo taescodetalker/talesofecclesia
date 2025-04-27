@@ -5,8 +5,8 @@
         "members": [
             {
                 "enemyId": 2,
-                "x": 243,
-                "y": 531,
+                "x": 285,
+                "y": 516,
                 "hidden": false
             }
         ],
@@ -319,8 +319,8 @@
         "members": [
             {
                 "enemyId": 10,
-                "x": 252,
-                "y": 778,
+                "x": 273,
+                "y": 785,
                 "hidden": false
             }
         ],
@@ -2095,8 +2095,8 @@
         "members": [
             {
                 "enemyId": 41,
-                "x": 385,
-                "y": 395,
+                "x": 342,
+                "y": 493,
                 "hidden": false
             }
         ],
@@ -2329,8 +2329,8 @@
         "members": [
             {
                 "enemyId": 19,
-                "x": 423,
-                "y": 551,
+                "x": 408,
+                "y": 802,
                 "hidden": false
             }
         ],
