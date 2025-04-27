@@ -7,7 +7,7 @@
         "uiAreaHeight": 1080,
         "numberFontFilename": "Yu-Gi-Oh! Matrix Regular Small Caps 2.woff2",
         "fallbackFonts": "Verdana, sans-serif",
-        "fontSize": 26,
+        "fontSize": 28,
         "mainFontFilename": "Yu-Gi-Oh! Matrix Regular Small Caps 2.woff2",
         "screenScale": 1,
         "windowOpacity": 192,
@@ -128,7 +128,7 @@
         "pitch": 70,
         "volume": 90
     },
-    "editMapId": 9,
+    "editMapId": 62,
     "elements": [
         "",
         "Physical",
@@ -610,7 +610,7 @@
             ]
         }
     ],
-    "testTroopId": 2,
+    "testTroopId": 49,
     "title1Name": "tales2",
     "title2Name": "",
     "titleBgm": {
@@ -667,7 +667,7 @@
         "",
         ""
     ],
-    "versionId": 88197947,
+    "versionId": 38275559,
     "victoryMe": {
         "name": "Victory2",
         "pan": 0,
