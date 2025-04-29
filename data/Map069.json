@@ -3820,7 +3820,7 @@
                             "code": 657,
                             "indent": 0,
                             "parameters": [
-                                "Text = Where does it come from? Contrary to popular belief,\u2026"
+                                "Text = Where does it come from? Contrary to popular belief,…"
                             ]
                         },
                         {
@@ -3845,10 +3845,10 @@
                                 "textbox",
                                 0,
                                 0,
-                                480.0,
-                                370.0,
-                                50.0,
-                                50.0,
+                                480,
+                                370,
+                                50,
+                                50,
                                 255,
                                 0
                             ]
@@ -5212,7 +5212,7 @@
                 }
             ],
             "x": 7,
-            "y": 3
+            "y": 5
         },
         {
             "id": 29,
