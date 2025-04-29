@@ -6337,7 +6337,7 @@
                         "selfSwitchCh": "A",
                         "selfSwitchValid": false,
                         "switch1Id": 19,
-                        "switch1Valid": false,
+                        "switch1Valid": true,
                         "switch2Id": 1,
                         "switch2Valid": false,
                         "variableId": 1,
@@ -6353,15 +6353,6 @@
                         "tileId": 0
                     },
                     "list": [
-                        {
-                            "code": 121,
-                            "indent": 0,
-                            "parameters": [
-                                19,
-                                19,
-                                0
-                            ]
-                        },
                         {
                             "code": 123,
                             "indent": 0,
