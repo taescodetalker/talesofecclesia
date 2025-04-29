@@ -128,7 +128,7 @@
         "pitch": 70,
         "volume": 90
     },
-    "editMapId": 62,
+    "editMapId": 79,
     "elements": [
         "",
         "Physical",
@@ -148,7 +148,7 @@
         "Accessory",
         "Boots"
     ],
-    "gameTitle": "The Branded Chronicles: Stories of Ecclesia",
+    "gameTitle": "",
     "gameoverMe": {
         "name": "Gameover2",
         "pan": 0,
@@ -610,7 +610,7 @@
             ]
         }
     ],
-    "testTroopId": 49,
+    "testTroopId": 20,
     "title1Name": "tales2",
     "title2Name": "",
     "titleBgm": {
@@ -667,7 +667,7 @@
         "",
         ""
     ],
-    "versionId": 38275559,
+    "versionId": 60375232,
     "victoryMe": {
         "name": "Victory2",
         "pan": 0,

@@ -920,14 +920,14 @@
         "members": [
             {
                 "enemyId": 25,
-                "x": 187,
-                "y": 579,
+                "x": 215,
+                "y": 747,
                 "hidden": false
             },
             {
                 "enemyId": 25,
-                "x": 604,
-                "y": 564,
+                "x": 596,
+                "y": 760,
                 "hidden": false
             }
         ],
