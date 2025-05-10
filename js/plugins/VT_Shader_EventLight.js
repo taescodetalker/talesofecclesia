@@ -17,8 +17,25 @@
 (() => {
 	const eventToLightMap = {}; // Maps event ID to light index
 
-	Game_Event.prototype.lightRadius = function() {
+	Game_Event.prototype.lightRadius = function () {
 		return this._lightRadius || 0;
+	};
+
+	Spriteset_Map.prototype.clearLights = function () {
+		// Reset shader uniforms
+		SceneManager._scene.combinedUniforms.lightPos.fill(0.0); // Clear all positions
+		SceneManager._scene.combinedUniforms.lightRadius.fill(0.0); // Clear all radii
+		SceneManager._scene.combinedUniforms.intensity.fill(0.0); // Clear all intensities
+		SceneManager._scene.combinedUniforms.numLights = 0; // Reset light count
+
+		// Clear the event-to-light mapping
+		for (const key in eventToLightMap) {
+			delete eventToLightMap[key];
+		}
+
+		playerLightIndex = null;
+
+		console.log("All lights cleared!");
 	};
 
 	const _Spriteset_Map_createCharacters = Spriteset_Map.prototype.createCharacters;
@@ -30,6 +47,10 @@
 	};
 
 	Spriteset_Map.prototype.addEventLights = function () {
+		// Get map name to print in console
+		const mapName = $dataMap.displayName || $dataMap.name;
+		console.log(`Adding lights for map: ${mapName}`);
+		this.clearLights(); // Clear existing lights before adding new ones
 		// Loop through all events on the map
 		$gameMap.events().forEach((event) => {
 			const note = event.event().note; // Get the event's note field
@@ -54,43 +75,26 @@
 		});
 	};
 
-	Spriteset_Map.prototype.clearLights = function () {
-		// Reset shader uniforms
-		SceneManager._scene.combinedUniforms.lightPos.fill(0.0); // Clear all positions
-		SceneManager._scene.combinedUniforms.lightRadius.fill(0.0); // Clear all radii
-		SceneManager._scene.combinedUniforms.intensity.fill(0.0); // Clear all intensities
-		SceneManager._scene.combinedUniforms.numLights = 0; // Reset light count
-
-		// Clear the event-to-light mapping
-		for (const key in eventToLightMap) {
-			delete eventToLightMap[key];
-		}
-
-		playerLightIndex = null;
-
-		console.log("All lights cleared!");
-	};
-
-	Spriteset_Map.prototype.zoomAwareLightsPositionUpdate = function(lightIndex, newX, newY) {
-		if(!$gameScreen) return;
+	Spriteset_Map.prototype.zoomAwareLightsPositionUpdate = function (lightIndex, newX, newY) {
+		if (!$gameScreen) return;
 		const posIndex = lightIndex * 2; // Each light uses 2 slots for position (x, y)
 		const zoomX = $gameScreen.zoomX();
 		const zoomY = $gameScreen.zoomY();
 		const zoomScale = $gameScreen.zoomScale();
 		let x = newX;
 		let y = newY;
-		if(zoomX > 0) {
+		if (zoomX > 0) {
 			x -= zoomX - Graphics.width / (2 * zoomScale);
 		}
-		if(zoomY > 0) {
+		if (zoomY > 0) {
 			y -= zoomY - Graphics.height / (2 * zoomScale);
 		}
-		SceneManager._scene.combinedUniforms.lightPos[posIndex] = x / (Graphics.width / zoomScale); 		// Update X
-		SceneManager._scene.combinedUniforms.lightPos[posIndex + 1] = y / (Graphics.height / zoomScale); 	// Update Y
+		SceneManager._scene.combinedUniforms.lightPos[posIndex] = x / (Graphics.width / zoomScale); // Update X
+		SceneManager._scene.combinedUniforms.lightPos[posIndex + 1] = y / (Graphics.height / zoomScale); // Update Y
 	};
 
 	Spriteset_Map.prototype.updateEventLights = function () {
-		for(e of $gameMap.events()) {
+		for (e of $gameMap.events()) {
 			const lightIndex = eventToLightMap[e.eventId()];
 			if (lightIndex !== undefined) {
 				this.zoomAwareLightsPositionUpdate(lightIndex, e.screenX(), e.screenY());
