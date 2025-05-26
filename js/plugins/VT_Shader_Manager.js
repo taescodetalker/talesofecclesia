@@ -1,13 +1,13 @@
 /*:
  * @target MZ
- * @plugindesc Manages and loads custom shaders for use in RPG Maker MZ. Version 1.0
- * @author YourName
+ * @plugindesc Manages and loads custom shaders for use in RPG Maker MZ.
+ * @author Vincent Thieu
  *
  * @param ShaderFolder
  * @desc Folder path where shaders are stored (relative to js/ folder).
  * @default shaders/
  *
- * @help ShaderManager.js
+ * @help VT_Shader_Manager.js
  *
  * This plugin dynamically loads and applies custom shaders in RPG Maker MZ.
  *
@@ -16,6 +16,9 @@
  * sprite.filters = [shader];
  *
  * Place GLSL files in the folder specified by ShaderFolder (default: js/shaders/).
+ *
+ * Terms of Use: Commercial.
+ * Version: 1.0.0
  */
 
 var ShaderManager = (function () {
@@ -23,7 +26,7 @@ var ShaderManager = (function () {
 	const shaderFolder = "js/" + (params["ShaderFolder"] || "shaders/");
 
 	function loadFile(path) {
-		// console.log("loading file " + path);
+		console.log("loading file " + path);
 		let xhr = new XMLHttpRequest();
 		xhr.open("GET", path, false); // Synchronous request
 		xhr.send();
@@ -153,9 +156,6 @@ Graphics._renderer = new PIXI.Renderer({
 		// Ambient darkness
 		useAmbient: false,
 		ambientColor: [0.05, 0.05, 0.1], // Default cave darkness
-
-		// Light colors for each light source
-		lightColor: new Float32Array(MAX_LIGHTS * 3), // RGB values flattened
 	};
 
 	// Create the combined shader
@@ -247,7 +247,7 @@ Graphics._renderer = new PIXI.Renderer({
 		}
 	};
 
-	Spriteset_Map.prototype.addLight = function (x, y, radius, intensity, color = [1.0, 1.0, 1.0]) {
+	Spriteset_Map.prototype.addLight = function (x, y, radius, intensity) {
 		const numLights = combinedUniforms.numLights;
 
 		// Check if we can add more lights
@@ -258,7 +258,6 @@ Graphics._renderer = new PIXI.Renderer({
 
 		// Calculate the index in the flattened array
 		const posIndex = numLights * 2;
-		const colorIndex = numLights * 3; // Each color is a vec3 (RGB)
 
 		// Add light properties
 		combinedUniforms.lightPos[posIndex] = x / Graphics.width; // Normalized X position
@@ -266,15 +265,10 @@ Graphics._renderer = new PIXI.Renderer({
 		combinedUniforms.lightRadius[numLights] = radius; // Set light radius
 		combinedUniforms.intensity[numLights] = intensity; // Set light intensity
 
-		// Set RGB color
-		combinedUniforms.lightColor[colorIndex] = color[0];
-		combinedUniforms.lightColor[colorIndex + 1] = color[1];
-		combinedUniforms.lightColor[colorIndex + 2] = color[2];
-
 		// Increment the number of active lights
 		combinedUniforms.numLights++;
 
-		// console.log(`Light ${numLights} added at (${x}, ${y}) with radius ${radius} and intensity ${intensity}`);
+		console.log(`Light ${numLights} added at (${x}, ${y}) with radius ${radius} and intensity ${intensity}`);
 		return true; // Light successfully added
 	};
 
@@ -292,14 +286,14 @@ Graphics._renderer = new PIXI.Renderer({
 		// Ensure the map's spriteset is ready
 		if (this._spriteset && combinedShader) {
 			// this._spriteset.filters = [dayNightShader, lightShader]; // Apply the shader filter
-			this._spriteset.filters = [combinedShader];
+			this._spriteset._baseSprite.filters = [combinedShader];
 
-			const centerX = Graphics.width / 2; // Middle of the screen (X)
-			const centerY = Graphics.height / 2; // Middle of the screen (Y)
+			//const centerX = Graphics.width / 2; // Middle of the screen (X)
+			//const centerY = Graphics.height / 2; // Middle of the screen (Y)
 
 			// Add the light
-			const lightRadius = 0.15; // Light radius (normalized size)
-			const lightIntensity = 1.0; // Light brightness
+			//const lightRadius = 0.15; // Light radius (normalized size)
+			//const lightIntensity = 1.0; // Light brightness
 
 			// addLight(centerX, centerY, lightRadius, lightIntensity);
 		}
