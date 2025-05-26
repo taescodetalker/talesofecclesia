@@ -156,6 +156,9 @@ Graphics._renderer = new PIXI.Renderer({
 		// Ambient darkness
 		useAmbient: false,
 		ambientColor: [0.05, 0.05, 0.1], // Default cave darkness
+
+		// Light colors for each light source
+		lightColor: new Float32Array(MAX_LIGHTS * 3), // RGB values flattened
 	};
 
 	// Create the combined shader
@@ -258,6 +261,7 @@ Graphics._renderer = new PIXI.Renderer({
 
 		// Calculate the index in the flattened array
 		const posIndex = numLights * 2;
+		const colorIndex = numLights * 3; // Each color is a vec3 (RGB)
 
 		// Add light properties
 		combinedUniforms.lightPos[posIndex] = x / Graphics.width; // Normalized X position
@@ -265,6 +269,11 @@ Graphics._renderer = new PIXI.Renderer({
 		combinedUniforms.lightRadius[numLights] = radius; // Set light radius
 		combinedUniforms.intensity[numLights] = intensity; // Set light intensity
 
+		// Set RGB color
+		combinedUniforms.lightColor[colorIndex] = color[0];
+		combinedUniforms.lightColor[colorIndex + 1] = color[1];
+		combinedUniforms.lightColor[colorIndex + 2] = color[2];
+		
 		// Increment the number of active lights
 		combinedUniforms.numLights++;
 
