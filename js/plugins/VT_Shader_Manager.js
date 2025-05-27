@@ -250,7 +250,7 @@ Graphics._renderer = new PIXI.Renderer({
 		}
 	};
 
-	Spriteset_Map.prototype.addLight = function (x, y, radius, intensity) {
+	Spriteset_Map.prototype.addLight = function (x, y, radius, intensity, color = [1.0, 1.0, 1.0]) {
 		const numLights = combinedUniforms.numLights;
 
 		// Check if we can add more lights
@@ -273,7 +273,7 @@ Graphics._renderer = new PIXI.Renderer({
 		combinedUniforms.lightColor[colorIndex] = color[0];
 		combinedUniforms.lightColor[colorIndex + 1] = color[1];
 		combinedUniforms.lightColor[colorIndex + 2] = color[2];
-		
+
 		// Increment the number of active lights
 		combinedUniforms.numLights++;
 
