@@ -54,7 +54,7 @@
 		// Loop through all events on the map
 		$gameMap.events().forEach((event) => {
 			const note = event.event().note; // Get the event's note field
-			const lightTag = /<light:\s*(\w+)(?:,\s*radius=([\d.]+),\s*intensity=([\d.]+))?>/i.exec(note);
+			const lightTag = /<light:\s*(\w+)(?:,\s*radius=([\d.]+),\s*intensity=([\d.]+))?(?:,\s*color=#[0-9a-fA-F]{6})?>/i.exec(note);
 
 			if (lightTag) {
 				const lightType = lightTag[1].toLowerCase(); // Light type (e.g., "torch")
@@ -66,9 +66,17 @@
 				const x = event.screenX();
 				const y = event.screenY();
 
+				let color = [1.0, 1.0, 1.0]; // default warm light
+				const colorMatch = /color=#([0-9a-fA-F]{6})/.exec(note);
+				if (colorMatch) {
+					const hex = colorMatch[1];
+					console.log(`Event ${event.eventId()} has color: #${hex}`);
+					color = [parseInt(hex.slice(0, 2), 16) / 255, parseInt(hex.slice(2, 4), 16) / 255, parseInt(hex.slice(4, 6), 16) / 255];
+				}
+
 				// Add light source based on the tag
 				console.log(`Adding light for event ${event.eventId()} (${lightType}) at (${x}, ${y})`);
-				this.addLight(x, y, radius, intensity);
+				this.addLight(x, y, radius, intensity, color);
 
 				eventToLightMap[event.eventId()] = SceneManager._scene.combinedUniforms.numLights - 1; // Map event to the last added light
 			}
