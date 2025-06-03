@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Decode Talker",
+    "type": "Link",
+    "atk": 2300,
+    "def": "-",
+    "effect": "Gains 500 ATK for each monster it points to. When a card or effect that targets a card(s) on the field is activated, you can tribute 1 monster this card points to; negate the activation."
+  },
+  {
+    "name": "Clock Wyvern",
+    "type": "Effect",
+    "atk": 1800,
+    "def": 1000,
+    "effect": "When this card is Normal or Special Summoned: You can halve this card’s ATK, and if you do, Special Summon 1 'Clock Token'."
+  },
+  {
+    "name": "Micro Coder",
+    "type": "Effect",
+    "atk": 300,
+    "def": 0,
+    "effect": "If a Cyberse monster you control would be used as Link Material for a Code Talker, you can use this card from your hand."
+  }
+]
