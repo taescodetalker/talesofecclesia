@@ -83,21 +83,10 @@ null,
 {"id":81,"expanded":false,"name":"Call of the Haunted","order":29,"parentId":15,"scrollX":1081.3333333333333,"scrollY":854,"quick":false},
 {"id":82,"expanded":false,"name":"Dogmatika Outskirts","order":14,"parentId":80,"scrollX":1946.3999999999999,"scrollY":1136.3999999999999,"quick":false},
 {"id":83,"expanded":false,"name":"Dogmatika Staircase","order":9,"parentId":7,"scrollX":540.6666666666666,"scrollY":525,"quick":false},
-<<<<<<< Updated upstream
 {"id":84,"expanded":false,"name":"TestRoom2","order":2,"parentId":0,"scrollX":1081.3333333333333,"scrollY":642,"quick":false},
 {"id":85,"expanded":true,"name":"Dogmatika Plaza","order":11,"parentId":76,"scrollX":1374.8571428571427,"scrollY":1338,"quick":false},
 {"id":86,"expanded":false,"name":"Dogmatika Shopping District","order":12,"parentId":85,"scrollX":1634.3999999999999,"scrollY":543,"quick":false},
-<<<<<<< HEAD
-{"id":87,"expanded":true,"name":"Dogmatika Plaza (2) DESPIA","order":16,"parentId":8,"scrollX":973.1999999999999,"scrollY":1140.6,"quick":false},
-=======
-{"id":84,"expanded":false,"name":"TestRoom2","order":2,"parentId":0,"scrollX":540.6666666666666,"scrollY":447,"quick":false},
-{"id":85,"expanded":true,"name":"Dogmatika Plaza","order":11,"parentId":76,"scrollX":1946.4,"scrollY":1155.6,"quick":false},
-{"id":86,"expanded":false,"name":"Dogmatika Shopping District","order":12,"parentId":85,"scrollX":1644,"scrollY":792.5999999999999,"quick":false},
-{"id":87,"expanded":true,"name":"Dogmatika Plaza (2) DESPIA","order":16,"parentId":8,"scrollX":1854.6666666666667,"scrollY":1351.3333333333333,"quick":false},
->>>>>>> Stashed changes
-=======
-{"id":87,"expanded":true,"name":"Dogmatika Plaza (2) DESPIA","order":16,"parentId":8,"scrollX":1428,"scrollY":1528.6666666666667,"quick":false},
->>>>>>> parent of 6f9d984 (It's Fleur de liss, not Fluer de Lee)
+{"id":87,"expanded":true,"name":"Dogmatika Plaza (2) DESPIA","order":16,"parentId":8,"scrollX":977.3333333333334,"scrollY":1268.3333333333333,"quick":false},
 {"id":88,"expanded":true,"name":"FT Item Shop","order":38,"parentId":18,"scrollX":884.7272727272727,"scrollY":525.2727272727273,"quick":false},
 {"id":89,"expanded":false,"name":"Mountain ","order":58,"parentId":32,"scrollX":1081.3333333333333,"scrollY":642,"quick":false},
 {"id":90,"expanded":false,"name":"MAP090","order":85,"parentId":70,"scrollX":540.6666666666666,"scrollY":315.6666666666667,"quick":false}
