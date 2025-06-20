@@ -3,7 +3,7 @@
     "main": "index.html",
     "chromium-args": "--force-color-profile=srgb",
     "window": {
-        "title": "The Branded Chronicles: Stories of Ecclesia",
+        "title": "",
         "width": 1920,
         "height": 1080,
         "position": "center",
