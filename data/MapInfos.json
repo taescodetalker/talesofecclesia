@@ -1,7 +1,7 @@
 [
 null,
 {"id":1,"expanded":true,"name":"SV Inn","order":47,"parentId":16,"scrollX":648.8,"scrollY":385.2,"quick":false},
-{"id":2,"expanded":true,"name":"Great Sea Golgonda 1","order":65,"parentId":7,"scrollX":2209.714285714286,"scrollY":811.7142857142857,"quick":true},
+{"id":2,"expanded":true,"name":"Great Sea Golgonda 1","order":65,"parentId":7,"scrollX":1769.4545454545455,"scrollY":1033.0909090909092,"quick":true},
 {"id":3,"expanded":true,"name":"Closed Forest","order":31,"parentId":15,"scrollX":1308,"scrollY":1574.8,"quick":false},
 {"id":4,"expanded":true,"name":"Labryinth Wall 1","order":79,"parentId":10,"scrollX":1081.3333333333333,"scrollY":631.3333333333334,"quick":false},
 {"id":5,"expanded":true,"name":"Felgrand Temple","order":39,"parentId":18,"scrollX":648.8,"scrollY":385.2,"quick":false},
